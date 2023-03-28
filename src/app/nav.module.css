@@ -1,0 +1,35 @@
+.navContainer {
+    background-color: #c1c0e3;
+    border-bottom: 2px solid #4F49E0;
+    font-size: .8rem;
+    font-weight: 600;
+    max-width: 360px;
+    padding: 1rem 0;
+}
+
+.linkButton {
+    background-color: inherit;
+    border: none;
+    color:#1c1a51;
+    font-style: inherit;
+}
+@media (min-width: 300px) {
+    .navContainer {
+        font-size: .7rem;
+    }
+}
+@media (min-width: 361px) {
+    .navContainer {
+        background-color: #c1c0e3;
+        border-bottom: 2px solid #4F49E0;
+        font-weight: 600;
+        padding: .6rem 0;
+        min-width: 100vw;
+    }
+}
+
+@media (min-width: 500px) {
+    .navContainer {
+        font-size: 1rem;
+    }
+}
