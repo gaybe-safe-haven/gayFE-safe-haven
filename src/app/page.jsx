@@ -11,7 +11,7 @@ export default function Home() {
      {/* <img></img> */}
      <p>But not all shelters are safe for queer and trans folks.</p>
      {/* <img></img> */}
-     <p>We're asking you to help us track the ones that are.</p>
+     <p>We\'re asking you to help us track the ones that are.</p>
     </main>
   )
 }
