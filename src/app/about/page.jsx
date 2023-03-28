@@ -8,7 +8,7 @@ export default function About() {
       <p>So, we`&apos;`re building a comprehensive list of LGBTQ+-friendly youth shelters across the United States</p>
       <p>and we need YOUR HELP!</p>
       {/* <img></img> */}
-      <p>If you know of a shelter that should be on our list, please add it. And if you've had an experience with a shelter that`&apos;`s already on our list, please rate it to help others make informed decisions. Together, we can create a network of support and protection for queer and trans youth who need it the most.</p>
+      <p>If you know of a shelter that should be on our list, please add it. And if you`&apos;`ve had an experience with a shelter that`&apos;`s already on our list, please rate it to help others make informed decisions. Together, we can create a network of support and protection for queer and trans youth who need it the most.</p>
     </main>
   )
 }
