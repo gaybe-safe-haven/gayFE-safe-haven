@@ -7,17 +7,44 @@
     padding: 1rem 0;
 }
 
+.navContentWrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: rgb(28, 26, 81, .8);
+}
+
+.linkContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
 .linkButton {
     background-color: inherit;
     border: none;
     color:#1c1a51;
     font-style: inherit;
 }
-@media (min-width: 300px) {
-    .navContainer {
-        font-size: .7rem;
+
+@media (max-width: 330px) {
+    .title {
+        font-size: 1.5rem;
     }
 }
+
+@media (min-width: 300px) {
+    .navContainer {
+        font-size: .9rem;
+    }
+}
+
 @media (min-width: 361px) {
     .navContainer {
         background-color: #c1c0e3;

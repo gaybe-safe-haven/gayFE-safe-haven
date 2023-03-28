@@ -1,8 +1,9 @@
-/* Should we put a page title/h1 in our layout file, or inside of the main tag on our pages? Should we do a Header component for this?*/
+/* Hold-over from early styling phase, saving for context  */
+
 .titleContainer {
     background-color:#cee4e4;
     border-bottom: 2px solid #4F49E0;
-    color: #1c1a51;
+    color: rgb(28, 26, 81, .8);
     text-align: center;
 }
 

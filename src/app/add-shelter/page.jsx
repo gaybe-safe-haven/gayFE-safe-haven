@@ -1,6 +1,6 @@
 'use client'
 
-import styles from "../form.module.css";
+import styles from "../Components/Form.module.css"
 
 export default function add() {
   return (
