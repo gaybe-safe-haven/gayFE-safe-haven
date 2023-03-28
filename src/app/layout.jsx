@@ -19,6 +19,12 @@ export default function RootLayout({ children }) {
           <Link href="/api"><button className={styles.linkButton}>public api</button></Link>
         </nav>
         {children}
+        <div className="stripes">
+          <div className="purpleStripe"></div>
+          <div className="tealStripe"></div>
+          <div className="greenStripe"></div>
+          <div className="roseStripe"></div>
+        </div>
       </body>
     </html>
   )
