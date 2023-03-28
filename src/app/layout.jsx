@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <nav>
           <Link href="/about"><button>about</button></Link>
           <Link href="/list"><button>list</button></Link>
-          <Link href="/add"><button>add a shelter</button></Link>
+          <Link href="/add-shelter"><button>add a shelter</button></Link>
           <Link href="/api"><button>public api</button></Link>
         </nav>
         {children}
