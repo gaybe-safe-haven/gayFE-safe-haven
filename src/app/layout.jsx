@@ -1,4 +1,5 @@
 import './globals.css'
+import Link from 'next/Link'
 
 export const metadata = {
   title: 'Gaybe Safe Haven',
@@ -6,14 +7,15 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body>
         <nav>
-          about
-          list
-          add a shelter
-          public api
+          <Link href="/about"><button>about</button></Link>
+          <Link href="/list"><button>list</button></Link>
+          <Link href="/add"><button>add a shelter</button></Link>
+          <Link href="/api"><button>public api</button></Link>
         </nav>
         {children}
       </body>
