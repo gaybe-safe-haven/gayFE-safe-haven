@@ -7,9 +7,9 @@ const fetchMockData = async () => {
 }
 
 export default async function List() {
-	const mockData = await GetMockData()
-	console.log(mockData.data)
-	const mappedData = mockData.data.map(data => data.id)
+	const mockData = await fetchMockData()
+	// console.log(mockData.data)
+	const mappedData = mockData.data.map(data => data.attributes.name)
 	return (
 		<main className={styles.main}>
 			<p>list</p>
