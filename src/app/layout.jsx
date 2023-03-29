@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
         <nav className={styles.navContainer}>
           <div className={styles.navContentWrapper}>
             <h1 className={styles.title}>Our App &#60;3</h1>
+            {/* we should have a link to "/" and the h1 could do this or a logo? */}
             <div className={styles.linkContainer}>
               <Link href="/about"><button className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button className={styles.linkButton}>list</button></Link>

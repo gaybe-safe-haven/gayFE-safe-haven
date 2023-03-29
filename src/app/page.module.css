@@ -10,3 +10,17 @@
     font-weight: 700;
 }
 
+.greenPTag {
+    color: #066161;
+    font-weight: 600;
+}
+
+.purplePTag {
+    color: #4F49E0;
+    font-weight: 700;
+}
+
+.greenPTagThin {
+    color: #066161;
+    font-weight: 400;
+}
