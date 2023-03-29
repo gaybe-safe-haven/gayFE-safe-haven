@@ -1,39 +1,14 @@
 'use client'
-
-import styles from "../Components/Form.module.css"
+import Form from "../Components/Form";
+import styles from "../page.module.css"
 
 export default function add() {
   return (
-    <form className={styles.formContainer}>
-      <h3 className={styles.formHeading}>My Form</h3>
-      <div className={styles.inputContainer}>
-          <label htmlFor="something" >something:&nbsp;</label>
-          <input 
-            type="text" 
-            name="something" 
-            placeholder="something" 
-            className={styles.formInput}
-          />
-      </div>
-      <div className={styles.inputContainer}>
-          <label htmlFor="quickly">quickly:&nbsp;</label>
-          <input 
-            type="text" 
-            name="quickly" 
-            placeholder="quickly" 
-            className={styles.formInput}
-          />
-      </div>
-      <div className={styles.inputContainer}>
-      <label htmlFor="coming">coming:&nbsp;</label>
-          <input 
-            type="text" 
-            name="coming" 
-            placeholder="coming" 
-            className={styles.formInput}
-          />
-      </div>
-      <button className={styles.button}>Yikes</button>
-    </form>    
+    <main className={styles.main}>
+      <h2>Add a shelter to our list</h2>
+      <p>know of a shelter, but don’t see it here? Fill out the form below to add it to our database</p>
+      <Form />   
+      <p>newly posted shelters will be added to the list immediately, but will remain unverified until our staff have reviewed them</p>
+    </main>
   )
 }

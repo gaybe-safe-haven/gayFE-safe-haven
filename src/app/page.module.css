@@ -1,4 +1,12 @@
 .main {
+    display: flex;
+    flex-direction: column;
     font-family: inherit;
+    padding: 0 1rem;
+}
+
+.pinkPTag {
+    color: #E9007E;
+    font-weight: 700;
 }
 

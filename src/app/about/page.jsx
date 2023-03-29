@@ -1,6 +1,8 @@
+import styles from "../page.module.css"
+
 export default function About() {
   return (
-    <main>
+    <main className={styles.main}>
       <p>In the face of an increasingly hostile political climate towards LGBTQ+ individuals, it&apos;s more important than ever to provide safe spaces for homeless LGBTQ+ youth</p>
       {/* <img></img> */}
       <p>We wanted to make an app that would let vulnerable youth search for LGBTQ+-friendly shelters across the United States</p>
