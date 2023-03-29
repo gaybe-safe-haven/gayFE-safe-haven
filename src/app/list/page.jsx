@@ -1,16 +1,11 @@
 import styles from "../page.module.css"
-import { GetMockData } from "../../apiCalls"
-
-const fetchMockData = async () => {
-	const fetchData = await fetch ('https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters')
-	return fetchData.json()
-}
+import {getShelterData} from "../../apiCalls"
 
 export default async function List() {
-	const mockData = await fetchMockData()
+	const shelterData = await getShelterData()
 	// console.log(mockData.data)
-	const mappedData = mockData.data.map(data => data.attributes.name)
-	mappedData.sort((a,b) => a.localeCompare(b))
+	shelterData.data.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
+	const mappedData = shelterData.data.map(data => data.attributes.name)
 	console.log(mappedData)
 	return (
 		<main className={styles.main}>
