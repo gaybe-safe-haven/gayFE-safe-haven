@@ -1,0 +1,58 @@
+{
+	"data": [
+		{
+			"id": "1",
+			"type": "shelter",
+			"attributes": {
+				"name": "Shelter Name",
+				"address": "123 Street Blvd",
+				"city": "Seattle",
+				"state": "WA",
+				"zip": "12345",
+				"phone": "123-456-1234",
+				"website": "www.somewhere.com",
+				"rating": {
+					"gay": "7",
+					"clean": "10",
+					"safe": "null"
+				}
+			}
+		},
+		{
+			"id": "2",
+			"type": "shelter",
+			"attributes": {
+				"name": "Shelter Name",
+				"address": "123 Street Blvd",
+				"city": "Seattle",
+				"state": "WA",
+				"zip": "12345",
+				"phone": "123-456-1234",
+				"website": "www.somewhere.com",
+				"rating": {
+					"gay": "7",
+					"clean": "10",
+					"safe": "null"
+				}
+			}
+		},
+		{
+			"id": "3",
+			"type": "shelter",
+			"attributes": {
+				"name": "Shelter Name",
+				"address": "123 Street Blvd",
+				"city": "Seattle",
+				"state": "WA",
+				"zip": "12345",
+				"phone": "123-456-1234",
+				"website": "www.somewhere.com",
+				"rating": {
+					"gay": "7",
+					"clean": "10",
+					"safe": "null"
+				}
+			}
+		}
+	]
+}
