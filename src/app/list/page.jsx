@@ -10,6 +10,8 @@ export default async function List() {
 	const mockData = await fetchMockData()
 	// console.log(mockData.data)
 	const mappedData = mockData.data.map(data => data.attributes.name)
+	mappedData.sort((a,b) => a.localeCompare(b))
+	console.log(mappedData)
 	return (
 		<main className={styles.main}>
 			<p>list</p>
