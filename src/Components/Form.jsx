@@ -13,6 +13,7 @@ export default function Form() {
       website: ""
     }
   )
+  const [newShelter, setNewShelter] = useState({})
 
   function handleChange(e) {
     setFormData(prevFormData => {
@@ -25,6 +26,7 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
+    setNewShelter()
     clearInputs()
   }
 
@@ -39,6 +41,10 @@ export default function Form() {
         website: ""
       }
     )
+  }
+
+  function addShelter(newShelter) {
+    fetch("https://postman-echo.com/shelters", newShelter)
   }
 
     return (
