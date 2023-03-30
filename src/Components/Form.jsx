@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Form() {
   const [formData, setFormData] = useState(
     {
-      shelterName: "",
+      name: "",
       streetAddress: "",
       city: "",
       state: "",
@@ -31,16 +31,29 @@ export default function Form() {
     console.log('new', formData)
   }
 
+  function clearInputs() {
+    setFormData(
+      {
+        name: "",
+        streetAddress: "",
+        city: "",
+        state: "",
+        phoneNumber: "",
+        website: ""
+      }
+    )
+  }
+
     return (
       <form id="addForm" onSubmit={handleSubmit} className={styles.formContainer}>
         <h3 className={styles.formHeading}>Add A Shelter</h3>
         <div className={styles.inputContainer}>
           <input 
             type="text" 
-            name="shelterName" 
+            name="name" 
             placeholder="shelter name" 
             className={styles.formInput}
-            value={formData.shelterName}
+            value={formData.name}
             onChange={handleChange}
           />
         </div>
