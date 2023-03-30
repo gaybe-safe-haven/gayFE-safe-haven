@@ -7,7 +7,15 @@ export default function ShelterPage({ params }) {
 
 	useEffect(() => {
 		getShelterData(`shelters/1`) //this is hard coded for mock data, change to params.id for real data
-		
+		.then((data) => {
+			if (data.ok) {
+				return data.json()
+			}
+		})
+		.then((data) => {
+			setShelter(data.data)
+			console.log(data)
+		})
 	},[])
   return (
     <main>

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react"
 
 export default function List() {
 	const [shelterData, setShelterData] = useState([])
-	const [isLoading, setIsLoading] = useState(true)
+	// const [isLoading, setIsLoading] = useState(true)
 
 	useEffect(() => {
 		getShelterData('shelters')
@@ -15,13 +15,13 @@ export default function List() {
 				return data.json()}})
 		.then((data) => {
 			setShelterData(data.data)
-			setIsLoading(false)
+			// setIsLoading(false)
 		})
 	},[])
 
-	if (isLoading) {
-		return <p>Loading...</p>
-	}
+	// if (isLoading) {
+	// 	return <p>Loading...</p>
+	// }
 
 	// const shelterData = await getShelterData('shelters')
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
