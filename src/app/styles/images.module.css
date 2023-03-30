@@ -1,0 +1,10 @@
+.greenImageWrapper {
+    background-color: #C5D2AC;
+}
+
+.hairPaintTeenImage {
+    composes: greenImageWrapper;
+    height: 22rem;
+    padding: 1rem;
+    width: 30rem;
+}
