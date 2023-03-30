@@ -27,7 +27,7 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    document.getElementById("addForm").reset()
+    clearInputs()
     console.log('new', formData)
   }
 
