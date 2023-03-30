@@ -21,14 +21,11 @@ export default function Form() {
         [e.target.name]: e.target.value
       }
     })
-    console.log('formdata', formData)
   }
-  console.log('thing', formData)
   
   function handleSubmit(e) {
     e.preventDefault()
     clearInputs()
-    console.log('new', formData)
   }
 
   function clearInputs() {
