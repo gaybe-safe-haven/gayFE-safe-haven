@@ -26,9 +26,10 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    setNewShelter()
+    setNewShelter(formData)
     clearInputs()
   }
+  console.log('C', newShelter)
 
   function clearInputs() {
     setFormData(
@@ -44,7 +45,18 @@ export default function Form() {
   }
 
   function addShelter(newShelter) {
-    fetch("https://postman-echo.com/shelters", newShelter)
+    fetch("https://postman-echo.com/shelters", {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(newShelter)
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        return Promise.reject(response.status)
+      }
+    })
   }
 
     return (
