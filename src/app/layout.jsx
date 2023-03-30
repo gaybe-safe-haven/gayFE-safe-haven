@@ -12,15 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav className={styles.navContainer}>
+        <nav id="navContainer" className={styles.navContainer}>
           <div className={styles.navContentWrapper}>
-            <h1 className={styles.title}>Our App &#60;3</h1>
+            <h1 id="title" className={styles.title}>Our App &#60;3</h1>
             {/* we should have a link to "/" and the h1 could do this or a logo? */}
             <div className={styles.linkContainer}>
-              <Link href="/about"><button className={styles.linkButton}>about</button></Link>
-              <Link href="/list"><button className={styles.linkButton}>list</button></Link>
-              <Link href="/add-shelter"><button className={styles.linkButton}>add a shelter</button></Link>
-              <Link href="/api"><button className={styles.linkButton}>public api</button></Link>
+              <Link href="/about"><button id="aboutBtn" className={styles.linkButton}>about</button></Link>
+              <Link href="/list"><button id="seeListBtn" className={styles.linkButton}>list</button></Link>
+              <Link href="/add"><button id="addShelterBtn" className={styles.linkButton}>add</button></Link>
+              <Link href="/api"><button id="apiBtn"className={styles.linkButton}>public api</button></Link>
             </div>
           </div>
         </nav>
