@@ -9,7 +9,7 @@ export default function About() {
   return (
     <main className={styles.main}>
       <p className={styles.greenPTagThin}>In the face of an increasingly hostile political climate towards LGBTQ+ individuals, it&apos;s more important than ever to provide safe spaces for homeless LGBTQ+ youth</p>
-      <Image className={imageStyles.hairPaintTeenImage} src={hairPaintTeen} alt="hair paint teen" />
+      <Image id="hairPaintTeenImg" className={imageStyles.hairPaintTeenImage} src={hairPaintTeen} alt="hair paint teen" />
       <p className={styles.greenPTagThin}>We wanted to make an app that would let vulnerable youth search for LGBTQ+-friendly shelters across the United States</p>
       <p className={styles.pinkPTag}>but  a national database of LGBTQ+-friendly shelters didn&apos;t exist!</p>
       <p className={styles.greenPTagThin}>So, we&apos;re building a comprehensive list of LGBTQ+-friendly youth shelters across the United States</p>

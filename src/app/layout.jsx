@@ -19,8 +19,8 @@ export default function RootLayout({ children }) {
             <div className={styles.linkContainer}>
               <Link href="/about"><button id="aboutBtn" className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button id="seeListBtn" className={styles.linkButton}>list</button></Link>
-              <Link href="/add"><button id="addShelterBtn" className={styles.linkButton}>add</button></Link>
-              <Link href="/api"><button id="apiBtn"className={styles.linkButton}>public api</button></Link>
+              <Link href="/add-shelter"><button id="addShelterBtn" className={styles.linkButton}>add a shelter</button></Link>
+              <Link href="/api"><button id="apiBtn" className={styles.linkButton}>public api</button></Link>
             </div>
           </div>
         </nav>
