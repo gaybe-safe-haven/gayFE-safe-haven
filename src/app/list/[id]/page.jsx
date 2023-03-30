@@ -1,7 +1,8 @@
+"use client"
 import { getShelterData } from '../../../apiCalls'
 
-export default async function ShelterPage({ params }) {
-  const shelter = await getShelterData(`shelters/${params.id}`)
+export default function ShelterPage({ params }) {
+  getShelterData(`shelters/${params.id}`)
   console.log(shelter.data)
   return (
     <main>
