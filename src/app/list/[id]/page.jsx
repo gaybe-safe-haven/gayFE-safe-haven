@@ -1,9 +1,14 @@
 "use client"
 import { getShelterData } from '../../../apiCalls'
+import {useState, useEffect} from 'react'
 
 export default function ShelterPage({ params }) {
-  getShelterData(`shelters/${params.id}`)
-  console.log(shelter.data)
+	const [shelter, setShelter] = useState({})
+
+	useEffect(() => {
+		getShelterData(`shelters/1`) //this is hard coded for mock data, change to params.id for real data
+		
+	},[])
   return (
     <main>
       <h1>{shelter.attributes.name}</h1>
