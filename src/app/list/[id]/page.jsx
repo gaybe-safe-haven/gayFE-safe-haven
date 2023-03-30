@@ -44,6 +44,10 @@ export default function ShelterPage({ params }) {
           <img src={'/mop.png'} />
         </div>
       </section>
+      <div>
+        <p>stayed here?</p>
+        <p>rate your experience</p>
+      </div>
     </main>
 
   )
