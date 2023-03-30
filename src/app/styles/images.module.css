@@ -1,10 +1,49 @@
 .greenImageWrapper {
-    background-color: #C5D2AC;
+    align-self: flex-start;
+    background-color: #C5D2AC;  
 }
 
 .hairPaintTeenImage {
     composes: greenImageWrapper;
-    height: 22rem;
+    height: auto;
     padding: 1rem;
-    width: 30rem;
+    width: auto;
+}
+
+.yellowGreenImageWrapper {
+    align-self: flex-start;
+    background-color: #ABD757;
+}
+
+.makeupTeensImage {
+    composes: yellowGreenImageWrapper;
+    height: auto;
+    padding: 1rem;
+    width: auto;
+}
+
+.purpleImageWrapper {
+    align-self: flex-start;
+    background-color: #B3B1DE;
+}
+
+.facepaintTeen {
+    composes: purpleImageWrapper;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+    width: auto;
+}
+
+.blueImageWrapper {
+    align-self: flex-start;
+    background-color: #98EDED;
+}
+
+.groupTeens {
+    composes: blueImageWrapper;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+    width: auto;
 }
