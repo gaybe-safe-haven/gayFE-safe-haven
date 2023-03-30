@@ -13,20 +13,20 @@ export default function ShelterPage({ params }) {
 			}
 		})
 		.then((data) => {
-			setShelter(data.data)
-			console.log(data)
+			setShelter(data.data.attributes)
+			console.log(data.data)
 		})
 	},[])
   return (
     <main>
-      <h1>{shelter.attributes.name}</h1>
+      <h1>{shelter.name}</h1>
       <div>
-        <p>{shelter.attributes.address}</p>
-        <p>{`${shelter.attributes.city}, ${shelter.attributes.state} ${shelter.attributes.zip}`}</p>
+        <p>{shelter.address}</p>
+        <p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
       </div>
       <div>
-        {shelter.attributes.websiteUrl && <a href={`${shelter.attributes.websiteUrl}`}>website</a>}
-        <p>{shelter.attributes.phoneNumber}</p>
+        {shelter.websiteUrl && <a href={`${shelter.websiteUrl}`}>website</a>}
+        <p>{shelter.phoneNumber}</p>
       </div>
     </main>
     
