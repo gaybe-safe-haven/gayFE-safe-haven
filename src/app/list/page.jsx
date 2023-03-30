@@ -25,7 +25,7 @@ export default function List() {
 
 	// const shelterData = await getShelterData('shelters')
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
-	const mappedData = shelterData.map(data => <p><Link href={`/list/${data.id}`} key={data.attributes.id} >{data.attributes.name}</Link></p>)
+	const mappedData = shelterData.map(data => <p key={data.attributes.id}><Link href={`/list/${data.id}`}  >{data.attributes.name}</Link></p>)
 	return (
 		<main className={styles.main}>
 			<p>list</p>
