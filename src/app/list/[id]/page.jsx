@@ -1,6 +1,6 @@
 "use client"
 import { getShelterData } from '../../../apiCalls'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 export default function ShelterPage({ params }) {
 	const [shelter, setShelter] = useState({})
@@ -14,21 +14,42 @@ export default function ShelterPage({ params }) {
 		})
 		.then((data) => {
 			setShelter(data.data.attributes)
-			console.log(data.data)
+			console.log(data.data.data)
 		})
 	},[])
+
+  console.log(shelter.name)
   return (
     <main>
       <h1>{shelter.name}</h1>
       <div>
-        <p>{shelter.address}</p>
+        <p>{shelter.streetAddress}</p>
         <p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
       </div>
       <div>
         {shelter.websiteUrl && <a href={`${shelter.websiteUrl}`}>website</a>}
         <p>{shelter.phoneNumber}</p>
       </div>
+      <section>
+        <div>
+          <p>{shelter.avgStaff}</p>
+          <img src={'/flag.png'} />
+        </div>
+        <div>
+          <p>{shelter.avgSafety}</p>
+          <img src={'/home.png'} />
+        </div>
+        <div>
+          <p>{shelter.avgClean}</p>
+          <img src={'/mop.png'} />
+        </div>
+      </section>
+      <div>
+        <p>stayed here?</p>
+        <p>rate your experience</p>
+      </div>
     </main>
-    
+
   )
 }
+
