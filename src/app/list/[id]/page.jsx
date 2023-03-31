@@ -20,7 +20,9 @@ export default function ShelterPage({ params }) {
 	},[])
 
   const submitReview = (review) => {
-
+    //post
+    //update state to show success or error
+    //redo get request
   }
 
   return (
