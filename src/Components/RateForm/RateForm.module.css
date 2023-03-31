@@ -3,6 +3,19 @@
 }
 
 .icon {
-  height: 3vh;
-  width: 3vw;
+  height: 46px;
+  width: 46px;
+}
+
+.submit {
+  background-color: #ABD757;
+  border: 1px solid #066161;
+  border-radius: 2px;
+  color: #066161;
+  font-size: 20px;
+}
+
+.label {
+  font-size: 10px;
+  color: #066161;
 }
