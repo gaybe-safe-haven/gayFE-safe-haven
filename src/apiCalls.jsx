@@ -5,7 +5,7 @@ export const getShelterData = (path) => {
 
 
 export const addShelter = (newShelter) => {
-	const postURL = "https://postman-echo.com/shelters"
+	const postURL = "https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters"
 	fetch(postURL, {
 		method: 'POST',
 		headers: {'Content-Type': 'application/json'},
