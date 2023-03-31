@@ -3,8 +3,6 @@ import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
 import { useState } from "react";
 
-const message = document.querySelector(".message")
-
 export default function Form() {
   const [formData, setFormData] = useState(
     {
