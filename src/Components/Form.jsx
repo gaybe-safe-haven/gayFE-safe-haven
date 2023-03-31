@@ -1,5 +1,6 @@
 "use client"
 import styles from "./Form.module.css";
+import { addShelter } from "../apiCalls";
 import { useState } from "react";
 
 export default function Form() {
@@ -13,7 +14,7 @@ export default function Form() {
       website: ""
     }
   )
-  const [newShelter, setNewShelter] = useState({})
+  // const [newShelter, setNewShelter] = useState({})
 
   function handleChange(e) {
     setFormData(prevFormData => {
@@ -26,11 +27,14 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    setNewShelter(formData)
-    clearInputs()
+    addShelter(formData)
+    console.log('A', formData)
+    // clearInputs()
   }
 
   function clearInputs() {
+    // addShelter(newShelter)
+    // console.log('B', newShelter)
     setFormData(
       {
         name: "",
@@ -43,23 +47,8 @@ export default function Form() {
     )
   }
 
-  function addShelter(newShelter) {
-    fetch("https://postman-echo.com/shelters", {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(newShelter)
-    })
-    .then(response => {
-      if (response.ok) {
-        return response.json()
-      } else {
-        return Promise.reject(response.status)
-      }
-    })
-  }
-
     return (
-      <form id="addForm" onSubmit={handleSubmit} className={styles.formContainer}>
+      <form id="addForm" className={styles.formContainer}>
         <h3 className={styles.formHeading}>Add A Shelter</h3>
         <div className={styles.inputContainer}>
           <input 
@@ -121,7 +110,7 @@ export default function Form() {
             onChange={handleChange}
           />
         </div>
-        <button className={styles.button}>Add Shelter</button>
+        <button className={styles.button} onClick={ (e) => handleSubmit(e) }>Add Shelter</button>
       </form>    
     )
 }
