@@ -1,6 +1,22 @@
 import styles from "./RateForm.module.css";
+import { useState, useEffect } from 'react'
 
-export default function RateForm() {
+export default function RateForm({ id }) {
+  const [review, setReview] = useState({
+    cleanliness: 5,
+    safety: 5,
+    staff: 5,
+  })
+
+  handleChange = () => {
+
+  }
+
+  handleSubmit = () => {
+
+  }
+
+
   return (
   <form className={styles.review}>
     <p className={styles.label}>Staff was LGBTQ friendly</p>
