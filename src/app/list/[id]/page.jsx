@@ -19,7 +19,7 @@ export default function ShelterPage({ params }) {
 		})
 	},[])
 
-  submitReview = (review) => {
+  const submitReview = (review) => {
 
   }
 
