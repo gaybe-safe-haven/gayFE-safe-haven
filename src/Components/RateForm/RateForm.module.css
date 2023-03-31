@@ -1,10 +1,22 @@
 .review {
   border: #E9007E solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 1vh;
 }
 
 .icon {
   height: 46px;
   width: 46px;
+  margin: 1vh;
 }
 
 .submit {
@@ -12,7 +24,8 @@
   border: 1px solid #066161;
   border-radius: 2px;
   color: #066161;
-  font-size: 20px;
+  font-size: 16px;
+  width: 40vw;
 }
 
 .label {
