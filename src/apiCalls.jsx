@@ -4,19 +4,14 @@ export const getShelterData = (path) => {
 }
 
 
-export const addShelter = (newShelter) => {
+
+export const postData = (newData) => {
 	const postURL = "https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters"
-	fetch(postURL, {
+
+	return fetch(postURL, {
 		method: 'POST',
 		headers: {'Content-Type': 'application/json'},
-		body: JSON.stringify(newShelter)
-	})
-	.then(response => {
-		if (response.ok) {
-			return response.json()
-		} else {
-			return Promise.reject(response.status)
-		}
+		body: JSON.stringify(newData)
 	})
 }
 
