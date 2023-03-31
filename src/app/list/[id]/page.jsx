@@ -1,6 +1,7 @@
 "use client"
 import { getShelterData } from '../../../apiCalls'
 import { useState, useEffect } from 'react'
+import RateForm from '../../../components/RateForm/RateForm.jsx'
 
 export default function ShelterPage({ params }) {
 	const [shelter, setShelter] = useState({})
@@ -18,7 +19,10 @@ export default function ShelterPage({ params }) {
 		})
 	},[])
 
-  console.log(shelter.name)
+  submitReview = (review) => {
+
+  }
+
   return (
     <main>
       <h1>{shelter.name}</h1>
@@ -48,6 +52,7 @@ export default function ShelterPage({ params }) {
         <p>stayed here?</p>
         <p>rate your experience</p>
       </div>
+      <RateForm id={params.id} submitReview={submitReview} />
     </main>
 
   )
