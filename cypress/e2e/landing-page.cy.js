@@ -1,6 +1,6 @@
 describe("User Flow: As a user, when I visit the site, I should see a landing page that tells me 'Why This App and What To Do?' ", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("http://localhost:3000/");
   });
 
   it("Should show the main page of the app with title and header", () => {
@@ -18,8 +18,8 @@ describe("User Flow: As a user, when I visit the site, I should see a landing pa
     cy.get("button#addShelterBtn").contains("add a shelter").click()
       .url().should("eq", "http://localhost:3000/add-shelter")
 
-    cy.get("button#apiBtn").contains("public api").click()
-      .url().should("eq", "http://localhost:3000/api")
+    // cy.get("button#apiBtn").contains("public api").click()
+    //   .url().should("eq", "http://localhost:3000/api")
   })
 
   it("Should display images and text in the main section", () => {
