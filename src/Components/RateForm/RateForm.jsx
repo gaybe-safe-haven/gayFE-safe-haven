@@ -15,8 +15,8 @@ export default function RateForm({ id, submitReview }) {
       staff: '',
     })
   }
+  
   const handleChange = (target) => {
-
     setReview(prevState => {
       return {
         ...prevState,
@@ -29,13 +29,12 @@ export default function RateForm({ id, submitReview }) {
     e.preventDefault()
     const newReview = {
       ...review,
-      shelterId
+      id
     }
     console.log(newReview)
     submitReview(newReview)
     clearInputs()
   }
-
 
   return (
   <form className={styles.review}>
@@ -56,7 +55,7 @@ export default function RateForm({ id, submitReview }) {
     </div>
     <p className={styles.label}>Please only submit a rating if you have stayed at this shelter.</p> 
     <p className={styles.label}>This is community-driven information and we trust you to accurately report your experience.</p>
-    <button className={styles.submit}>submit review</button>
+    <button className={styles.submit} onClick={(e) => handleSubmit(e)}>submit review</button>
   </form>
   )
 }
