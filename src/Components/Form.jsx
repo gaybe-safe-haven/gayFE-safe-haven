@@ -29,7 +29,6 @@ export default function Form() {
     setNewShelter(formData)
     clearInputs()
   }
-  console.log('C', newShelter)
 
   function clearInputs() {
     setFormData(
