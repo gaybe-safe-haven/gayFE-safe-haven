@@ -1,19 +1,33 @@
 import styles from "./RateForm.module.css";
 import { useState, useEffect } from 'react'
 
-export default function RateForm({ id }) {
+export default function RateForm({ id, submitReview }) {
   const [review, setReview] = useState({
     cleanliness: 5,
     safety: 5,
     staff: 5,
   })
 
-  handleChange = () => {
-
+  clearInputs = () => {
+    setReview({
+      cleanliness: 5,
+      safety: 5,
+      staff: 5,
+    })
+  }
+  handleChange = (e) => {
+    console.log(e.target)
   }
 
-  handleSubmit = () => {
-
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const newReview = {
+      ...review,
+      shelterId
+    }
+    console.log(newReview)
+    submitReview(newReview)
+    clearInputs
   }
 
 
