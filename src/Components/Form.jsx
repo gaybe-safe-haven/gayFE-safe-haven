@@ -1,7 +1,9 @@
 "use client"
 import styles from "./Form.module.css";
-import { addShelter } from "../apiCalls";
+import { postData } from "../apiCalls";
 import { useState } from "react";
+
+const message = document.querySelector(".message")
 
 export default function Form() {
   const [formData, setFormData] = useState(
@@ -15,6 +17,8 @@ export default function Form() {
     }
   )
 
+  const [postSuccess, setPostSuccess] = useState(false)
+
   function handleChange(e) {
     setFormData(prevFormData => {
       return {
@@ -26,7 +30,18 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    addShelter(formData)
+    postData(formData)
+    .then(response => {
+      if (response.ok) {
+        return response.json()
+      } else {
+        return Promise.reject(response.status)
+      }
+    })
+    .then(data => {
+      setPostSuccess(true)
+    })
+    setTimeout(() => {setPostSuccess(false)}, 3000)
     clearInputs()
   }
 
@@ -107,6 +122,7 @@ export default function Form() {
         />
       </div>
       <button type="submit" className={styles.button} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
+      {postSuccess && <p className="message">Your addition was successful!</p> }
     </form>    
   )
 }
