@@ -1,6 +1,7 @@
 "use client"
 import { getShelterData } from '../../../apiCalls'
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import styles from "../../page.module.css"
 
 export default function ShelterPage({ params }) {
 	const [shelter, setShelter] = useState({})
@@ -20,7 +21,7 @@ export default function ShelterPage({ params }) {
 
   console.log(shelter.name)
   return (
-    <main>
+    <main className={styles.main}>
       <h1>{shelter.name}</h1>
       <div>
         <p>{shelter.streetAddress}</p>
