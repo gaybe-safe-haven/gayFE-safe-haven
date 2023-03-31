@@ -1,9 +1,9 @@
-"use client"
-import styles from "../page.module.css"
-import {getShelterData} from "../../apiCalls"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import LoadingListPage from "./loading"
+"use client";
+import styles from "../page.module.css";
+import { getShelterData } from "../../apiCalls";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import LoadingListPage from "./loading";
 
 
 export default function List() {
@@ -44,7 +44,9 @@ export default function List() {
 	}
 
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
-	const mappedData = shelterData.map(data => <p key={data.attributes.id}><Link href={`/list/${data.id}`}  >{data.attributes.name}</Link></p>)
+
+	const mappedData = shelterData.map(data => <p key={data.attributes.id} ><Link href={`/list/${data.id}`}>{data.attributes.name}</Link></p>)
+
 	return (
 		<main className={styles.main}>
 			<p>list</p>
