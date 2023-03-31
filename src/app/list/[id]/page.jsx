@@ -9,9 +9,8 @@ export default function ShelterPage({ params }) {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    console.log("params: ", params)
-	  useEffect(() => {
-		    getShelterData(params) //this is hard coded for mock data, change to params.id for real data
+    useEffect(() => {
+		    getShelterData("list/1") //this is hard coded for mock data, change to params.id for real data
 		    .then((data) => {
 			      if (data.ok) {
 				        return data.json()
