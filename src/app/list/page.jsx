@@ -1,9 +1,11 @@
 "use client";
 import styles from "../page.module.css";
+import listPage from "./listPage.module.css"
 import { getShelterData } from "../../apiCalls";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
+import { BiCheckboxChecked, BiCheckbox } from "react-icons/bi";
 
 
 export default function List() {
@@ -45,20 +47,24 @@ export default function List() {
 
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
 
-	const mappedData = shelterData.map(data => <p key={data.attributes.id} ><Link href={`/list/${data.id}`}>{data.attributes.name}</Link></p>)
+	const mappedData = shelterData.map(data => {
+		const validation = data.attributes.verified ? <BiCheckboxChecked className={listPage.validateIcon} /> : <BiCheckbox className={listPage.notValidatedIcon}/>;
+		return <div 
+				key={data.attributes.id} 
+				className={listPage.listItemContainer}>
+					<Link href={`/list/${data.id}`}>
+						{data.attributes.name}
+					</Link>
+					{validation}
+				</div>;
+	})
 
 	return (
 		<main className={styles.main}>
-			<p>list</p>
+			<h2>Shelter List</h2>
 			<div>
 				{mappedData}
 			</div>
 		</main>
 	)
 }
-
-// function LoadingListPage() {
-// 	return (
-// 		<p>loading...</p>
-// 	)
-// }
