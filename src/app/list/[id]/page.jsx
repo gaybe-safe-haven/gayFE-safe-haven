@@ -1,7 +1,7 @@
 "use client";
 import { getShelterData, postData } from '../../../apiCalls';
 import { useState, useEffect } from 'react';
-import styles from "../../page.module.css";
+import styles from "./shelter.module.css";
 import LoadingShelterPage from './loading';
 import RateForm from '../../../components/RateForm/RateForm.jsx'
 
