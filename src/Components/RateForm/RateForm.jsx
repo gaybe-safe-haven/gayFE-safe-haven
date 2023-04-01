@@ -7,6 +7,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     safety: '',
     staff: '',
   })
+  const [missing, setMissing] = useState('')
 
   const clearInputs = () => {
     setReview({
@@ -34,8 +35,12 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
       id
     }
     console.log(newReview)
-    submitReview(newReview)
-    clearInputs()
+    if(newReview.cleanliness && newReview.safety && newReview.staff) {
+      submitReview(newReview)
+      clearInputs()
+    } else {
+      setMissing('please rate all fields before submitting')
+    }
   }
   if(reviewed) {
     return (
@@ -66,6 +71,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     <p className={styles.label}>This is community-driven information and we trust you to accurately report your experience.</p>
     <button className={styles.submit} onClick={(e) => handleSubmit(e)}>submit review</button>
     {error && <p>your review was not processed, please try again</p>}
+    {missing && <p>{missing}</p>}
   </form>
   )
 }
