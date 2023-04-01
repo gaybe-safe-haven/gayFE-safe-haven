@@ -1,5 +1,5 @@
 import styles from "./RateForm.module.css";
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function RateForm({ id, reviewed, error, submitReview }) {
   const [review, setReview] = useState({
@@ -16,8 +16,6 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
       staff: '',
     })
   }
-
-  //add useEffect to rerender if props have changed??
   
   const handleChange = (target) => {
     setReview(prevState => {
