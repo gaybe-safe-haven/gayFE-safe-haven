@@ -32,7 +32,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
       ...review,
       id
     }
-    console.log(newReview)
+  
     if(newReview.cleanliness && newReview.safety && newReview.staff) {
       submitReview(newReview)
       clearInputs()
