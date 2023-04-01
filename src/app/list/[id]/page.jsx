@@ -54,11 +54,11 @@ export default function ShelterPage({ params }) {
     .then(data => {
       console.log(data)
       setReviewed(data.data.attributes)
+      getShelterData()
     })
     .catch(error => {
       setRevError(error)
     })
-
     //update state to show success or error
     //redo get request
   }
@@ -92,7 +92,7 @@ export default function ShelterPage({ params }) {
         <p>stayed here?</p>
         <p>rate your experience</p>
       </div>
-      <RateForm id={params.id} submitReview={submitReview} />
+      <RateForm id={params.id} error={revError} reviewed={reviewed} submitReview={submitReview} />
     </main>
 
   )
