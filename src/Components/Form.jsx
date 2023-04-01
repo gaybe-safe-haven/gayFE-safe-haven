@@ -28,7 +28,7 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    postData(formData)
+    postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
         return response.json()
