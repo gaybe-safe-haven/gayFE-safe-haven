@@ -81,15 +81,17 @@ export default function ShelterPage({ params }) {
 
   return (
     <main className={styles.main}>
+      <section className={styles.contact}>
       <h1 className={styles.name}>{shelter.name}</h1>
       <div className={styles.address}>
         <p>{shelter.streetAddress}</p>
         <p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
       </div>
-      <div className={styles.address}>
+      <div className={styles.clientServices}>
         {shelter.websiteUrl && <a href={`${shelter.websiteUrl}`}>website</a>}
         <p>{shelter.phoneNumber}</p>
       </div>
+      </section>
       <section className={styles.reviews}>
         <article className={styles.scores}>
         <div>
