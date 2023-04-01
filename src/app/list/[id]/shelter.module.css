@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact {
+  font-size: 22px;
+  margin: 1em;
+}
+
+.name {
+  font-size: 30px;
+}
+
+.clientServices {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.icons {
+  height: 60px;
+  width: 60px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: #ABD757 solid 3px;
+  height: 30vh;
+  width: 90vw;
+  font-size: 13px;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 34px;
+}
+
+.verify {
+  font-size: 12px;
+  padding: 1vh;
+}
