@@ -1,5 +1,6 @@
 .main {
     display: flex;
+    flex: 1;
     flex-direction: column;
     font-family: inherit;
     justify-content: flex-start;
@@ -8,7 +9,9 @@
 
 .h2Styling {
     color: #1c1a51;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem;
 }
 
 .pinkPTag {
