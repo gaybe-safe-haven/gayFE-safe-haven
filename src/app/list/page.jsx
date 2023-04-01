@@ -4,7 +4,7 @@ import styles from "../page.module.css";
 import { getShelterData } from "../../apiCalls";
 import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
-import Card from "@/components/Card/Card";
+import Card from "@/Components/Card/Card";
 
 
 export default function List() {
