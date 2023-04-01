@@ -12,7 +12,7 @@ export default function ShelterPage({ params }) {
     const [reviewed, setReviewed] = useState('')
     const [revError, setRevError] = useState('')
 
-    const getShelterData = () => {
+    useEffect(() => {
       getShelterData("shelters/1") //this is hard coded for mock data, change to params.id for real data
       .then((data) => {
         if (data.ok) {
@@ -30,10 +30,27 @@ export default function ShelterPage({ params }) {
       .finally(() => {
           setIsLoading(false)
       })
-    }
+    }, [])
+
     useEffect(() => {
-      getAllShelterData()
-    },[])
+      getShelterData("shelters/1") //this is hard coded for mock data, change to params.id for real data
+      .then((data) => {
+        if (data.ok) {
+          return data.json()
+        } else {
+              throw new Error("Failed to fetch shelter data")
+          }
+      })
+      .then((data) => {
+        setShelter(data.data.attributes)
+      })
+      .catch((error) => {
+          setError(error.message)
+      })
+      .finally(() => {
+          setIsLoading(false)
+      })
+    }, [reviewed])
 
     if (isLoading) {
       return <LoadingShelterPage />
@@ -54,7 +71,6 @@ export default function ShelterPage({ params }) {
     .then(data => {
       console.log(data)
       setReviewed(data.data.attributes)
-      getShelterData()
     })
     .catch(error => {
       setRevError(error)

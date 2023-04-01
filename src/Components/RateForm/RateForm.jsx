@@ -1,7 +1,7 @@
 import styles from "./RateForm.module.css";
 import { useState, useEffect } from 'react'
 
-export default function RateForm({ id, submitReview }) {
+export default function RateForm({ id, reviewed, error, submitReview }) {
   const [review, setReview] = useState({
     cleanliness: '',
     safety: '',
@@ -15,6 +15,8 @@ export default function RateForm({ id, submitReview }) {
       staff: '',
     })
   }
+
+  //add useEffect to rerender if props have changed??
   
   const handleChange = (target) => {
     setReview(prevState => {
@@ -34,6 +36,13 @@ export default function RateForm({ id, submitReview }) {
     console.log(newReview)
     submitReview(newReview)
     clearInputs()
+  }
+  if(reviewed) {
+    return (
+      <section>
+        <p>thank you for taking the time to share your experience with us</p>
+      </section>
+    )
   }
 
   return (
@@ -56,6 +65,7 @@ export default function RateForm({ id, submitReview }) {
     <p className={styles.label}>Please only submit a rating if you have stayed at this shelter.</p> 
     <p className={styles.label}>This is community-driven information and we trust you to accurately report your experience.</p>
     <button className={styles.submit} onClick={(e) => handleSubmit(e)}>submit review</button>
+    {error && <p>your review was not processed, please try again</p>}
   </form>
   )
 }
