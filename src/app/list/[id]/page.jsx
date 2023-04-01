@@ -91,8 +91,15 @@ export default function ShelterPage({ params }) {
         {shelter.websiteUrl && <a href={`${shelter.websiteUrl}`}>website</a>}
         <p>{shelter.phoneNumber}</p>
       </div>
+      <div className={styles.verify} >
+      {shelter.verified ? 
+          <p>the contact information for this shelter has been verified by our team</p> :
+          <p>the contact information for this shelter was submitted by a community member and has not been verified</p>
+        }
+      </div>
       </section>
       <section className={styles.reviews}>
+        <h2>Community Reviews</h2>
         <article className={styles.scores}>
         <div>
           <p>{shelter.avgStaff}</p>
@@ -107,15 +114,8 @@ export default function ShelterPage({ params }) {
           <img className={styles.icons} src={'/mop.png'} />
         </div>
         </article>
-        
-        {shelter.verified ? 
-          <p className={styles.verify}>the contact information for this shelter has been verified by our team</p> :
-          <p className={styles.verify}>the contact information for this shelter was submitted by a community member and has not been verified</p>}
+        <p>these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
       </section>
-      <div>
-        <p>stayed here?</p>
-        <p>rate your experience</p>
-      </div>
       <RateForm id={params.id} error={revError} reviewed={reviewed} submitReview={submitReview} />
     </main>
 

@@ -7,7 +7,9 @@
 
 .contact {
   font-size: 22px;
+  margin: 1em;
 }
+
 .name {
   font-size: 30px;
 }
@@ -30,6 +32,7 @@
   border: #ABD757 solid 3px;
   height: 30vh;
   width: 90vw;
+  font-size: 13px;
 }
 
 .scores {
@@ -41,4 +44,5 @@
 
 .verify {
   font-size: 12px;
+  padding: 1vh;
 }

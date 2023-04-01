@@ -50,23 +50,26 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
 
   return (
   <form className={styles.review}>
-    <p className={styles.label}>Staff was LGBTQ friendly</p>
+    <div className={styles.invitation}>
+        <h2>Rate Your Experience</h2>
+        <p className={styles.plea}>Please only submit a rating if you have received services here</p> 
+    </div>
     <div className={styles.rating}>
       <label htmlFor="staff"><img src="/flag.png" alt="lgbtq flag icon" className={styles.icon} /></label>
       <input type="range" id="staff" name="staff" min="0" max="10" value={review.staff} onChange={(e) => handleChange(e.target)} />
     </div>
-    <p className={styles.label}>I was physically safe</p>
+    <p className={styles.label}>Staff was LGBTQ friendly</p>
     <div className={styles.rating}>
       <label htmlFor="staff"><img src="/home.png" alt="safe house icon" className={styles.icon} /></label>
       <input type="range" id="safety" name="safety" min="0" max="10" value={review.safety} onChange={(e) => handleChange(e.target)}/>
     </div>
-    <p className={styles.label}>Facility was clean and sanitary</p>
+    <p className={styles.label}>I was physically safe</p>
     <div className={styles.rating}>
       <label htmlFor="staff"><img src="/mop.png" alt="mop icon" className={styles.icon} /></label>
       <input type="range" id="cleanliness" name="cleanliness" min="0" max="10" value={review.cleanliness} onChange={(e) => handleChange(e.target)}/>
     </div>
-    <p className={styles.label}>Please only submit a rating if you have stayed at this shelter.</p> 
-    <p className={styles.label}>This is community-driven information and we trust you to accurately report your experience.</p>
+    <p className={styles.label}>Facility was clean and sanitary</p>
+    
     <button className={styles.submit} onClick={(e) => handleSubmit(e)}>submit review</button>
     {error && <p>your review was not processed, please try again</p>}
     {missing && <p>{missing}</p>}
