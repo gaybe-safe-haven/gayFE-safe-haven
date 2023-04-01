@@ -1,10 +1,14 @@
 import Image from "next/image";
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import styles from "./page.module.css";
 import imageStyles from "./styles/images.module.css";
 import makeupTeens from "../../public/makeup-teens.jpg";
 import facepaintTeenPic from "../../public/facepaint-teen.jpg";
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ 
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '700', '900' ]
+})
 
 export default function Home() {
   return (
