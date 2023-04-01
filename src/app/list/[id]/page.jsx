@@ -9,25 +9,30 @@ export default function ShelterPage({ params }) {
     const [shelter, setShelter] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [reviewed, setReviewed] = useState('')
+    const [revError, setRevError] = useState('')
 
+    const getShelterData = () => {
+      getShelterData("shelters/1") //this is hard coded for mock data, change to params.id for real data
+      .then((data) => {
+        if (data.ok) {
+          return data.json()
+        } else {
+              throw new Error("Failed to fetch shelter data")
+          }
+      })
+      .then((data) => {
+        setShelter(data.data.attributes)
+      })
+      .catch((error) => {
+          setError(error.message)
+      })
+      .finally(() => {
+          setIsLoading(false)
+      })
+    }
     useEffect(() => {
-		  getShelterData("shelters/1") //this is hard coded for mock data, change to params.id for real data
-        .then((data) => {
-          if (data.ok) {
-            return data.json()
-          } else {
-                throw new Error("Failed to fetch shelter data")
-            }
-        })
-        .then((data) => {
-          setShelter(data.data.attributes)
-        })
-        .catch((error) => {
-            setError(error.message)
-        })
-        .finally(() => {
-            setIsLoading(false)
-        })
+      getAllShelterData()
     },[])
 
     if (isLoading) {
@@ -47,12 +52,13 @@ export default function ShelterPage({ params }) {
       }
     })
     .then(data => {
-
+      console.log(data)
+      setReviewed(data.data.attributes)
     })
     .catch(error => {
-
+      setRevError(error)
     })
-    
+
     //update state to show success or error
     //redo get request
   }
