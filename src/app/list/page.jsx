@@ -52,7 +52,7 @@ export default function List() {
 		return <div 
 				key={data.attributes.id} 
 				className={listPage.listItemContainer}>
-					<Link href={`/list/${data.id}`}>
+					<Link href={`/list/${data.id}`} className={listPage.linkText}>
 						{data.attributes.name}
 					</Link>
 					{validation}
@@ -61,7 +61,7 @@ export default function List() {
 
 	return (
 		<main className={styles.main}>
-			<h2>Shelter List</h2>
+			<h2 className={styles.h2Styling}>Shelter List</h2>
 			<div>
 				{mappedData}
 			</div>
