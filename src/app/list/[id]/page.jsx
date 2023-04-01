@@ -81,28 +81,34 @@ export default function ShelterPage({ params }) {
 
   return (
     <main className={styles.main}>
-      <h1>{shelter.name}</h1>
-      <div>
+      <h1 className={styles.name}>{shelter.name}</h1>
+      <div className={styles.address}>
         <p>{shelter.streetAddress}</p>
         <p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
       </div>
-      <div>
+      <div className={styles.address}>
         {shelter.websiteUrl && <a href={`${shelter.websiteUrl}`}>website</a>}
         <p>{shelter.phoneNumber}</p>
       </div>
-      <section>
+      <section className={styles.reviews}>
+        <article className={styles.scores}>
         <div>
           <p>{shelter.avgStaff}</p>
-          <img src={'/flag.png'} />
+          <img className={styles.icons} src={'/flag.png'} />
         </div>
         <div>
           <p>{shelter.avgSafety}</p>
-          <img src={'/home.png'} />
+          <img className={styles.icons} src={'/home.png'} />
         </div>
         <div>
           <p>{shelter.avgClean}</p>
-          <img src={'/mop.png'} />
+          <img className={styles.icons} src={'/mop.png'} />
         </div>
+        </article>
+        
+        {shelter.verified ? 
+          <p className={styles.verify}>the contact information for this shelter has been verified by our team</p> :
+          <p className={styles.verify}>the contact information for this shelter was submitted by a community member and has not been verified</p>}
       </section>
       <div>
         <p>stayed here?</p>
