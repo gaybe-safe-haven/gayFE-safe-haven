@@ -10,7 +10,6 @@ export default function Card({data}) {
 
     return (
         <div 
-        key={data.attributes.id} 
         className={styles.listItemContainer}>
             <Link href={`/list/${data.id}`} className={styles.linkText}>
                 {data.attributes.name}
