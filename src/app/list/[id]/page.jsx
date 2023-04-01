@@ -1,5 +1,5 @@
 "use client";
-import { getShelterData } from '../../../apiCalls';
+import { getShelterData, postData } from '../../../apiCalls';
 import { useState, useEffect } from 'react';
 import styles from "../../page.module.css";
 import LoadingShelterPage from './loading';
@@ -38,7 +38,21 @@ export default function ShelterPage({ params }) {
       return <p>Error: {error}</p>
     }
   const submitReview = (review) => {
-    //post
+    postData(review, 'reviews')
+    .then(response => {
+      if(response.ok) {
+        return response.json()
+      } else {
+        throw new Error ('review failed to submit, please try again later')
+      }
+    })
+    .then(data => {
+
+    })
+    .catch(error => {
+
+    })
+    
     //update state to show success or error
     //redo get request
   }
