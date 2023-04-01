@@ -20,11 +20,7 @@ export default function ShelterPage({ params }) {
             }
         })
         .then((data) => {
-            if (data && data.data && data.data.length > 0) {
-                setShelter(data.data.attributes)
-            } else {
-                throw new Error("Empty response from server")
-            }
+          setShelter(data.data.attributes)
         })
         .catch((error) => {
             setError(error.message)
@@ -46,7 +42,7 @@ export default function ShelterPage({ params }) {
     //update state to show success or error
     //redo get request
   }
-  
+
   return (
     <main className={styles.main}>
       <h1>{shelter.name}</h1>
