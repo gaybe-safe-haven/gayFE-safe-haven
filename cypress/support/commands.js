@@ -1,6 +1,3 @@
-Cypress.Commands.add('getBySel', (selector, ...args) => {
-    return cy.get(` [data-test=${selector}]`, ...args)
-})
 
 // ***********************************************
 // This example commands.js shows you how to
