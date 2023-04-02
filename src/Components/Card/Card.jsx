@@ -6,13 +6,13 @@ import Link from "next/link";
 
 export default function Card({data}) {
 
-    const validation = data.attributes.verified ? <BiCheckboxChecked className={styles.validateIcon} /> : <BiCheckbox className={styles.notValidatedIcon}/>;
+    const validation = data.attributes.verified ? <BiCheckboxChecked id="validationIcon" alt="validated shelter" className={styles.validateIcon} /> : <BiCheckbox id="validationIcon" alt="not validated" className={styles.notValidatedIcon}/>;
 
     return (
         <div 
         id="shelterCard"
         className={styles.listItemContainer}>
-            <Link href={`/list/${data.id}`} className={styles.linkText}>
+            <Link href={`/list/${data.id}`} id="shelterLink" className={styles.linkText}>
                 {data.attributes.name}
             </Link>
             {validation}
