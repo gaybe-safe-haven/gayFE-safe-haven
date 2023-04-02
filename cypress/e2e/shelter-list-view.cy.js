@@ -15,6 +15,13 @@ describe("User Flow: As a user, I should be able to view a list of all of the su
 
   it("Should provide a link to a single shelter's display page", () => {
     cy.get("div#shelterCard > a#shelterLink").first().click()
+    cy.go("back")
+  })
+  
+  it("Should provide a link on every shelter's name", () => {
+    cy.get("div#shelterCard > a#shelterLink").should(($a) => {
+      expect($a).to.have.length(6)
+    })
   })
 
 })
