@@ -86,7 +86,7 @@ export default function ShelterPage({ params }) {
     <main className={styles.main}>
       <div className={shelterPage.mainContainer}>
         <section className={shelterPage.contact}>
-        <h1 className={shelterPage.name}>{shelter.name}</h1>
+        <h2 className={shelterPage.name}>{shelter.name}</h2>
         <div className={shelterPage.address}>
           <p>{shelter.streetAddress}</p>
           <p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
