@@ -1,6 +1,7 @@
+//list page
+
 "use client";
 import styles from "../page.module.css";
-// import listPage from "./listPage.module.css"
 import { getShelterData } from "../../apiCalls";
 import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
