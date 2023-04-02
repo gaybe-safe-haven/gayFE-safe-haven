@@ -9,15 +9,23 @@ describe("User Flow: As a user, when I visit the site, I should see a landing pa
   })
 
   it("Should have a nav bar that navigates to different page views using Link", () => {
+    cy.get('button[alt="about"]')
+      .should("be.visible")
     cy.get("button#aboutBtn").contains("about").click()
       .url().should("eq", "http://localhost:3000/about")
 
+    cy.get('button[alt="list"]')
+      .should("be.visible")
     cy.get("button#seeListBtn").contains("list").click()
       .url().should("eq", "http://localhost:3000/list")
 
+    cy.get('button[alt="add a shelter"]')
+      .should("be.visible")
     cy.get("button#addShelterBtn").contains("add a shelter").click()
       .url().should("eq", "http://localhost:3000/add-shelter")
 
+    cy.get('button[alt="public api"]')
+      .should("be.visible")
     cy.get("button#apiBtn").contains("public api").click()
       .url().should("eq", "http://localhost:3000/api")
   })
