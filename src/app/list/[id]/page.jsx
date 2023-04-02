@@ -1,10 +1,11 @@
+//single shelter display (and single shelter form)
+
 "use client";
 import { getShelterData, postData } from '../../../apiCalls';
 import { useState, useEffect } from 'react';
 import styles from "./shelter.module.css";
 import LoadingShelterPage from './loading';
 import RateForm from '@/Components/RateForm/RateForm';
-//import RateForm from '../../../components/RateForm/RateForm'
 
 export default function ShelterPage({ params }) {
     const [shelter, setShelter] = useState({});

@@ -1,9 +1,10 @@
+//about page
+
 import Image from "next/image";
 import styles from "../page.module.css";
 import imageStyles from "../styles/images.module.css";
 import hairPaintTeen from "../../../public/hair-paint-teen.jpg";
 import groupTeensPic from "../../../public/group-teens.jpg";
-import { images } from "../../../next.config";
 
 export default function About() {
   return (

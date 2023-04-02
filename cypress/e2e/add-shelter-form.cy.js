@@ -56,4 +56,6 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
 
     cy.get("p").contains("Your addition was successful!").should("exist")
   })
+
+  //Should we test the POST request?
 })
