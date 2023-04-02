@@ -10,6 +10,7 @@ export default function Card({data}) {
 
     return (
         <div 
+        id="shelterCard"
         className={styles.listItemContainer}>
             <Link href={`/list/${data.id}`} className={styles.linkText}>
                 {data.attributes.name}

@@ -1,0 +1,104 @@
+[
+        {
+            "id": "1",
+            "type": "shelter",
+            "attributes": {
+                "name": "Thrive Youth Center",
+                "streetAddress": "1 Haven for Hope Way",
+                "city": "San Antonio",
+                "state": "TX",
+                "zip": "78207",
+                "websiteUrl": null,
+                "phoneNumber": "(312) 987-4583",
+                "verified": false,
+                "avgStaff": 9.8,
+                "avgSafety": 8.6,
+                "avgClean": 8.2
+            }
+        },
+        {
+            "id": "2",
+            "type": "shelter",
+            "attributes": {
+                "name": "Montrose Grace Pl",
+                "streetAddress": "2515 Waugh Dr, Houston, TX 77006",
+                "city": "Houston",
+                "state": "TX",
+                "zip": "77006",
+                "websiteUrl": "http://montrosegraceplace.org/",
+                "phoneNumber": "+18322390824",
+                "verified": false,
+                "avgStaff": null,
+                "avgSafety": null,
+                "avgClean": null
+            }
+        },
+        {
+            "id": "3",
+            "type": "shelter",
+            "attributes": {
+                "name": "Test Shelter",
+                "streetAddress": "12341 Test Street",
+                "city": "TestCity",
+                "state": "TX",
+                "zip": "99006",
+                "websiteUrl": "http://montrosegraceplace.org/",
+                "phoneNumber": "+18322390824",
+                "verified": true,
+                "avgStaff": 5.4,
+                "avgSafety": 3.6,
+                "avgClean": 9.8
+            }
+        },
+        {
+            "id": "4",
+            "type": "shelter",
+            "attributes": {
+                "name": "Test Shelter 3",
+                "streetAddress": "12341 Test Street",
+                "city": "TestCity",
+                "state": "CA",
+                "zip": "98006",
+                "websiteUrl": "http://montrosegraceplace.org/",
+                "phoneNumber": "+18322390824",
+                "verified": false,
+                "avgStaff": 7.4,
+                "avgSafety": 6.6,
+                "avgClean": 0.8
+            }
+        },
+        {
+            "id": "5",
+            "type": "shelter",
+            "attributes": {
+                "name": "Test Shelter",
+                "streetAddress": "12341 Test Street",
+                "city": "TestCity",
+                "state": "TX",
+                "zip": "99006",
+                "websiteUrl": "http://montrosegraceplace.org/",
+                "phoneNumber": "+18322390824",
+                "verified": true,
+                "avgStaff": 5.4,
+                "avgSafety": 3.6,
+                "avgClean": 9.8
+            }
+        },
+        {
+            "id": "6",
+            "type": "shelter",
+            "attributes": {
+                "name": "Mock Shelter",
+                "streetAddress": "12341 Experimental Street",
+                "city": "TestCity",
+                "state": "GA",
+                "zip": "98006",
+                "websiteUrl": "http://montrosegraceplace.org/",
+                "phoneNumber": "+18322390824",
+                "verified": false,
+                "avgStaff": 9.4,
+                "avgSafety": 6.6,
+                "avgClean": 4.8
+            }
+        }
+    ]
