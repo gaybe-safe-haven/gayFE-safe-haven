@@ -9,7 +9,7 @@ export const checkZip = (input) => {
 }
 
 export const checkSite = (input) => {
-  if (input.contains('http://') || !input.contains('www.') {
+  if (input.contains('http://') || !input.contains('www.')) {
     return false
   }
   return true
