@@ -64,7 +64,7 @@ export default function ShelterPage({ params }) {
       return <p>Error: {error}</p>
     }
 
-		if (!shleter) {
+		if (!shelter) {
 			notFound()
 		}
 
