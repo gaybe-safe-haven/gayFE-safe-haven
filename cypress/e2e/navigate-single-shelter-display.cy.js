@@ -5,7 +5,8 @@ describe("User Flow: As a user, when I select one of the shelters, I will be tak
   });
 
   it("Should take the user to a single shelter display when the user clicks on a shelter link from the list", () => {
-    cy.get("div#shelterCard > a#shelterLink").first().click()
+    cy.get(".page_main__ibFHK > :nth-child(2) > :nth-child(1)").first().click()
     cy.go("forward")
   })
 })
+

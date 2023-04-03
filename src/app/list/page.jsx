@@ -1,5 +1,3 @@
-//list page
-
 "use client";
 import styles from "../page.module.css";
 import { getShelterData } from "../../apiCalls";
@@ -55,7 +53,7 @@ export default function List() {
 	return (
 		<main className={styles.main}>
 			{/* //filter container goes here */}
-			<h2 id="shelterList" className={styles.h2Styling}>Shelter List</h2>
+			<h2 className={styles.h2Styling}>Shelter List</h2>
 			<div>
 				{mappedData}
 			</div>

@@ -1,5 +1,3 @@
-//single shelter display (and single shelter form)
-
 "use client";
 import { getShelterData, postData } from '../../../apiCalls';
 import { useState, useEffect } from 'react';
@@ -86,7 +84,7 @@ export default function ShelterPage({ params }) {
   return (
     <main className={styles.main}>
       <div className={shelterPage.mainContainer}>
-        <section id="shelterData"className={shelterPage.contact}>
+        <section className={shelterPage.contact}>
           <h2 className={shelterPage.name}>{shelter.name}</h2>
           <div className={shelterPage.address}>
             <p>{shelter.streetAddress}</p>
@@ -96,40 +94,37 @@ export default function ShelterPage({ params }) {
             {shelter.websiteUrl && <a href={`http://${shelter.websiteUrl}`}>website</a>}
             <p>{shelter.phoneNumber}</p>
           </div>
-          <div id="verified" className={shelterPage.verify} >
+          <div className={shelterPage.verify} >
           {shelter.verified ? 
               <p>the contact information for this shelter has been verified by our team</p> :
               <p>the contact information for this shelter was submitted by a community member and has not been verified</p>
             }
           </div>
         </section>
-
-        <section id="communityReviews" className={shelterPage.reviews}>
+        <section className={shelterPage.reviews}>
           <h2>Community Reviews</h2>
           {!shelterPage.reviews 
             ? <p>There are no reviews of this shelter</p>  
             :<article className={shelterPage.scores}>
               <div>
                 <p>{shelter.avgStaff}</p>
-                <img id="flag" className={shelterPage.icons} src={'/flag.png'} />
+                <img className={shelterPage.icons} src={'/flag.png'} />
               </div>
               <div>
                 <p>{shelter.avgSafety}</p>
-                <img id="home" className={shelterPage.icons} src={'/home.png'} />
+                <img className={shelterPage.icons} src={'/home.png'} />
               </div>
               <div>
                 <p>{shelter.avgClean}</p>
-                <img id="mop" className={shelterPage.icons} src={'/mop.png'} />
+                <img className={shelterPage.icons} src={'/mop.png'} />
               </div>
             </article>
           }
           <p>these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
         </section>
-
-				<RateForm id={params.id} error={revError} reviewed={reviewed} submitReview={submitReview} />
-			</div>
-		</main>
-
-	)
+        <RateForm id={params.id} error={revError} reviewed={reviewed} submitReview={submitReview} />
+      </div>
+    </main>
+  )
 }
 
