@@ -66,5 +66,14 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("form > p").contains("please rate all fields before submitting")
 
   })
+
+  it("Should display a message upon successful form submission", () => {
+    cy.get("form").within((form) => {
+      cy.get("input[name='staff']").invoke("val", 8).trigger("change")
+      cy.get("input[name='safety']").invoke("val", 9).trigger("change")
+      cy.get("input[name='cleanliness']").invoke("val", 4).trigger("change")
+      cy.get("button#rateFormSubmitButton").contains("submit review").click()
+    })
+  })
 })
 
