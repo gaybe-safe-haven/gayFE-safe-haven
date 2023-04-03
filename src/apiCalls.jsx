@@ -1,5 +1,5 @@
 export const getShelterData = (path) => {
-	const url = `https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/${path}`
+	const url = `https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.o/${path}`
 	return fetch (url, { cache: "no-store"})
 }
 
