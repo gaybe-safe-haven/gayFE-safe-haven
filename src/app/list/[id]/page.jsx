@@ -106,18 +106,18 @@ export default function ShelterPage({ params }) {
         <section id="communityReviews" className={shelterPage.reviews}>
           <h2>Community Reviews</h2>
           <article className={shelterPage.scores}>
-          <div>
-            <p>{shelter.avgStaff}</p>
-            <img id="flag" className={shelterPage.icons} src={'/flag.png'} />
-          </div>
-          <div>
-            <p>{shelter.avgSafety}</p>
-            <img id="home" className={shelterPage.icons} src={'/home.png'} />
-          </div>
-          <div>
-            <p>{shelter.avgClean}</p>
-            <img id="mop" className={shelterPage.icons} src={'/mop.png'} />
-          </div>
+            <div>
+              <p>{shelter.avgStaff}</p>
+              <img id="flag" className={shelterPage.icons} src={'/flag.png'} />
+            </div>
+            <div>
+              <p>{shelter.avgSafety}</p>
+              <img id="home" className={shelterPage.icons} src={'/home.png'} />
+            </div>
+            <div>
+              <p>{shelter.avgClean}</p>
+              <img id="mop" className={shelterPage.icons} src={'/mop.png'} />
+            </div>
           </article>
           <p>these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
         </section>

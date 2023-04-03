@@ -14,6 +14,8 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
   it("Should display community review data as well as icons and ratings explanation", () => {
     cy.get("section#communityReviews > h2").contains("Community Reviews")
     cy.get("section#communityReviews > h2").should("be.visible")
+    cy.get("section#communityReviews > article > div > p").should("be.visible")
+    cy.get("section#communityReviews > p").contains("these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them")
 
     cy.get("img#flag").should("be.visible")
     .should("have.attr", "src")
@@ -29,6 +31,39 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
   })
 
   it("Should provide a form to let a user submit shelter ratings based on their experience", () => {
+    cy.get("h2#rateFormTitle").contains("Rate Your Experience")
+      .next().contains("Please only submit a rating if you have received services here")
+    cy.get("form > p").contains("Staff was LGBTQ friendly")
+    cy.get("form > p").contains("I was physically safe")
+    cy.get("form > p").contains("Facility was clean and sanitary")
+
+    cy.get("form").within((form) => {
+      cy.get("input[name='staff']")
+      cy.get("img#flag2").should("have.attr", "src")
+        .should("eq", "/flag.png")
+      cy.get("img#flag2").should("have.attr", "alt")
+        .should("eq", "lgbtq flag icon")
+
+      cy.get("input[name='safety']")
+      cy.get("img#home2").should("have.attr", "src")
+      .should("eq", "/home.png")
+      cy.get("img#home2").should("have.attr", "alt")
+      .should("eq", "safe house icon")
+
+      cy.get("input[name='cleanliness']")
+      cy.get("img#mop2").should("have.attr", "src")
+      .should("eq", "/mop.png")
+      cy.get("img#mop2").should("have.attr", "alt")
+      .should("eq", "mop icon")
+
+      cy.get("button#rateFormSubmitButton").contains("submit review")
+    }).should("be.visible")
+  })
+
+  it("Should display an error message if no inputs were changed in the form", () => {
+    cy.get("input[name='safety']").should("be.empty")
+    cy.get("button#rateFormSubmitButton").click()
+    cy.get("form > p").contains("please rate all fields before submitting")
 
   })
 })
