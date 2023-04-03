@@ -46,6 +46,10 @@ export default function List() {
 		return <p>Error: {error}</p>
 	}
 
+	if (!shelterData) {
+		notFound()
+	}
+
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
 
 	const mappedData = shelterData.map(data => {
