@@ -29,6 +29,7 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
+    setError(false)
     postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
@@ -39,9 +40,14 @@ export default function Form() {
     })
     .then(data => {
       setPostSuccess(true)
+      setTimeout(() => {setPostSuccess(false)}, 3000)
+      clearInputs()
     })
-    setTimeout(() => {setPostSuccess(false)}, 3000)
-    clearInputs()
+    .catch(error => {
+      console.log(error)
+      setError(true)
+    })
+    }
   }
 
   function clearInputs() {
