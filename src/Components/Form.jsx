@@ -57,7 +57,7 @@ export default function Form() {
   }
 
   return (
-    <form id="addForm" className={styles.formContainer}>
+    <form className={styles.formContainer}>
       <h3 className={styles.formHeading}>Add A Shelter</h3>
       <div className={styles.inputContainer}>
         <input 
