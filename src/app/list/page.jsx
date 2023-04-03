@@ -4,6 +4,8 @@ import { getShelterData } from "../../apiCalls";
 import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
 import Card from "@/Components/Card/Card";
+import shelterListNotFound from "./not-found";
+import { notFound } from "next/navigation";
 
 
 export default function List() {
@@ -14,11 +16,10 @@ export default function List() {
 	useEffect(() => {
 		getShelterData('shelters')
 		.then((data) => {
-			if(data.ok) {
-				return data.json();
-			} else {
+			if(!data.ok) {
 				throw new Error('Failed to fetch shelter data')
 			}
+			return data.json();
 		})	
 		.then((data) => {
 			if (data && data.data && data.data.length > 0){
@@ -28,7 +29,7 @@ export default function List() {
 			}
 		})
 		.catch((error) => {
-			setError(error.message)
+				setError(shelterListNotFound())
 		})
 		.finally(() => {
 			setIsLoading(false)
