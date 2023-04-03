@@ -1,7 +1,7 @@
 describe("User Flow: As a user, I should be able to submit a form on the shelter details page to add my ratings/opinions to a shelter", () => {
   beforeEach(() => {
-    // cy.intercept("GET", "https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters/1", {fixture: "../fixtures/shelter.json"})
-    //looks like our data is still hard-coded in rate form?
+		// cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/1", {fixture: "../fixtures/shelter.json"})
+    // looks like our data is still hard-coded in rate form?
     cy.visit("http://localhost:3000/list/1");
   });
 
@@ -9,7 +9,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("h2.shelter_name__HjWLg").should("be.visible")
     cy.get('.shelter_contact__ecbAs > :nth-child(2) > :nth-child(1)').should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("be.visible")
-    cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("contain", "1-800-333-3333")
+    cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("contain", "(312) 987-4583")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("contain", "website")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("have.attr", "href")

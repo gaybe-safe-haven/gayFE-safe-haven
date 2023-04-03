@@ -1,6 +1,6 @@
 describe("User Flow: As a user, I should be able to view a list of all of the submitted shelters", () => {
   beforeEach(() => {
-    cy.intercept("GET", "https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters", {fixture: "../fixtures/shelters.json"})
+    cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters", {fixture: "../fixtures/shelters.json"})
     cy.visit("http://localhost:3000/list");
   });
   
