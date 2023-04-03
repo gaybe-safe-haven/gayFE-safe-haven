@@ -16,7 +16,7 @@ export default function ShelterPage({ params }) {
 	const [revError, setRevError] = useState('')
 
 	useEffect(() => {
-		getShelterData(`shelters/${params.id}`) //this is hard coded for mock data, change to params.id for real data
+		getShelterData(`shelters/${params.id}`)
 			.then((data) => {
 				if (!data.ok) {
 					notFound()
@@ -35,7 +35,7 @@ export default function ShelterPage({ params }) {
 	}, [])
 
 	useEffect(() => {
-		getShelterData(`shelters/${params.id}`) //this is hard coded for mock data, change to params.id for real data
+		getShelterData(`shelters/${params.id}`) 
 			.then((data) => {
 				if (!data.ok) {
 					notFound()
