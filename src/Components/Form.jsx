@@ -11,6 +11,7 @@ export default function Form() {
       streetAddress: "",
       city: "",
       state: "",
+      zip: "",
       phoneNumber: "",
       website: ""
     }
@@ -126,6 +127,16 @@ export default function Form() {
           placeholder="state" 
           className={styles.formInput}
           value={formData.state}
+          onChange={(e) => handleChange(e)}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+        <input 
+          type="text" 
+          name="zip" 
+          placeholder="zipcode" 
+          className={styles.formInput}
+          value={formData.zip}
           onChange={(e) => handleChange(e)}
         />
       </div>
