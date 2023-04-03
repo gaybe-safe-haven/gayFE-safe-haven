@@ -33,12 +33,16 @@ export default function Form() {
   }
 
   function checkForm() {
-    if(checkZip(formData)) {
-
+    if(!checkZip(formData.zip)) {
+      setFeedback('please enter a valid zipcode')
+      return false
     }
+  if(!checkSite(formData.website)) {
+    setFeedback('please enter a valid web address beginning with www.')
+    return false
+  }
     const inputs = Object.keys(formData)
     inputs.forEach(key => {
-      //we don't care if the website is filled out or not
       if(key !== 'website' && !formData[key]) {
         setIncomplete(true)
         console.log('form incomplete')
@@ -49,7 +53,8 @@ export default function Form() {
   
   function handleSubmit(e) {
     e.preventDefault()
-    setError(false)
+    setError('')
+    setFeedback('')
 
     if(checkForm()) {
       postData(formData, 'shelters')
