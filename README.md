@@ -48,7 +48,11 @@
 
 image/gif here
 
-app overview here
+#### Overview
+The LGBTQ+ community faces unique challenges when it comes to finding safe and welcoming shelters, especially for youth. Our app aims to bridge this information gap by allowing community members to submit safe shelter information through our app, which is then added to an API that we are building. Additionally, users can leave reviews based on their experiences at these shelters to provide valuable insight for those seeking safe and inclusive shelter options.
+
+#### Usage
+Our app is designed to be easy to use and navigate. Users can view a list of safe shelters, leave reviews on their experiences, and submit new shelter information through the app. Our goal is to create a safe and inclusive space for all members of the LGBTQ+ community to access the resources they need.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
