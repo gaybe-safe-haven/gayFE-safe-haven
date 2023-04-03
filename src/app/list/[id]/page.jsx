@@ -7,6 +7,7 @@ import styles from "../../page.module.css"
 import shelterPage from "./shelter.module.css";
 import LoadingShelterPage from './loading';
 import RateForm from '@/Components/RateForm/RateForm';
+import { notFound } from "next/navigation";
 
 export default function ShelterPage({ params }) {
     const [shelter, setShelter] = useState({});

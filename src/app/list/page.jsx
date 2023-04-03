@@ -6,7 +6,7 @@ import { getShelterData } from "../../apiCalls";
 import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
 import Card from "@/Components/Card/Card";
-import { notFound } from "next/navigation"
+import { notFound } from "next/navigation";
 
 
 export default function List() {
