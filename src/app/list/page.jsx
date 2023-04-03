@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
 import Card from "@/Components/Card/Card";
 import shelterListNotFound from "./not-found";
+import { notFound } from "next/navigation";
 
 
 export default function List() {
@@ -18,7 +19,7 @@ export default function List() {
 		getShelterData('shelters')
 		.then((data) => {
 			if(!data.ok) {
-				throw new Error('Failed to fetch shelter data')
+				notFound()
 			}
 			return data.json();
 		})	
@@ -29,10 +30,8 @@ export default function List() {
 				throw new Error('Empty response from server')
 			}
 		})
-		.catch((error) => {
-				if (error.message === 'Failed to fetch') {
-					setError(shelterListNotFound())
-				}
+		.catch(() => {
+				setError(shelterListNotFound())
 		})
 		.finally(() => {
 			setIsLoading(false)
@@ -44,7 +43,7 @@ export default function List() {
 	}
 
 	if (error) {
-		return <p>{error}</p>
+		return <p>Error: {error}</p>
 	}
 
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
