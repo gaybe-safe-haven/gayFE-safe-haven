@@ -1,5 +1,3 @@
-//root page/main
-
 import Image from "next/image";
 import { Roboto } from 'next/font/google'
 import styles from "./page.module.css";
