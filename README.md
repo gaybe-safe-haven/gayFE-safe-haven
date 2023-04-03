@@ -6,7 +6,25 @@
  [![El Brewster][El-badge]][El-url]
  [![Faye Rosenshein][Faye-badge]][Faye-url]
 
+<br />
 
+  <a href="https://github.com/smithkirsten/gaybe-safe-haven/gayFE-safe-haven">
+    <h1 align="center">Gaybe Safe Haven</h1>
+  </a>
+
+<h3 align="center"></h3>
+
+  <p align="center">
+    LGBTQ+ Youth Shelter App 
+    <br />
+    <a href="https://github.com/smithkirsten/gaybe-safe-haven/gayFE-safe-haven"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/smithkirsten/gaybe-safe-haven/gayFE-safe-haven/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/smithkirsten/gaybe-safe-haven/gayFE-safe-haven/issues">Request Feature</a>
+  </p>
+</div>
 
 [Kirsten-badge]: https://img.shields.io/badge/-Kirsten%20Smith-lightgrey
 [Kirsten-url]: https://github.com/smithkirsten
