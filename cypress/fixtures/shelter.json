@@ -1,17 +1,19 @@
-{
-    "id": "1",
-    "type": "shelter",
-    "attributes": {
-        "name": "Thrive Youth Center",
-        "streetAddress": "1 Haven for Hope Way",
-        "city": "San Antonio",
-        "state": "TX",
-        "zip": "78207",
-        "websiteUrl": null,
-        "phoneNumber": "(312) 987-4583",
-        "verified": false,
-        "avgStaff": 9.8,
-        "avgSafety": 8.6,
-        "avgClean": 8.2
-    }
-}
+
+                {
+                    "id": "1",
+                    "type": "shelter",
+                    "attributes": {
+                        "name": "Thrive Youth Center",
+                        "streetAddress": "1 Haven for Hope Way",
+                        "city": "San Antonio",
+                        "state": "TX",
+                        "zip": "78207",
+                        "websiteUrl": null,
+                        "phoneNumber": "(312) 987-4583",
+                        "verified": false,
+                        "avgStaff": 9.8,
+                        "avgSafety": 8.6,
+                        "avgClean": 8.2
+                    }
+                }
+
