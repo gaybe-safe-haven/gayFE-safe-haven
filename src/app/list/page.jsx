@@ -30,7 +30,7 @@ export default function List() {
 			}
 		})
 		.catch((error) => {
-			setError(error.message)
+			setError(shelterListNotFound())
 		})
 		.finally(() => {
 			setIsLoading(false)
