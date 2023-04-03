@@ -14,14 +14,3 @@ export const postData = (newData, path) => {
 		body: JSON.stringify(newData)
 	})
 }
-
-// export const getServerSideProps = async ({ req, res }) => {
-// 	res.setHeader(
-// 		'Cache-Control',
-// 		'public, s-maxage=10, stale-while-revalidate=59'
-// 	)
-
-// 	return {
-// 		props: {},
-// 	}
-// }
