@@ -37,7 +37,8 @@ describe("User Flow: As a user, when I visit the site, I should see a landing pa
     cy.get("p.page_greenPTag__4sZ1l").invoke("text").should("eq", "But not all shelters are safe for queer and trans folks.")
     cy.get("img.images_facepaintTeen__DS4MU.images_purpleImageWrapper__HiC78").should("be.visible")
     cy.get('img[alt="face paint teen"').should("have.attr", "src")
-    cy.get("p.page_pinkPTag__naZBk").invoke("text").should("eq", "We&apos;re asking you to help us track the ones that are.")
+    cy.get("p.page_pinkPTag__naZBk").invoke("text").should("eq", "We're asking you to help us track the ones that are.")
+    //leaving this note here: Cypress seems to prefer "We're" and not the literal html "We&apos;re"
   })
 
   it("Should have a stripes visual at the foot of the view screen", () => {
