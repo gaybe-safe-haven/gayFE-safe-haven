@@ -1,5 +1,3 @@
-//list page
-
 "use client";
 import styles from "../page.module.css";
 import { getShelterData } from "../../apiCalls";
