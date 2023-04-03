@@ -52,6 +52,21 @@ app overview here
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Built With
+- [![NextJS][NextJs]][nextjs-url] 
+- [![Cypress]][Cypress-url]
+- [![Javascript][javascript.js]][javascript-url]
+- [![CSS][css]][css-url]
+- [![HTML][html]][html-url]
+- [![Webpack][webpack]][webpack-url]
+- [![API][api]][api-url]
+- [![Git][git]][git-url]
+- [![GitHub][github]][github-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 [Kirsten-badge]: https://img.shields.io/badge/-Kirsten%20Smith-lightgrey
 [Kirsten-url]: https://github.com/smithkirsten
 [Anna-badge]: https://img.shields.io/badge/-Anna%20Peterson-Purple
