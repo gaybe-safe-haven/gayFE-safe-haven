@@ -23,6 +23,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     
     cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "9.8")
     cy.get("img.shelter_icons__YJFDX").should("be.visible")
+
     .should("have.attr", "src")
     .should("eq", "/flag.png")
 
