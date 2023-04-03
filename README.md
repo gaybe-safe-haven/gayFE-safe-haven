@@ -65,6 +65,32 @@ app overview here
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Getting Started
+
+### Installation
+## To use the deployed app visit: 
+
+1. Fork the Repo from the [Repository](https://github.com/gaybe-safe-haven/gayFE-safe-haven)
+2. Clone the repo
+   ```sh
+   git@github.com:gaybe-safe-haven/gayFE-safe-haven.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Run npm start
+   ```sh
+   npm start
+   ```
+5. Use the Link that is given in the Terminal & Open in Browser
+   ```sh
+   Example: http://localhost:3000/
+   ```
+6. Once finished, close using control + c
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 [Kirsten-badge]: https://img.shields.io/badge/-Kirsten%20Smith-lightgrey
