@@ -26,6 +26,24 @@
   </p>
 </div>
 
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>
+
 [Kirsten-badge]: https://img.shields.io/badge/-Kirsten%20Smith-lightgrey
 [Kirsten-url]: https://github.com/smithkirsten
 [Anna-badge]: https://img.shields.io/badge/-Anna%20Peterson-Purple
