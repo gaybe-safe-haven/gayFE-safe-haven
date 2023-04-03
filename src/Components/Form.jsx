@@ -2,6 +2,7 @@
 import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
 import { useState } from "react";
+import { checkSite, checkZip } from '../util'
 
 export default function Form() {
   const [formData, setFormData] = useState(
@@ -17,7 +18,8 @@ export default function Form() {
 
   const [postSuccess, setPostSuccess] = useState(false)
   const [error, setError] = useState(false)
-  const [incomplete, setIncomplete] = useState(false)
+  const [incomplete, setIncomplete] = useState(true)
+  const [feedback, setFeedback] = useState('')
 
   function handleChange(e) {
     setIncomplete(false)
@@ -30,6 +32,9 @@ export default function Form() {
   }
 
   function checkForm() {
+    if(checkZip(formData)) {
+
+    }
     const inputs = Object.keys(formData)
     inputs.forEach(key => {
       //we don't care if the website is filled out or not
@@ -62,7 +67,7 @@ export default function Form() {
     })
     .catch(error => {
       console.log(error)
-      setError(true)
+      setError(error)
     })
     }
   }
@@ -74,6 +79,7 @@ export default function Form() {
         streetAddress: "",
         city: "",
         state: "",
+        zip: "",
         phoneNumber: "",
         website: ""
       }
@@ -145,7 +151,7 @@ export default function Form() {
       </div>
       <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
       {error && <p className="message">There was an error with your submission. Please try again.</p>}
-      {incomplete && <p>please make sure all fields are complete</p>}
+      {/* {incomplete && <p>please make sure all fields are complete</p>} */}
       {postSuccess && <p className="message">Your submission was successful!</p> }
     </form>    
   )
