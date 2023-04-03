@@ -4,30 +4,38 @@ describe("User Flow: As a user, when I visit the site, I should see a landing pa
   });
 
   it("Should show the main page of the app with title and header", () => {
-    cy.get("nav").should("have.id", "navContainer")
-    cy.get("h1#title").contains("Our App <3")
+    cy.get("nav").should("have.class", "nav_navContainer__mu3F6")
+    cy.get("h1.nav_title__nwUPC").contains("Our App <3")
   })
 
   it("Should have a nav bar that navigates to different page views using Link", () => {
-    cy.get("button#aboutBtn").contains("about").click()
+    cy.get('button[alt="about"]')
+      .should("be.visible")
+    cy.get("button.nav_linkButton__zOSWr").contains("about").click()
       .url().should("eq", "http://localhost:3000/about")
 
-    cy.get("button#seeListBtn").contains("list").click()
+    cy.get('button[alt="list"]')
+      .should("be.visible")
+    cy.get("button.nav_linkButton__zOSWr").contains("list").click()
       .url().should("eq", "http://localhost:3000/list")
 
-    cy.get("button#addShelterBtn").contains("add a shelter").click()
+    cy.get('button[alt="add a shelter"]')
+      .should("be.visible")
+    cy.get("button.nav_linkButton__zOSWr").contains("add a shelter").click()
       .url().should("eq", "http://localhost:3000/add-shelter")
 
-    cy.get("button#apiBtn").contains("public api").click()
+    cy.get('button[alt="public api"]')
+      .should("be.visible")
+    cy.get("button.nav_linkButton__zOSWr").contains("public api").click()
       .url().should("eq", "http://localhost:3000/api")
   })
 
   it("Should display images and text in the main section", () => {
-    cy.get("p#statistic120").invoke("text").should("eq", "LGBTQ+ youth are 120% more likely to experience homelessness.")
-    cy.get("img#makeupTeensImg").should("be.visible")
+    cy.get("p.page_purplePTag__fUjZo").invoke("text").should("eq", "LGBTQ+ youth are 120% more likely to experience homelessness.")
+    cy.get("img.images_makeupTeensImage__3NYpt.images_yellowGreenImageWrapper__M_8ZV").should("be.visible")
     cy.get('img[alt="makeup teens"]')
       .should("have.attr", "src")
-    cy.get("img#facepaintTeenImg").should("be.visible")
+    cy.get("img.images_facepaintTeen__DS4MU.images_purpleImageWrapper__HiC78").should("be.visible")
       .should("have.attr", "src")
   })
 
