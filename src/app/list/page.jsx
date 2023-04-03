@@ -17,11 +17,10 @@ export default function List() {
 	useEffect(() => {
 		getShelterData('shelters')
 		.then((data) => {
-			if(data.ok) {
-				return data.json();
-			} else {
+			if(!data.ok) {
 				throw new Error('Failed to fetch shelter data')
 			}
+			return data.json();
 		})	
 		.then((data) => {
 			if (data && data.data && data.data.length > 0){
