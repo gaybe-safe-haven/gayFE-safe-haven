@@ -92,7 +92,7 @@ export default function ShelterPage({ params }) {
             <p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
           </div>
           <div className={shelterPage.clientServices}>
-            {shelter.websiteUrl && <a href={`${shelter.websiteUrl}`}>website</a>}
+            {shelter.websiteUrl && <a href={`http://${shelter.websiteUrl}`}>website</a>}
             <p>{shelter.phoneNumber}</p>
           </div>
           <div id="verified" className={shelterPage.verify} >
@@ -105,20 +105,23 @@ export default function ShelterPage({ params }) {
 
         <section id="communityReviews" className={shelterPage.reviews}>
           <h2>Community Reviews</h2>
-          <article className={shelterPage.scores}>
-            <div>
-              <p>{shelter.avgStaff}</p>
-              <img id="flag" className={shelterPage.icons} src={'/flag.png'} />
-            </div>
-            <div>
-              <p>{shelter.avgSafety}</p>
-              <img id="home" className={shelterPage.icons} src={'/home.png'} />
-            </div>
-            <div>
-              <p>{shelter.avgClean}</p>
-              <img id="mop" className={shelterPage.icons} src={'/mop.png'} />
-            </div>
-          </article>
+          {!shelterPage.reviews 
+            ? <p>There are no reviews of this shelter</p>  
+            :<article className={shelterPage.scores}>
+              <div>
+                <p>{shelter.avgStaff}</p>
+                <img id="flag" className={shelterPage.icons} src={'/flag.png'} />
+              </div>
+              <div>
+                <p>{shelter.avgSafety}</p>
+                <img id="home" className={shelterPage.icons} src={'/home.png'} />
+              </div>
+              <div>
+                <p>{shelter.avgClean}</p>
+                <img id="mop" className={shelterPage.icons} src={'/mop.png'} />
+              </div>
+            </article>
+          }
           <p>these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
         </section>
 
