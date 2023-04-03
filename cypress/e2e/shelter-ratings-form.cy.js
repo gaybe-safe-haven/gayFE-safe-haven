@@ -82,10 +82,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
       cy.get("input[type=range][name='cleanliness']").invoke("val", 8).trigger("change")
       cy.get("button.RateForm_submit__1MsQV").contains("submit review").click()
     })
-// so dissapointing we can't test something that isn't here ;-; 
-
-    // cy.get("main > div > section#thankYou > p").contains("thank you for taking the time to share your experience with us")
-    // https://docs.cypress.io/guides/core-concepts/conditional-testing
+//need something here for conditionally rendered text on submit
   })
 })
 

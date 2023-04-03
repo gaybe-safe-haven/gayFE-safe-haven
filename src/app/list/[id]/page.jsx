@@ -1,5 +1,3 @@
-//single shelter display (and single shelter form)
-
 "use client";
 import { getShelterData, postData } from '../../../apiCalls';
 import { useState, useEffect } from 'react';
@@ -125,7 +123,6 @@ export default function ShelterPage({ params }) {
         <RateForm id={params.id} error={revError} reviewed={reviewed} submitReview={submitReview} />
       </div>
     </main>
-
   )
 }
 
