@@ -8,6 +8,7 @@ import shelterPage from "./shelter.module.css";
 import LoadingShelterPage from './loading';
 import RateForm from '@/Components/RateForm/RateForm';
 import { notFound } from "next/navigation";
+import sheltertNotFound from './not-found';
 
 export default function ShelterPage({ params }) {
     const [shelter, setShelter] = useState({});
@@ -28,7 +29,7 @@ export default function ShelterPage({ params }) {
         setShelter(data.data.attributes)
       })
       .catch((error) => {
-          setError(error.message)
+				setError(error.message)
       })
       .finally(() => {
           setIsLoading(false)
