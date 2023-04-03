@@ -43,7 +43,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
   
   if(reviewed) {
     return (
-      <section className={styles.review}>
+      <section id="thankYou" className={styles.review}>
         <p>thank you for taking the time to share your experience with us</p>
       </section>
     )

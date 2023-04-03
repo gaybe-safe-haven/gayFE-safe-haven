@@ -69,13 +69,15 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
 
   it("Should display a message upon successful form submission", () => {
     cy.get("form").within((form) => {
-      cy.get("input[name='staff']").invoke("val", 8).trigger("change")
-      cy.get("input[name='safety']").invoke("val", 9).trigger("change")
-      cy.get("input[name='cleanliness']").invoke("val", 4).trigger("change")
+      cy.get("input[type=range][name='staff']").invoke("val", 8).trigger("change")
+      cy.get("input[type=range][name='safety']").invoke("val", 8).trigger("change")
+      cy.get("input[type=range][name='cleanliness']").invoke("val", 8).trigger("change")
       cy.get("button#rateFormSubmitButton").contains("submit review").click()
     })
-    // cy.get("p").contains("thank you for taking the time to share your experience with us")
-    //I can't tell where this bit is supposed to happen or if I wrote the test wrong?
+// so dissapointing we can't test something that isn't here ;-; 
+
+    // cy.get("main > div > section#thankYou > p").contains("thank you for taking the time to share your experience with us")
+    // https://docs.cypress.io/guides/core-concepts/conditional-testing
   })
 })
 
