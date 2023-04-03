@@ -63,6 +63,11 @@ export default function ShelterPage({ params }) {
     if (error) {
       return <p>Error: {error}</p>
     }
+
+		if (!shleter) {
+			notFound()
+		}
+
   const submitReview = (review) => {
     postData(review, 'reviews')
     .then(response => {
