@@ -40,6 +40,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
       setMissing('please rate all fields before submitting')
     }
   }
+  
   if(reviewed) {
     return (
       <section className={styles.review}>

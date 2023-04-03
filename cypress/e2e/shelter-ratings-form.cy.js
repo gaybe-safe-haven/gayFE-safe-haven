@@ -74,6 +74,8 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
       cy.get("input[name='cleanliness']").invoke("val", 4).trigger("change")
       cy.get("button#rateFormSubmitButton").contains("submit review").click()
     })
+    // cy.get("p").contains("thank you for taking the time to share your experience with us")
+    //I can't tell where this bit is supposed to happen or if I wrote the test wrong?
   })
 })
 
