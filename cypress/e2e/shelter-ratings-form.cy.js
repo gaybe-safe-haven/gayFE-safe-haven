@@ -15,7 +15,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("section#communityReviews > h2").contains("Community Reviews")
     cy.get("section#communityReviews > h2").should("be.visible")
     cy.get("section#communityReviews > article > div > p").should("be.visible")
-    cy.get("section#communityReviews > p").contains("these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them")
+    cy.get("section#communityReviews > p").contains("These ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them")
 
     cy.get("img#flag").should("be.visible")
     .should("have.attr", "src")
