@@ -17,6 +17,7 @@ export default function Form() {
 
   const [postSuccess, setPostSuccess] = useState(false)
   const [error, setError] = useState(false)
+  const [incomplete, setIncomplete] = useState(false)
 
   function handleChange(e) {
     setFormData(prevFormData => {
@@ -26,10 +27,23 @@ export default function Form() {
       }
     })
   }
+
+  function checkForm() {
+    const inputs = Object.keys(formData)
+    inputs.forEach(key => {
+      //we don't care if the website is filled out or not
+      if(key !== 'website' && !formData[key]) {
+        setIncomplete(true)
+      }
+    })
+    return incomplete ? false : true
+  }
   
   function handleSubmit(e) {
     e.preventDefault()
     setError(false)
+    if(!checkForm())
+
     postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
@@ -48,7 +62,7 @@ export default function Form() {
       setError(true)
     })
     }
-  }
+  
 
   function clearInputs() {
     setFormData(
