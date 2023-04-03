@@ -38,38 +38,39 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
   })
 
   it("Should provide a form to let a user submit shelter ratings based on their experience", () => {
-    cy.get("h2#rateFormTitle").contains("Rate Your Experience")
+    cy.get("form > div.RateForm_invitation__fwHij > h2").contains("Rate Your Experience")
       .next().contains("Please only submit a rating if you have received services here")
-    cy.get("form > p").contains("Staff was LGBTQ friendly")
+    cy.get("form > div > p.RateForm_plea__BkV2_").contains("Please only submit a rating if you have received services here")
     cy.get("form > p").contains("I was physically safe")
     cy.get("form > p").contains("Facility was clean and sanitary")
 
     cy.get("form").within((form) => {
+      cy.get("div.RateForm_rating__RrWOH > label > img.RateForm_icon__M_H_m").should("be.visible")
       cy.get("input[name='staff']")
-      cy.get("img#flag2").should("have.attr", "src")
+      cy.get("img.RateForm_icon__M_H_m").should("have.attr", "src")
         .should("eq", "/flag.png")
-      cy.get("img#flag2").should("have.attr", "alt")
+      cy.get("img.RateForm_icon__M_H_m").should("have.attr", "alt")
         .should("eq", "lgbtq flag icon")
 
       cy.get("input[name='safety']")
-      cy.get("img#home2").should("have.attr", "src")
-      .should("eq", "/home.png")
-      cy.get("img#home2").should("have.attr", "alt")
-      .should("eq", "safe house icon")
+      cy.get(':nth-child(4) > label > .RateForm_icon__M_H_m').should("have.attr", "src")
+        .should("eq", "/home.png")
+      cy.get(':nth-child(4) > label > .RateForm_icon__M_H_m').should("have.attr", "alt")
+        .should("eq", "safe house icon")
 
       cy.get("input[name='cleanliness']")
-      cy.get("img#mop2").should("have.attr", "src")
+      cy.get(':nth-child(6) > label > .RateForm_icon__M_H_m').should("have.attr", "src")
       .should("eq", "/mop.png")
-      cy.get("img#mop2").should("have.attr", "alt")
+      cy.get(':nth-child(6) > label > .RateForm_icon__M_H_m').should("have.attr", "alt")
       .should("eq", "mop icon")
 
-      cy.get("button#rateFormSubmitButton").contains("submit review")
+      cy.get("button.RateForm_submit__1MsQV").contains("submit review")
     }).should("be.visible")
   })
 
   it("Should display an error message if no inputs were changed in the form", () => {
     cy.get("input[name='safety']").should("be.empty")
-    cy.get("button#rateFormSubmitButton").click()
+    cy.get("button.RateForm_submit__1MsQV").click()
     cy.get("form > p").contains("please rate all fields before submitting")
 
   })
@@ -79,7 +80,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
       cy.get("input[type=range][name='staff']").invoke("val", 8).trigger("change")
       cy.get("input[type=range][name='safety']").invoke("val", 8).trigger("change")
       cy.get("input[type=range][name='cleanliness']").invoke("val", 8).trigger("change")
-      cy.get("button#rateFormSubmitButton").contains("submit review").click()
+      cy.get("button.RateForm_submit__1MsQV").contains("submit review").click()
     })
 // so dissapointing we can't test something that isn't here ;-; 
 
