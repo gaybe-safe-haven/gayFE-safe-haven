@@ -20,6 +20,7 @@ export default function Form() {
   const [incomplete, setIncomplete] = useState(false)
 
   function handleChange(e) {
+    setIncomplete(false)
     setFormData(prevFormData => {
       return {
         ...prevFormData, 
@@ -34,6 +35,7 @@ export default function Form() {
       //we don't care if the website is filled out or not
       if(key !== 'website' && !formData[key]) {
         setIncomplete(true)
+        console.log('form incomplete')
       }
     })
     return incomplete ? false : true
@@ -42,11 +44,12 @@ export default function Form() {
   function handleSubmit(e) {
     e.preventDefault()
     setError(false)
-    if(!checkForm())
 
-    postData(formData, 'shelters')
+    if(checkForm()) {
+      postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
+        console.log('successful post!')
         return response.json()
       } else {
         return Promise.reject(response.status)
@@ -62,7 +65,7 @@ export default function Form() {
       setError(true)
     })
     }
-  
+  }
 
   function clearInputs() {
     setFormData(
@@ -140,8 +143,9 @@ export default function Form() {
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <button type="submit" className={styles.button} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
+      <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
       {error && <p className="message">There was an error with your submission. Please try again.</p>}
+      {incomplete && <p>please make sure all fields are complete</p>}
       {postSuccess && <p className="message">Your submission was successful!</p> }
     </form>    
   )
