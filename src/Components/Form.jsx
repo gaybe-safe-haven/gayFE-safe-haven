@@ -16,6 +16,7 @@ export default function Form() {
   )
 
   const [postSuccess, setPostSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
   function handleChange(e) {
     setFormData(prevFormData => {
@@ -120,7 +121,8 @@ export default function Form() {
         />
       </div>
       <button type="submit" className={styles.button} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
-      {postSuccess && <p className="message">Your addition was successful!</p> }
+      {error && <p className="message">There was an error with your submission. Please try again.</p>}
+      {postSuccess && <p className="message">Your submission was successful!</p> }
     </form>    
   )
 }
