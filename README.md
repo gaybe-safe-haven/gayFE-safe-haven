@@ -44,6 +44,14 @@
   </ol>
 </details>
 
+## About The Project
+
+image/gif here
+
+app overview here
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 [Kirsten-badge]: https://img.shields.io/badge/-Kirsten%20Smith-lightgrey
 [Kirsten-url]: https://github.com/smithkirsten
 [Anna-badge]: https://img.shields.io/badge/-Anna%20Peterson-Purple
