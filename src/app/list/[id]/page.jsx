@@ -19,11 +19,10 @@ export default function ShelterPage({ params }) {
     useEffect(() => {
       getShelterData("shelters/1") //this is hard coded for mock data, change to params.id for real data
       .then((data) => {
-        if (data.ok) {
-          return data.json()
-        } else {
-              throw new Error("Failed to fetch shelter data")
-          }
+        if (!data.ok) {
+					throw new Error("Failed to fetch shelter data")
+				}
+				return data.json()
       })
       .then((data) => {
         setShelter(data.data.attributes)
