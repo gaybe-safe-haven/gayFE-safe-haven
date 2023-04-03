@@ -21,7 +21,7 @@
     background-color: #E8FFFF;
     border: 1px solid #066161;
     border-radius: .1rem;
-    color: rgb(28, 26, 81, .6);
+    color: rgb(28, 26, 81);
     font: inherit;
     margin: .2rem;
 }
@@ -34,4 +34,10 @@
     font: inherit;
     margin: .2rem;
     width: 8rem;
+}
+
+.button:disabled {
+    border: none;
+    color: rgb(28, 26, 81, .6);
+
 }
