@@ -30,7 +30,9 @@ export default function List() {
 			}
 		})
 		.catch((error) => {
-			setError(shelterListNotFound())
+				if (error.message === 'Failed to fetch') {
+					setError(shelterListNotFound())
+				}
 		})
 		.finally(() => {
 			setIsLoading(false)
@@ -42,7 +44,7 @@ export default function List() {
 	}
 
 	if (error) {
-		return <p>Error: {error}</p>
+		return <p>{error}</p>
 	}
 
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
