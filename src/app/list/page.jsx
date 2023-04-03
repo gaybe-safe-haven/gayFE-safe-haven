@@ -18,8 +18,11 @@ export default function List() {
 	useEffect(() => {
 		getShelterData('shelters')
 		.then((data) => {
-			if(!data.ok) {
+			if(data.status(404)) {
 				notFound()
+			}
+			if(!data.ok) {
+				throw new Error('Failed to fetch shelter data')
 			}
 			return data.json();
 		})	
@@ -30,7 +33,7 @@ export default function List() {
 				throw new Error('Empty response from server')
 			}
 		})
-		.catch(() => {
+		.catch((error) => {
 				setError(shelterListNotFound())
 		})
 		.finally(() => {
