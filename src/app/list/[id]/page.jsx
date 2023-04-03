@@ -122,7 +122,7 @@ export default function ShelterPage({ params }) {
               </div>
             </article>
           }
-          <p>These ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
+          <p>these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
         </section>
 
         <RateForm id={params.id} error={revError} reviewed={reviewed} submitReview={submitReview} />
