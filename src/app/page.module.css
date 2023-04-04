@@ -7,6 +7,39 @@
     padding: 0 1rem;
 }
 
+.hero {
+    /* background-color: rgb(6, 122, 205); */
+    /* background-color: rgb(134, 143, 226); */
+    /* background-color: #4958e0; */
+    background-color: #bea3eb;
+    border-bottom: 1px solid #b3b1b3;
+    color: #F3F1FE;
+    min-width: 100vw;
+}
+
+.heroWrapper {
+    padding: 0 1rem;
+}
+
+.title {
+    color:#004f4f;
+    font-weight: 600;
+}
+
+.titleDescription {
+    color:#1c1a51;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.headerIcon {
+    align-self: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+
 .h2Styling {
     /* color: #1c1a51; */
     color: #660137;
@@ -35,3 +68,74 @@
     font-weight: 400;
 }
 
+@media (min-width: 400px) {
+    .main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-family: inherit;
+        justify-content: flex-start;
+        margin: .8rem;
+        padding: 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-family: inherit;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .mainContentTop,
+    .mainContentBottom {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem;
+    }
+    
+    .textWrapper {
+        background-color: #e5abca;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 1rem;
+        max-width: 30%;
+        padding: 1.5rem;
+    }
+    
+    .textWrapper2 {
+        background-color: #B6E6E6;
+        padding: 1rem;
+    }
+    .purplePTag {
+        background-color:#e5abca;
+        color: #4F49E0;
+        flex: .6;
+        font-weight: 700;
+        margin: .5rem;
+        padding: 1rem;
+    }
+
+    .greenPTag {
+        margin-left: 2rem;
+        padding-left: 2rem;
+    }
+
+    .pinkPTag {
+        background-color: #c5d2ac;
+        flex: 1;
+        margin: 2rem;
+        margin-bottom: 8rem;
+        padding: 1rem;
+    }
+
+    .bluePTag {
+        background-color: #B6E6E6;
+        margin: .5rem;
+        padding: 1rem;
+    }
+}

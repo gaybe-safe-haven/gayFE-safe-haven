@@ -1,8 +1,10 @@
 import "./styles/globals.css";
 import Link from 'next/link'
 import styles from "./styles/nav.module.css"
-import { Suspense } from "react";
-import LoadingListPage from "./list/loading";
+import heroStyles from "./page.module.css";
+// import LoadingListPage from "./list/loading";
+import { CiStar } from "react-icons/ci";
+
 
 export const metadata = {
   title: 'Gaybe Safe Haven',
@@ -16,7 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         <nav className={styles.navContainer}>
           <div className={styles.navContentWrapper}>
-            <h1 className={styles.title}>Our App &#60;3</h1>
+            {/* <h1 className={styles.title}>Rate My Gay Shelter .net</h1> */}
             {/* we should have a link to "/" and the h1 could do this or a logo? */}
             <div className={styles.linkContainer}>
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
@@ -26,6 +28,12 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </nav>
+        <div className={heroStyles.hero}>
+          <div className={heroStyles.heroWrapper}>
+            <h1 className={heroStyles.title}><CiStar className={heroStyles.headerIcon}/>&nbsp;S.A.F.E.R. List</h1>
+            <p className={heroStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p>
+          </div>
+        </div>
         {children}
         <div className="stripes">
           <div className="purpleStripe"></div>
