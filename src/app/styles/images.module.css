@@ -53,35 +53,35 @@
     width: auto;
 }
 
-@media (min-width: 600px) {
-    .greenImageWrapper,
-    .yellowGreenImageWrapper,
-    .purpleImageWrapper,
-    .blueImageWrapper {
-        max-width: 40rem;
-    }
-
-    .makeupTeensImage {
-        composes: yellowGreenImageWrapper;
-        order: 2;
-        padding: 1rem;
-        width: auto;
-    }
-}
 
 @media (max-width: 400px) {
     .greenImageWrapper,
     .yellowGreenImageWrapper,
     .purpleImageWrapper,
     .blueImageWrapper {
-       min-width: 13rem;
+        min-width: 13rem;
     }
-
+    
     .hairPaintTeenImage,
     .makeupTeensImage,
     .facepaintTeen,
     .groupTeens {
         padding: .5rem;
+    }
+    
+    .makeupTeensImage {
+        composes: yellowGreenImageWrapper;
+        order: 2;
+        width: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .greenImageWrapper,
+    .yellowGreenImageWrapper,
+    .purpleImageWrapper,
+    .blueImageWrapper {
+        min-width: 30rem;
     }
 
     .makeupTeensImage {
@@ -91,17 +91,16 @@
         width: auto;
     }
 }
-
 /* swith this to flex box controlled sizes:  */
 @media (min-width: 800px) {
     .makeupTeensImage {
         composes: yellowGreenImageWrapper;
         order: 3;
         padding: 1rem;
-        width: auto;
+        max-width: 20rem;
     }
-    
-    /* .facepaintTeen {
 
-    } */
+    .facepaintTeen {
+        max-width: 18rem;
+    }
 }

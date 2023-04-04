@@ -107,7 +107,7 @@
     .mainContentBottom {
         display: flex;
         gap: 1rem;
-        max-height: 45%;
+        /* max-height: 40%; */
     }
     
     .textWrapper {
