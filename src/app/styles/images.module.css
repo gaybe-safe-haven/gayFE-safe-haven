@@ -1,7 +1,7 @@
 .greenImageWrapper {
     align-self: flex-start;
     background-color: #C5D2AC;  
-    max-width: 40rem;
+    min-width: 300px;
 }
 
 .hairPaintTeenImage {
@@ -14,7 +14,7 @@
 .yellowGreenImageWrapper {
     align-self: flex-start;
     background-color: #ABD757;
-    max-width: 40rem;
+    min-width: 300px;
 }
 
 .makeupTeensImage {
@@ -27,7 +27,7 @@
 .purpleImageWrapper {
     align-self: flex-start;
     background-color: #B3B1DE;
-    max-width: 40rem;
+    min-width: 300px;
 }
 
 .facepaintTeen {
@@ -41,7 +41,7 @@
 .blueImageWrapper {
     align-self: flex-start;
     background-color: #98EDED;
-    max-width: 40rem;
+    min-width: 300px;
 }
 
 .groupTeens {
@@ -50,4 +50,29 @@
     margin: 0;
     padding: 1rem;
     width: auto;
+}
+
+@media (min-width: 600px) {
+    .greenImageWrapper,
+    .yellowGreenImageWrapper,
+    .purpleImageWrapper,
+    .blueImageWrapper {
+        max-width: 40rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .greenImageWrapper,
+    .yellowGreenImageWrapper,
+    .purpleImageWrapper,
+    .blueImageWrapper {
+       min-width: 13rem;
+    }
+
+    .hairPaintTeenImage,
+    .makeupTeensImage,
+    .facepaintTeen,
+    .groupTeens {
+        padding: .5rem;
+    }
 }
