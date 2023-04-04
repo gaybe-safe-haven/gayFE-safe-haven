@@ -56,7 +56,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.get('input[type=text][name="websiteURL"]')
       cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
     })
-    cy.get("p.message").contains("Your submission was successful!").should("exist")
+    cy.get("p.message").contains("Your submission was successful!").should("be.visible")
   })
 
   it("Should not submit a form with incomplete fields", () => {
@@ -69,33 +69,51 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
     cy.get("button.Form_button__BbaEK").should('be.enabled')
   })
 
-  it("Should disallow a user from submitting an inproperly formatted zipcode", () => {
+  it("Should disallow a user from submitting an improperly formatted zipcode", () => {
     cy.get('input[type=text][name="phoneNumber"]').type("1234567890")
     cy.get('input[type=text][name="zip"]').type("0246")
     cy.get("button.Form_button__BbaEK").click()
-    cy.get("p.message").contains("please enter a valid zipcode").should("exist")
+    cy.get("p.message").contains("please enter a valid zipcode").should("be.visible")
 
     cy.get('input[type=text][name="zip"]').type("c")
     cy.get("button.Form_button__BbaEK").click()
-    cy.get("p.message").contains("please enter a valid zipcode").should("exist")
+    cy.get("p.message").contains("please enter a valid zipcode").should("be.visible")
   })
 
-  it("Should disallow a user from submitting an inproperly formatted phone number", () => {
+  it("Should disallow a user from submitting an improperly formatted phone number", () => {
     cy.get('input[type=text][name="zip"]').type("02460")
     cy.get('input[type=text][name="phoneNumber"]').type("(123)456")
     cy.get("button.Form_button__BbaEK").click()
-    cy.get("p.message").contains("please enter a valid phone number").should("exist")
+    cy.get("p.message").contains("please enter a valid phone number").should("be.visible")
 
     cy.get('input[type=text][name="phoneNumber"]').type("-duck")
     cy.get("button.Form_button__BbaEK").click()
-    cy.get("p.message").contains("please enter a valid phone number").should("exist")
+    cy.get("p.message").contains("please enter a valid phone number").should("be.visible")
   })
 
     //it should display prompt for incorrect webpage
+    it("Should disallow a user from submitting an improperly formatted webpage", () => {
+      cy.get('input[type=text][name="zip"]').type("02460")
+      cy.get('input[type=text][name="phoneNumber"]').type("(123)456-7700")
+      cy.get('input[type=text][name="websiteURL"]').type('http://www.google.com')
+      
+      cy.get("button.Form_button__BbaEK").click()
+      cy.get("p.message").contains("please enter a valid web address beginning with www.").should("be.visible")
+
+      cy.get('input[type=text][name="websiteURL"]').clear()
+      cy.get('input[type=text][name="websiteURL"]').type('.com')
+      cy.get("button.Form_button__BbaEK").click()
+      cy.get("p.message").contains("please enter a valid web address beginning with www.").should("be.visible")
+
+      cy.get('input[type=text][name="websiteURL"]').clear()
+      cy.get('input[type=text][name="websiteURL"]').type('www.google.com')
+      cy.get("button.Form_button__BbaEK").click()
+      cy.get("p.message").contains("Your submission was successful!").should("be.visible")
+    })
 
     //it should display an error message if there was an issue with the post
 
     //it should display an error message if the user tries to submit a shelter that already exists
 
-    //it should display an error message if the zip code entered is invalid
+    //it should display an error message if the zip code entered is invalid according to BE
 })
