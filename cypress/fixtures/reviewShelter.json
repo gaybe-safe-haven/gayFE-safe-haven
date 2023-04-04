@@ -1,0 +1,12 @@
+{
+	"data": {
+			"id": 3,
+			"type": "review",
+			"attributes": {
+					"shelterId": 1,
+					"cleanliness": 6.7,
+					"staff": 5.3,
+					"safety": 7.8
+			}
+	}   
+}
