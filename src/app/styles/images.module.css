@@ -20,6 +20,7 @@
 .makeupTeensImage {
     composes: yellowGreenImageWrapper;
     height: auto;
+    order: 3;
     padding: 1rem;
     width: auto;
 }
@@ -78,13 +79,18 @@
 }
 
 /* swith this to flex box controlled sizes:  */
-/* @media (min-width: 800px) {
+@media (min-width: 800px) {
     .makeupTeensImage {
-        max-height: 20rem;
+        composes: yellowGreenImageWrapper;
+        height: auto;
+        order: 3;
+        padding: 1rem;
+        width: auto;
     }
+    
 
-    .facepaintTeen {
+    /* .facepaintTeen {
         max-height: 20rem;
         max-width: auto;
-    }
-} */
+    } */
+}

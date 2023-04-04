@@ -111,17 +111,25 @@
         background-color: #d3d3d3;
         padding: 1rem;
     }
+
     .purplePTag {
         background-color:#b3b3b3;
         color: #555555;
         flex: .6;
         font-weight: 700;
         margin: .5rem;
+        order: 1;
         padding: 1rem;
     }
 
+/* top row main page flex box */
+    /* .makeupTeensImage {
+        order: 3;
+    } */
+
     .greenPTag {
         margin-left: 2rem;
+        order: 2;
         padding-left: 2rem;
     }
 
