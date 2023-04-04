@@ -14,3 +14,8 @@ export const checkSite = (input) => {
   }
   return true
 }
+
+export const checkPhone = (input) => {
+    const regex = /^(\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}$/;
+    return regex.test(input);
+}
