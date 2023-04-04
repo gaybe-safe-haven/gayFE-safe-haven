@@ -85,5 +85,9 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     })
 //need something here for conditionally rendered text on submit
   })
+	it("Should POST review", () => {
+		cy.intercept("POST", "https://gaybe-safe-haven.herokuapp.com/api/v1/reviews", {fixture: "../fixtures/reviewShelter.json"})
+		cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/1")
+	})
 })
 
