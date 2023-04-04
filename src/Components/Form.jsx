@@ -33,7 +33,7 @@ export default function Form() {
   }
 
   function checkForm() {
-    if(formData.websiteURL && !checkSite(formData.website)) {
+    if(formData.websiteURL && !checkSite(formData.websiteURL)) {
       setFeedback('please enter a valid web address beginning with www.')
       return false
     }
@@ -46,7 +46,6 @@ export default function Form() {
     inputs.forEach(key => {
       if(key !== 'websiteURL' && !formData[key]) {
         setIncomplete(true)
-        console.log('form incomplete')
       }
     })
     return incomplete ? false : true
