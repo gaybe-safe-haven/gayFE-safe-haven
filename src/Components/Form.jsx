@@ -1,7 +1,8 @@
 "use client"
 import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { checkSite, checkZip, checkPhone } from '../util'
 
 export default function Form() {
   const [formData, setFormData] = useState(
@@ -10,13 +11,27 @@ export default function Form() {
       streetAddress: "",
       city: "",
       state: "",
+      zip: "",
       phoneNumber: "",
-      website: ""
+      websiteURL: ""
     }
   )
 
   const [postSuccess, setPostSuccess] = useState(false)
+  const [error, setError] = useState(false)
+  const [incomplete, setIncomplete] = useState(true)
+  const [feedback, setFeedback] = useState('')
 
+  useEffect(() => {
+    setIncomplete(false)
+    const inputs = Object.keys(formData)
+    inputs.forEach(key => {
+      if(key !== 'websiteURL' && !formData[key]) {
+        setIncomplete(true)
+      }
+    })
+  }, [formData])
+  
   function handleChange(e) {
     setFormData(prevFormData => {
       return {
@@ -25,12 +40,33 @@ export default function Form() {
       }
     })
   }
+
+  function checkForm() {
+    if(formData.websiteURL && !checkSite(formData.websiteURL)) {
+      setFeedback('please enter a valid web address beginning with www.')
+      return false
+    }
+    if(!checkPhone(formData.phoneNumber)) {
+      setFeedback('please enter a valid phone number')
+      return false
+    }
+    if(!checkZip(formData.zip)) {
+      setFeedback('please enter a valid zipcode')
+      return false
+    }
+    return true
+  }
   
   function handleSubmit(e) {
     e.preventDefault()
-    postData(formData, 'shelters')
+    setError('')
+    setFeedback('')
+
+    if(checkForm()) {
+      postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
+        console.log('successful post!')
         return response.json()
       } else {
         return Promise.reject(response.status)
@@ -38,9 +74,15 @@ export default function Form() {
     })
     .then(data => {
       setPostSuccess(true)
+      setTimeout(() => {setPostSuccess(false)}, 3000)
+      clearInputs()
     })
-    setTimeout(() => {setPostSuccess(false)}, 3000)
-    clearInputs()
+    .catch(error => {
+      console.log(error)
+      //this will come in as an object and we will need to set different error messages depending
+      setError(error)
+    })
+    }
   }
 
   function clearInputs() {
@@ -50,6 +92,7 @@ export default function Form() {
         streetAddress: "",
         city: "",
         state: "",
+        zip: "",
         phoneNumber: "",
         website: ""
       }
@@ -102,6 +145,16 @@ export default function Form() {
       <div className={styles.inputContainer}>
         <input 
           type="text" 
+          name="zip" 
+          placeholder="zipcode" 
+          className={styles.formInput}
+          value={formData.zip}
+          onChange={(e) => handleChange(e)}
+        />
+      </div>
+      <div className={styles.inputContainer}>
+        <input 
+          type="text" 
           name="phoneNumber" 
           placeholder="phone number" 
           className={styles.formInput}
@@ -112,15 +165,17 @@ export default function Form() {
       <div className={styles.inputContainer}>
         <input 
           type="text" 
-          name="website" 
+          name="websiteURL" 
           placeholder="website" 
           className={styles.formInput}
-          value={formData.website}
+          value={formData.websiteURL}
           onChange={(e) => handleChange(e)}
         />
       </div>
-      <button type="submit" className={styles.button} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
-      {postSuccess && <p className="message">Your addition was successful!</p> }
+      <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
+      {error && <p className="message">There was an error with your submission. Please try again.</p>}
+      {feedback && <p className="message">{feedback}</p>}
+      {postSuccess && <p className="message">Your submission was successful!</p> }
     </form>    
   )
 }
