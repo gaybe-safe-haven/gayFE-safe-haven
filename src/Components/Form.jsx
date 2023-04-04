@@ -13,7 +13,7 @@ export default function Form() {
       state: "",
       zip: "",
       phoneNumber: "",
-      website: ""
+      websiteURL: ""
     }
   )
 
@@ -33,17 +33,18 @@ export default function Form() {
   }
 
   function checkForm() {
+    if(formData.websiteURL && !checkSite(formData.website)) {
+      setFeedback('please enter a valid web address beginning with www.')
+      return false
+    }
     if(!checkZip(formData.zip)) {
       setFeedback('please enter a valid zipcode')
       return false
     }
-  if(!checkSite(formData.website)) {
-    setFeedback('please enter a valid web address beginning with www.')
-    return false
-  }
+
     const inputs = Object.keys(formData)
     inputs.forEach(key => {
-      if(key !== 'website' && !formData[key]) {
+      if(key !== 'websiteURL' && !formData[key]) {
         setIncomplete(true)
         console.log('form incomplete')
       }
@@ -158,16 +159,16 @@ export default function Form() {
       <div className={styles.inputContainer}>
         <input 
           type="text" 
-          name="website" 
+          name="websiteURL" 
           placeholder="website" 
           className={styles.formInput}
-          value={formData.website}
+          value={formData.websiteURL}
           onChange={(e) => handleChange(e)}
         />
       </div>
       <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
       {error && <p className="message">There was an error with your submission. Please try again.</p>}
-      {/* {incomplete && <p>please make sure all fields are complete</p>} */}
+      {feedback && <p className="message">{feedback}</p>}
       {postSuccess && <p className="message">Your submission was successful!</p> }
     </form>    
   )
