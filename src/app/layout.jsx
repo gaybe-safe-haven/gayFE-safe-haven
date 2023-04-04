@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
               <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
               <Link href="/api"><button alt="public api" className={styles.linkButton}>public api</button></Link>
             </div>
-            <CiStar className={styles.headerIcon}/>
+            <CiStar className={styles.navIcon}/>
           </div>
         </nav>
-        <div className={heroStyles.hero}>
-          <div className={heroStyles.heroWrapper}>
+        <div className={heroStyles.header}>
+          <div className={heroStyles.headerWrapper}>
             <h1 className={heroStyles.title}>S.A.F.E.R. List</h1>
             <p className={heroStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p>
           </div>

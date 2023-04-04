@@ -76,3 +76,15 @@
         padding: .5rem;
     }
 }
+
+/* swith this to flex box controlled sizes:  */
+/* @media (min-width: 800px) {
+    .makeupTeensImage {
+        max-height: 20rem;
+    }
+
+    .facepaintTeen {
+        max-height: 20rem;
+        max-width: auto;
+    }
+} */
