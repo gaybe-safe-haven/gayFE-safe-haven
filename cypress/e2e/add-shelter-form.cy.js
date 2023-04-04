@@ -59,8 +59,20 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.get('input[type=text][name="websiteURL"]')
       cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
     })
+    cy.get("p.message").contains("Your submission was successful!").should("exist")
+  })
 
-    cy.get("p.message").contains("Your addition was successful!").should("exist")
+  it("Should not submit a form with incomplete fields", () => {
+    cy.get("button.Form_button__BbaEK").should('be.disabled')
+    cy.get('input[type=text][name="name"]').type("Test Shelter 2")
+    cy.get('input[type=text][name="streetAddress"]').type("123 Elm Street")
+    cy.get('input[type=text][name="city"]').type("Honolulu")
+    cy.get('input[type=text][name="state"]').type("HI")
+    cy.get('input[type=text][name="zip"]').type("02460")
+    cy.get("button.Form_button__BbaEK").should('be.disabled')
+    cy.get('input[type=text][name="phoneNumber"]').type("1234567890")
+    cy.get("button.Form_button__BbaEK").should('be.enabled')
+
   })
 
 
