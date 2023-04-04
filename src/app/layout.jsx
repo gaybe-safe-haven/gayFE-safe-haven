@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={styles.linkButton}>list</button></Link>
               <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
-              <Link href="/api"><button alt="public api" className={styles.linkButton}>public api</button></Link>
+              <Link href="/public-api"><button alt="public api" className={styles.linkButton}>public api</button></Link>
             </div>
           </div>
         </nav>
