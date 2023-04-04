@@ -93,6 +93,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
 
     //it should display prompt for incorrect webpage
     it("Should disallow a user from submitting an improperly formatted webpage", () => {
+      cy.intercept('POST', 'https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters',{fixture: '../fixtures/postShelter200.json'} )
       cy.get('input[type=text][name="zip"]').type("02460")
       cy.get('input[type=text][name="phoneNumber"]').type("(123)456-7700")
       cy.get('input[type=text][name="websiteURL"]').type('http://www.google.com')
@@ -111,7 +112,16 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.get("p.message").contains("Your submission was successful!").should("be.visible")
     })
 
-    //it should display an error message if there was an issue with the post
+   
+    it("Should display an error message if the server returns an error", () => {
+      cy.intercept('POST', 'https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters', { statusCode: 500, })
+
+        cy.get('input[type=text][name="zip"]').type("02460")
+        cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
+        cy.get('input[type=text][name="websiteURL"]').type("www.google.com")
+        cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
+        cy.get("p.message").contains("There was an error with your submission. Please try again.").should("be.visible")
+    })
 
     //it should display an error message if the user tries to submit a shelter that already exists
 
