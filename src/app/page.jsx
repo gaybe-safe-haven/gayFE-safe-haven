@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.mainContentTop}>
-        <p className={styles.purplePTag}>LGBTQ+ youth are 120% more likely to experience homelessness.</p>
+        <p className={styles.mainPagePTag1}>LGBTQ+ youth are 120% more likely to experience homelessness.</p>
         <Image className={imageStyles.makeupTeensImage} src={makeupTeens} alt="makeup teens"/>
-        <p className={styles.greenPTag}>But not all shelters are safe for queer and trans folks.</p>
+        <p className={styles.mainPagePTag2}>But not all shelters are safe for queer and trans folks.</p>
       </div>
       <div className={styles.mainContentBottom}>
         <Image className={imageStyles.facepaintTeen} src={facepaintTeenPic} alt="face paint teen" />
-        <p className={styles.pinkPTag}>We&apos;re asking you to help us track the ones that are.</p>
+        <p className={styles.mainPagePTag3}>We&apos;re asking you to help us track the ones that are.</p>
       </div>
     </main>
   )

@@ -1,7 +1,7 @@
 import "./styles/globals.css";
 import Link from 'next/link'
-import styles from "./styles/nav.module.css"
-import heroStyles from "./page.module.css";
+import navStyles from "./styles/nav.module.css"
+import headerStyles from "./page.module.css";
 // import LoadingListPage from "./list/loading";
 import { CiStar } from "react-icons/ci";
 
@@ -16,21 +16,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav className={styles.navContainer}>
-          <div className={styles.navContentWrapper}>
-            <div className={styles.linkContainer}>
-              <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
-              <Link href="/list"><button alt="list" className={styles.linkButton}>list</button></Link>
-              <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
-              <Link href="/api"><button alt="public api" className={styles.linkButton}>public api</button></Link>
+        <nav className={navStyles.navContainer}>
+          <div className={navStyles.navContentWrapper}>
+            <div className={navStyles.linkContainer}>
+              <Link href="/about"><button alt="about" className={navStyles.linkButton}>about</button></Link>
+              <Link href="/list"><button alt="list" className={navStyles.linkButton}>list</button></Link>
+              <Link href="/add-shelter"><button alt="add a shelter" className={navStyles.linkButton}>add a shelter</button></Link>
+              <Link href="/api"><button alt="public api" className={navStyles.linkButton}>public api</button></Link>
             </div>
-            <CiStar className={styles.navIcon}/>
+            <CiStar className={navStyles.navIcon}/>
           </div>
         </nav>
-        <div className={heroStyles.header}>
-          <div className={heroStyles.headerWrapper}>
-            <h1 className={heroStyles.title}>GayBES.A.F.E. Search</h1>
-            <p className={heroStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p>
+        <div className={headerStyles.header}>
+          <div className={headerStyles.headerWrapper}>
+            <h1 className={headerStyles.title}>GayBES.A.F.E. Search</h1>
+            <p className={headerStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p>
           </div>
         </div>
         {children}
