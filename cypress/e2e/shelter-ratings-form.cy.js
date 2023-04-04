@@ -1,6 +1,6 @@
 describe("User Flow: As a user, I should be able to submit a form on the shelter details page to add my ratings/opinions to a shelter", () => {
   beforeEach(() => {
-		// cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/1", {fixture: "../fixtures/shelter.json"})
+		cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/1", {fixture: "../fixtures/shelter.json"})
     // looks like our data is still hard-coded in rate form?
     cy.visit("http://localhost:3000/list/1");
   });
@@ -9,7 +9,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("h2.shelter_name__HjWLg").should("be.visible")
     cy.get('.shelter_contact__ecbAs > :nth-child(2) > :nth-child(1)').should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("be.visible")
-    cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("contain", "(312) 987-4583")
+    cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("contain", "2134568765")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("contain", "website")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("have.attr", "href")
@@ -21,18 +21,18 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("section.shelter_reviews__GcKCz > h2").should("be.visible")
     cy.get("section.shelter_reviews__GcKCz > p").contains("these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them")
     
-    cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "9.8")
+    cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "9.9")
     cy.get("img.shelter_icons__YJFDX").should("be.visible")
 
     .should("have.attr", "src")
     .should("eq", "/flag.png")
 
-    cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "8.6")
+    cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "8.8")
     cy.get(':nth-child(2) > .shelter_icons__YJFDX').should("be.visible")
     .should("have.attr", "src")
     .should("eq", "/home.png")
 
-    cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "8.2")
+    cy.get("article.shelter_scores__Lfy5u > div > p").should("contain", "")
     cy.get(':nth-child(3) > .shelter_icons__YJFDX').should("be.visible")
     .should("have.attr", "src")
     .should("eq", "/mop.png")

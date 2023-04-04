@@ -5,9 +5,10 @@
 	"attributes": {
 	"name": "Golden Sun",
 	"streetAddress": "1234 Black St",
+	"city": "New York",
 	"state": "NY",
 	"zip": 78123,
-	"websiteUrl": null,
+	"websiteUrl": "www.fake.com",
 	"phoneNumber": "2134568765",
 	"verified": false,
 	"avgStaff": 9.9,
