@@ -77,16 +77,18 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
   })
 
   it("Should display a message upon successful form submission", () => {
-    cy.get("form").within((form) => {
+    cy.intercept("POST", "https://gaybe-safe-haven.herokuapp.com/api/v1/reviews", {fixture: "../fixtures/reviewShelter.json"})
+		cy.get("form").within((form) => {
       cy.get("input[type=range][name='staff']").invoke("val", 8).trigger("change")
       cy.get("input[type=range][name='safety']").invoke("val", 8).trigger("change")
       cy.get("input[type=range][name='cleanliness']").invoke("val", 8).trigger("change")
       cy.get("button.RateForm_submit__1MsQV").contains("submit review").click()
     })
+		cy.get("section > p").contains("uthank you for taking the time to share your experience with us")
 //need something here for conditionally rendered text on submit
   })
 	it("Should POST review", () => {
-		cy.intercept("POST", "https://gaybe-safe-haven.herokuapp.com/api/v1/reviews", {fixture: "../fixtures/reviewShelter.json"})
+		
 		cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/1")
 	})
 })
