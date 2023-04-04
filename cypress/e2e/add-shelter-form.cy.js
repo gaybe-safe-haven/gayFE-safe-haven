@@ -70,10 +70,18 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
   })
 
   it("Should disallow a user from submitting an inproperly formatted zipcode", () => {
+    cy.get('input[type=text][name="phoneNumber"]').type("1234567890")
+    cy.get('input[type=text][name="zip"]').type("0246")
+    cy.get("button.Form_button__BbaEK").click()
+    cy.get("p.message").contains("please enter a valid zipcode").should("exist")
 
+    cy.get('input[type=text][name="zip"]').type("c")
+    cy.get("button.Form_button__BbaEK").click()
+    cy.get("p.message").contains("please enter a valid zipcode").should("exist")
   })
 
     //it should display prompt for incorrect phone number
+    
 
     //it should display prompt for incorrect webpage
 
