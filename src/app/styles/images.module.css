@@ -1,6 +1,7 @@
 .greenImageWrapper {
     align-self: flex-start;
     background-color: #C5D2AC;  
+    max-width: 40rem;
 }
 
 .hairPaintTeenImage {
@@ -13,6 +14,7 @@
 .yellowGreenImageWrapper {
     align-self: flex-start;
     background-color: #ABD757;
+    max-width: 40rem;
 }
 
 .makeupTeensImage {
@@ -25,6 +27,7 @@
 .purpleImageWrapper {
     align-self: flex-start;
     background-color: #B3B1DE;
+    max-width: 40rem;
 }
 
 .facepaintTeen {
@@ -38,6 +41,7 @@
 .blueImageWrapper {
     align-self: flex-start;
     background-color: #98EDED;
+    max-width: 40rem;
 }
 
 .groupTeens {
