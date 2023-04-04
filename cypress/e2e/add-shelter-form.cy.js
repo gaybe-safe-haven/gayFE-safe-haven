@@ -1,5 +1,6 @@
 describe("User Flow: As a user, when I choose to add a shelter to the list, I am taken to a form where I can input all the relevant information, and submit it. The shelter will be added to the existing list", () => {
   beforeEach(() => {
+		cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters',{fixture: '../fixtures/postShelter200.json'} )
     cy.visit("http://localhost:3000/add-shelter");
     cy.get('input[type=text][name="name"]').type("Test Shelter 1")
     cy.get('input[type=text][name="streetAddress"]').type("123 Test Ave")
@@ -15,7 +16,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
   })
 
   it("Should have a form that includes input boxes and a submit button", () => {
-    cy.intercept('POST', 'https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters',{fixture: '../fixtures/postShelter200.json'} )
+    // cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters',{fixture: '../fixtures/postShelter200.json'} )
     cy.get("form.Form_formContainer__j8djA").within((form) => {
       cy.get('input[type=text][name="name"]')
       cy.get('input[type=text][name="streetAddress"]')
@@ -93,7 +94,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
 
     //it should display prompt for incorrect webpage
     it("Should disallow a user from submitting an improperly formatted webpage", () => {
-      cy.intercept('POST', 'https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters',{fixture: '../fixtures/postShelter200.json'} )
+      // cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters',{fixture: '../fixtures/postShelter200.json'} )
       cy.get('input[type=text][name="zip"]').type("02460")
       cy.get('input[type=text][name="phoneNumber"]').type("(123)456-7700")
       cy.get('input[type=text][name="websiteURL"]').type('http://www.google.com')
@@ -114,7 +115,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
 
    
     it("Should display an error message if the server returns an error", () => {
-      cy.intercept('POST', 'https://bcc0d6a3-cbd5-41b7-be05-284d9753c510.mock.pstmn.io/shelters', { statusCode: 500, })
+      cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters', { statusCode: 500, })
 
         cy.get('input[type=text][name="zip"]').type("02460")
         cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
