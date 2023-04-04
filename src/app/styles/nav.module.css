@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
 }
 
 .linkContainer {
@@ -56,14 +56,14 @@
         font-size: 1rem;
         font-weight: 600;
         padding: .6rem 0;
-        min-width: 100vw;
+        max-width: 100vw;
     }
 
     .navContentWrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        min-width: 100vw;
+        max-width: 100vw;
     }
 
     .linkContainer {
@@ -76,7 +76,7 @@
 @media (min-width: 500px) {
     .navContainer {
         font-size: 1rem;
-        min-width: 100vw;
+        max-width: 100vw;
     }
 
     .navContentWrapper {
@@ -84,7 +84,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        min-width: 100vw;
+        max-width: 100vw;
     }
 
     .linkContainer {
