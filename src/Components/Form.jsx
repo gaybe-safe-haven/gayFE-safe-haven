@@ -1,7 +1,7 @@
 "use client"
 import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { checkSite, checkZip, checkPhone } from '../util'
 
 export default function Form() {
@@ -22,8 +22,17 @@ export default function Form() {
   const [incomplete, setIncomplete] = useState(true)
   const [feedback, setFeedback] = useState('')
 
-  function handleChange(e) {
+  useEffect(() => {
     setIncomplete(false)
+    const inputs = Object.keys(formData)
+    inputs.forEach(key => {
+      if(key !== 'websiteURL' && !formData[key]) {
+        setIncomplete(true)
+      }
+    })
+  }, [formData])
+  
+  function handleChange(e) {
     setFormData(prevFormData => {
       return {
         ...prevFormData, 
@@ -45,14 +54,7 @@ export default function Form() {
       setFeedback('please enter a valid zipcode')
       return false
     }
-
-    const inputs = Object.keys(formData)
-    inputs.forEach(key => {
-      if(key !== 'websiteURL' && !formData[key]) {
-        setIncomplete(true)
-      }
-    })
-    return incomplete ? false : true
+    return true
   }
   
   function handleSubmit(e) {
