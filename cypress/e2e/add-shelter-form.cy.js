@@ -55,8 +55,18 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
     })
 
+    //it should display prompt for incorrect zip code
+
+    //it should display prompt for incorrect phone number
+
+    //it should display prompt for incorrect webpage
+
+    //it should display an error message if there was an issue with the post
+
+    //it should display an error message if the user tries to submit a shelter that already exists
+
+    //it should display an error message if the zip code entered is invalid
+
     cy.get("p.message").contains("Your addition was successful!").should("exist")
   })
-
-  //Should we test the POST request?
 })
