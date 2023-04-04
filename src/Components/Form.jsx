@@ -66,7 +66,6 @@ export default function Form() {
       postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
-        console.log('successful post!')
         return response.json()
       } else {
         return Promise.reject(response.status)

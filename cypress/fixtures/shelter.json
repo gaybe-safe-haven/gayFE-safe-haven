@@ -1,18 +1,19 @@
-
-                {
-                    "id": "1",
-                    "type": "shelter",
-                    "attributes": {
-                        "name": "Thrive Youth Center",
-                        "streetAddress": "1 Haven for Hope Way",
-                        "city": "San Antonio",
-                        "state": "TX",
-                        "zip": "78207",
-                        "websiteUrl": null,
-                        "phoneNumber": "(312) 987-4583",
-                        "verified": false,
-                        "avgStaff": 9.8,
-                        "avgSafety": 8.6,
-                        "avgClean": 8.2
-                    }
-                }
+{
+	"data": {
+	"id": 1,
+	"type": "shelter",
+	"attributes": {
+	"name": "Golden Sun",
+	"streetAddress": "1234 Black St",
+	"city": "New York",
+	"state": "NY",
+	"zip": 78123,
+	"websiteUrl": "www.fake.com",
+	"phoneNumber": "2134568765",
+	"verified": false,
+	"avgStaff": 9.9,
+	"avgClean": 8.8,
+	"avgSafety": null
+		}
+	}
+}
