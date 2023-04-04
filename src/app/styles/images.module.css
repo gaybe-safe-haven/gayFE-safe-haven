@@ -60,6 +60,13 @@
     .blueImageWrapper {
         max-width: 40rem;
     }
+
+    .makeupTeensImage {
+        composes: yellowGreenImageWrapper;
+        order: 2;
+        padding: 1rem;
+        width: auto;
+    }
 }
 
 @media (max-width: 400px) {
@@ -76,21 +83,25 @@
     .groupTeens {
         padding: .5rem;
     }
+
+    .makeupTeensImage {
+        composes: yellowGreenImageWrapper;
+        order: 2;
+        padding: 1rem;
+        width: auto;
+    }
 }
 
 /* swith this to flex box controlled sizes:  */
 @media (min-width: 800px) {
     .makeupTeensImage {
         composes: yellowGreenImageWrapper;
-        height: auto;
         order: 3;
         padding: 1rem;
         width: auto;
     }
     
-
     /* .facepaintTeen {
-        max-height: 20rem;
-        max-width: auto;
+
     } */
 }

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         </nav>
         <div className={heroStyles.header}>
           <div className={heroStyles.headerWrapper}>
-            <h1 className={heroStyles.title}>S.A.F.E.R. List</h1>
+            <h1 className={heroStyles.title}>GayBES.A.F.E. Search</h1>
             <p className={heroStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p>
           </div>
         </div>

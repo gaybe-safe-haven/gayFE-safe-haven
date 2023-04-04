@@ -15,7 +15,7 @@ export default function About() {
             <p className={styles.bluePTag}>In the face of an increasingly hostile political climate towards LGBTQ+ individuals, it&apos;s more important than ever to provide safe spaces for homeless LGBTQ+ youth</p>
             <p className={styles.greenPTagThin}>We wanted to make an app that would let vulnerable youth search for LGBTQ+-friendly shelters across the United States</p>
           </div>
-
+{/* change purplePTag selector */}
           <p className={styles.purplePTag}>but  a national database of LGBTQ+-friendly shelters didn&apos;t exist!</p>
           <Image id="hairPaintTeenImg" className={imageStyles.hairPaintTeenImage} src={hairPaintTeen} alt="hair paint teen" />
       </div>
