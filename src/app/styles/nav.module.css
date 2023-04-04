@@ -29,7 +29,7 @@
     border: none;
     color:#4d4d4d;
     font-style: inherit;
-    padding-left: .6rem;
+    padding: 0;
 }
 
 .headerIcon {
