@@ -77,6 +77,7 @@ export default function Form() {
     })
     .catch(error => {
       console.log(error)
+      //this will come in as an object and we will need to set different error messages depending
       setError(error)
     })
     }
