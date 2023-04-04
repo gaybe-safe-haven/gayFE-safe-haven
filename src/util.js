@@ -1,6 +1,5 @@
 
 export const checkZip = (input) => {
-  console.log('all num nums?', /^\d+$/.test(input))
   if(input.length !== 5 || !(/^\d+$/.test(input))) {
       return false
   }
@@ -8,7 +7,6 @@ export const checkZip = (input) => {
 }
 
 export const checkSite = (input) => {
-
   if (input.includes('http://') || !input.includes('www.')) {
     return false
   }
