@@ -18,19 +18,18 @@ export default function RootLayout({ children }) {
       <body>
         <nav className={styles.navContainer}>
           <div className={styles.navContentWrapper}>
-            {/* <h1 className={styles.title}>Rate My Gay Shelter .net</h1> */}
-            {/* we should have a link to "/" and the h1 could do this or a logo? */}
             <div className={styles.linkContainer}>
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={styles.linkButton}>list</button></Link>
               <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
               <Link href="/api"><button alt="public api" className={styles.linkButton}>public api</button></Link>
             </div>
+            <CiStar className={heroStyles.headerIcon}/>
           </div>
         </nav>
         <div className={heroStyles.hero}>
           <div className={heroStyles.heroWrapper}>
-            <h1 className={heroStyles.title}><CiStar className={heroStyles.headerIcon}/>&nbsp;S.A.F.E.R. List</h1>
+            <h1 className={heroStyles.title}>&nbsp;S.A.F.E.R. List</h1>
             <p className={heroStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p>
           </div>
         </div>

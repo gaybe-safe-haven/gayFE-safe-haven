@@ -1,6 +1,6 @@
 .formContainer {
-    background-color: #B6E6E6;
-    border: 1px solid rgb(28, 26, 81, .6);
+    background-color: #d2d2d2;
+    border: 1px solid rgba(22, 22, 22, 0.6);
     border-radius: .1rem;
     display: flex;
     flex-direction: column;
@@ -10,27 +10,27 @@
 }
 
 .formHeading {
-    color:rgb(60, 1, 32, .8);
+    color:rgba(22, 22, 22, 0.8);
 }
 
 .inputContainer {
-    color: #066161;
+    color: #4f4f4f;
 }
 
 .formInput {
-    background-color: #E8FFFF;
-    border: 1px solid #066161;
+    background-color: #e3e3e3;
+    border: 1px solid #5e5e5e;
     border-radius: .1rem;
-    color: rgb(28, 26, 81, .6);
+    color: rgba(45, 45, 45, 0.6);
     font: inherit;
     margin: .2rem;
 }
 
 .button {
-    background-color: #E5ABCA;
-    border: 1px solid #660137;
+    background-color: #989898;
+    border: 1px solid #484848;
     border-radius: .1rem;
-    color: #660137;
+    color: #3f3f3f;
     font: inherit;
     margin: .2rem;
     width: 8rem;

@@ -1,6 +1,6 @@
 .listItemContainer {
-    background-color: #E8FFFF;
-    border: 1px solid #066161;
+    background-color: #ededed;
+    border: 1px solid #5c5c5c;
     border-radius: .1rem;
     display: flex;
     flex-direction: row;
@@ -12,7 +12,7 @@
 } 
  
 .linkText {
-    color: #1c1a51;
+    color: #2d2d2d;
     text-decoration: none;
 } 
 
@@ -27,10 +27,10 @@
 
 .validateIcon {
     composes: icon;
-    color: #E9007E;
+    color: #545454;
 }
 
 .notValidatedIcon {
     composes: icon;
-    color: rgb(233, 0, 126, .5);
+    color: rgba(66, 66, 66, 0.5);
 }
