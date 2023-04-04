@@ -1,5 +1,6 @@
 "use client";
 import styles from "../page.module.css";
+import listBoxStyles from "./listPage.module.css";
 import { getShelterData } from "../../apiCalls";
 import { useEffect, useState } from "react";
 import LoadingListPage from "./loading";
@@ -54,7 +55,7 @@ export default function List() {
 		<main className={styles.main}>
 			{/* //filter container goes here */}
 			<h2 className={styles.h2Styling}>Shelter List</h2>
-			<div>
+			<div className={listBoxStyles.grid}>
 				{mappedData}
 			</div>
 		</main>
