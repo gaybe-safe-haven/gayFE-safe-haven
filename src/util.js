@@ -1,6 +1,5 @@
 
 export const checkZip = (input) => {
-  console.log(input, input.length)
   if(input.length !== 5 || 
     input.split('').find(digit => !typeof digit !== 'number')) {
       return false
@@ -9,7 +8,8 @@ export const checkZip = (input) => {
 }
 
 export const checkSite = (input) => {
-  if (input.contains('http://') || !input.contains('www.')) {
+  console.log(input, input.length, typeof input)
+  if (input.includes('http://') || !input.includes('www.')) {
     return false
   }
   return true
