@@ -2,7 +2,7 @@
 import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
 import { useState } from "react";
-import { checkSite, checkZip } from '../util'
+import { checkSite, checkZip, checkPhone } from '../util'
 
 export default function Form() {
   const [formData, setFormData] = useState(
@@ -35,6 +35,10 @@ export default function Form() {
   function checkForm() {
     if(formData.websiteURL && !checkSite(formData.websiteURL)) {
       setFeedback('please enter a valid web address beginning with www.')
+      return false
+    }
+    if(!checkPhone(formData.phoneNumber)) {
+      setFeedback('please enter a valid phone number')
       return false
     }
     if(!checkZip(formData.zip)) {
