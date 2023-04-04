@@ -83,7 +83,9 @@
 
 @media (max-width: 799px) {
     .mainContentTop,
-    .mainContentBottom {
+    .mainContentBottom,
+    .mainContentTop2,
+    .mainContentBottom2 {
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -104,7 +106,9 @@
     }
 
     .mainContentTop,
-    .mainContentBottom {
+    .mainContentBottom,
+    .mainContentTop2,
+    .mainContentBottom2 {
         display: flex;
         gap: 1rem;
         /* max-height: 40%; */
