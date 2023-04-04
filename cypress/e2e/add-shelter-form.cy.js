@@ -32,7 +32,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
     cy.get("form.Form_formContainer__j8djA").within((form) => {
     
       cy.get('input[type=text][name="zip"]').type("02460")
-      cy.get('input[type=text][name="phoneNumber"]').type("1234567890")
+      cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
       cy.get('input[type=text][name="websiteURL"]')
     })
 
@@ -52,7 +52,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
   it("Should have a message that communicates a successful addition when the button is clicked", () => {
     cy.get("form.Form_formContainer__j8djA").within((form) => {
       cy.get('input[type=text][name="zip"]').type("02460")
-      cy.get('input[type=text][name="phoneNumber"]').type("1234567890")
+      cy.get('input[type=text][name="phoneNumber"]').type("(123)456-7890")
       cy.get('input[type=text][name="websiteURL"]')
       cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
     })
@@ -80,8 +80,16 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
     cy.get("p.message").contains("please enter a valid zipcode").should("exist")
   })
 
-    //it should display prompt for incorrect phone number
-    
+  it("Should disallow a user from submitting an inproperly formatted phone number", () => {
+    cy.get('input[type=text][name="zip"]').type("02460")
+    cy.get('input[type=text][name="phoneNumber"]').type("(123)456")
+    cy.get("button.Form_button__BbaEK").click()
+    cy.get("p.message").contains("please enter a valid phone number").should("exist")
+
+    cy.get('input[type=text][name="phoneNumber"]').type("-duck")
+    cy.get("button.Form_button__BbaEK").click()
+    cy.get("p.message").contains("please enter a valid phone number").should("exist")
+  })
 
     //it should display prompt for incorrect webpage
 
