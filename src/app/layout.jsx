@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
               <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
               <Link href="/api"><button alt="public api" className={styles.linkButton}>public api</button></Link>
             </div>
-            <CiStar className={heroStyles.headerIcon}/>
+            <CiStar className={styles.headerIcon}/>
           </div>
         </nav>
         <div className={heroStyles.hero}>
