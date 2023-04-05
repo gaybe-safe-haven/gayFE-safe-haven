@@ -76,7 +76,7 @@ export default function Form() {
     setFeedback('')
 
     if(checkForm()) {
-      console.log('posting')
+      console.log('posting', formData)
       postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
@@ -100,7 +100,6 @@ export default function Form() {
   }
 
   function clearInputs() {
-    console.log('reset')
     setFormData(
       {
         name: "",
@@ -112,6 +111,26 @@ export default function Form() {
         websiteURL: ""
       }
     )
+  }
+
+  function goToShelter(id) {
+
+  }
+
+  function displayForm() {
+    setPostSuccess({
+      name: '',
+      streetAddress: '',
+      city: '',
+      state: '',
+      zip: '',
+      websiteUrl: '',
+      phoneNumber: '',
+      verified: '',
+      avgStaff: '',
+      avgSafety: '',
+      avgClean: ''
+})
   }
 
   return (
