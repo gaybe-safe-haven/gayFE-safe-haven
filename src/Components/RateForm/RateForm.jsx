@@ -9,7 +9,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     staff: '',
   })
   const [missing, setMissing] = useState('')
-  console.log('rateform:', {id, reviewed, error, submitReview})
+  
   const clearInputs = () => {
     setReview({
       cleanliness: '',
