@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 
 export default function Card({data}) {
-
+    console.log('data:', data)
     const validation = data.attributes.verified ? <BiCheckboxChecked id="validationIcon" alt="validated shelter" className={styles.validateIcon} /> : <BiCheckbox id="notValidatedIcon" alt="not validated" className={styles.notValidatedIcon}/>;
 
     return (
@@ -21,7 +21,7 @@ export default function Card({data}) {
 
 Card.propTypes = {
     data: PropTypes.shape({
-        id: PropTypes.string.isRequired,
+        id: PropTypes.number.isRequired,
         attributes: PropTypes.shape({
             name: PropTypes.string.isRequired,
             verified: PropTypes.bool.isRequired,
