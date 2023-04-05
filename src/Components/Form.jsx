@@ -127,5 +127,12 @@ export default function Form() {
 }
 
 Form.propTypes = {
-  postData: PropTypes.func.isRequired,
+  postData: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    streetAddress: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
+    phoneNumber: PropTypes.string.isRequired,
+    website: PropTypes.string
+  }).isRequired
 };
