@@ -5,44 +5,183 @@
   text-align: center;
 }
 
+/* .infoWrapper {
+  border: 3px solid #4F49E0;
+} */
+
 .contact {
-  font-size: 22px;
-  margin: 1em;
-}
-
-.name {
-  font-size: 30px;
-}
-
-.clientServices {
-  display: flex;
-  justify-content: space-around;
-  font-size: 18px;
-}
-
-.icons {
-  height: 60px;
-  width: 60px;
-}
-
-.reviews {
+  border: 3px solid #4F49E0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  border: #ABD757 solid 3px;
-  height: 30vh;
-  width: 90vw;
-  font-size: 13px;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
+
+.reviews {
+  border: #ABD757 solid 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.name {
+  font-size: 2rem;
+}
+
+.smallH2 {
+  font-size: 1.3rem;
+}
+
+.smallP {
+  font-size: 1rem;
+}
+
+.smallerP {
+  font-size: .8rem;
+}
+.address {
+  /* color:#4F49E0; */
+}
+.clientServices {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+.icons {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
 
 .scores {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 34px;
+  font-size: 2rem;
 }
 
-.verify {
-  font-size: 12px;
-  padding: 1vh;
+.verified {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  .reviews,
+  .contact {
+    margin: .5rem;
+    padding: .5rem
+  }
+
+  .cleanP,
+  .safetyP,
+  .staffP,
+  .communityReviews,
+  .name {
+    composes: smallH2;
+  }
+
+  .reviewNote,
+  .verifiedMessage {
+    composes: smallerP;
+  }
+
+  .site,
+  .phone,
+  .street {
+    /* color:#4F49E0; */
+    composes: smallP;
+  }
+}
+
+@media (min-width: 800px) {
+  .mainContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    max-width: 100vw;
+  }
+
+  .leftWrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 50vw;
+    min-height: 100%;
+  }
+
+  /* .infoWrapper {
+    align-self: flex-start;
+    max-width: 50vw;
+  } */
+  /* .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: #ABD757 solid 3px;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .contact {
+    font-size: 1.5rem;
+    flex: .5;
+    padding: 1rem;
+    max-width: 50vw;
+    min-height: 50%;
+  }  */
+
+  .contact {
+    border: 3px solid #4F49E0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 25vh;
+    padding: 1rem;
+
+  }
+  
+  .reviews {
+    border: #ABD757 solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 25vh;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    border: 3px solid #4F49E0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 30vh;
+    padding: 1rem;
+  }
+
+  .reviews {
+    border: #ABD757 solid 3px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: space-between;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 20vh;
+    padding: 1rem;
+  }
 }

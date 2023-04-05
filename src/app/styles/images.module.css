@@ -1,6 +1,7 @@
 .greenImageWrapper {
     align-self: flex-start;
     background-color: #C5D2AC;  
+    min-width: 300px;
 }
 
 .hairPaintTeenImage {
@@ -12,12 +13,14 @@
 
 .yellowGreenImageWrapper {
     align-self: flex-start;
-    background-color: #ABD757;
+    background-color: rgb(171, 215, 87, .8);
+    min-width: 300px;
 }
 
 .makeupTeensImage {
     composes: yellowGreenImageWrapper;
     height: auto;
+    order: 3;
     padding: 1rem;
     width: auto;
 }
@@ -25,6 +28,7 @@
 .purpleImageWrapper {
     align-self: flex-start;
     background-color: #B3B1DE;
+    min-width: 300px;
 }
 
 .facepaintTeen {
@@ -38,6 +42,7 @@
 .blueImageWrapper {
     align-self: flex-start;
     background-color: #98EDED;
+    min-width: 300px;
 }
 
 .groupTeens {
@@ -46,4 +51,72 @@
     margin: 0;
     padding: 1rem;
     width: auto;
+}
+
+
+@media (max-width: 400px) {
+    .greenImageWrapper,
+    .yellowGreenImageWrapper,
+    .purpleImageWrapper,
+    .blueImageWrapper {
+        min-width: 13rem;
+    }
+    
+    .hairPaintTeenImage,
+    .makeupTeensImage,
+    .facepaintTeen,
+    .groupTeens {
+        padding: .5rem;
+    }
+    
+    .makeupTeensImage {
+        composes: yellowGreenImageWrapper;
+        order: 2;
+        width: auto;
+    }
+
+    .facepaintTeen {
+        composes: purpleImageWrapper;
+        height: auto;
+        margin: 0;
+        padding: 1rem;
+        width: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    .greenImageWrapper,
+    .yellowGreenImageWrapper,
+    .purpleImageWrapper,
+    .blueImageWrapper {
+        min-width: 30rem;
+    }
+
+    .makeupTeensImage {
+        composes: yellowGreenImageWrapper;
+        order: 2;
+        padding: 1rem;
+        width: auto;
+    }
+    .facepaintTeen {
+        composes: purpleImageWrapper;
+        height: auto;
+        margin: 0;
+        padding: 1rem;
+        width: auto;
+    }
+}
+/* swith this to flex box controlled sizes:  */
+@media (min-width: 800px) {
+    .makeupTeensImage {
+        composes: yellowGreenImageWrapper;
+        order: 3;
+        padding: 1rem;
+        max-width: 20rem;
+    }
+    .hairPaintTeenImage,
+    .groupTeens,
+    .facepaintTeen {
+        max-width: 18rem;
+    }
 }
