@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from "./styles/nav.module.css"
 import { Suspense } from "react";
 import LoadingListPage from "./list/loading";
+import PropTypes from 'prop-types';
 
 export const metadata = {
   title: 'Gaybe Safe Haven',
@@ -17,8 +18,8 @@ export default function RootLayout({ children }) {
         <nav className={styles.navContainer}>
           <div className={styles.navContentWrapper}>
             <h1 className={styles.title}>Our App &#60;3</h1>
-            {/* we should have a link to "/" and the h1 could do this or a logo? */}
             <div className={styles.linkContainer}>
+              <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link>
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={styles.linkButton}>list</button></Link>
               <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
@@ -37,3 +38,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+ children: PropTypes.node.isRequired,
+};
