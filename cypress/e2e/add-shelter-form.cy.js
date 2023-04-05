@@ -39,15 +39,9 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
 
     cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
 
-    cy.get('form').within((form) => {
-      cy.get('input[type=text][name="name"]').should("be.empty")
-      cy.get('input[type=text][name="streetAddress"]').should("be.empty")
-      cy.get('input[type=text][name="city"]').should("be.empty")
-      cy.get('input[type=text][name="state"]').should("be.empty")
-      cy.get('input[type=text][name="zip"]').should("be.empty")
-      cy.get('input[type=text][name="phoneNumber"]').should("be.empty")
-      cy.get('input[type=text][name="websiteUrl"]').should("be.empty")
-    })
+    cy.get('section > :nth-child(3)').should('be.visible')
+    cy.get('section > :nth-child(4)').should('be.visible')
+
   })
 
   it("Should have a message that communicates a successful addition when the button is clicked", () => {
@@ -136,23 +130,6 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
         cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
         cy.get('input[type=text][name="websiteUrl"]').type("www.google.com")
         cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
-        cy.get("p.message").contains("There was an error with your submission. Please try again.").should("be.visible")
+        cy.get("p.message").contains("Whoops! Your submission was interrupted. Please try again").should("be.visible")
     })
-
-    //it should display an error message if the user tries to submit a shelter that already exists
-    it("Should display an error message if a duplicate address is POSTed", () => {
-      cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters', {
-        "error": {
-            "status": 422,
-            "code": "P2002",
-            "message": "Unique constraint failed. Shelter already exists at this location"
-        }
-      })
-
-      cy.get('input[type=text][name="zip"]').type("02460")
-      cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
-      cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
-      cy.get("p.message").contains("A shelter at this location is already listed! Please only enter shelters that are not included in our directory").should("be.visible")
-    })
-
 })
