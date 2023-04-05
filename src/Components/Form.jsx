@@ -81,25 +81,25 @@ export default function Form() {
     console.log('submitting: ', formData)
     postData(formData, 'shelters')
     .then(response => {
+
       if (response.ok) {
         return response.json()
       } else {
-        return Promise.reject(response)
+        return Promise.reject(response.status)
       }
     })
     .then(data => {
       setPostSuccess({...data.data.attributes, id: data.data.id})
       clearInputs()
     })
-    .catch(error => {
-      console.log('error: ', error)
-      //this will come in as an object and we will need to set different error messages depending
-      if(error.error.message === "Unique constraint failed. Shelter already exists at this location") {
-        setError('A shelter at this location is already listed! Please only enter shelters that are not included in our directory')
-      } else {
-        setError('Whoops! Something went wrong. Please check all fields are correct and try again')
-      }
-    })
+    .catch (status => {
+
+        if(status === 422) {
+          setError('A shelter at this location is already listed! Please only enter shelters that are not included in our directory')
+        } else {
+          setError('Whoops! Your submission was interrupted. Please try again')
+        }
+      })
     }
   }
 
@@ -236,13 +236,13 @@ function goToShelter(id) {
   )
 }
 
-Form.propTypes = {
-  postData: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    streetAddress: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
-    phoneNumber: PropTypes.string.isRequired,
-    website: PropTypes.string
-  }).isRequired
-};
+// Form.propTypes = {
+//   postData: PropTypes.shape({
+//     name: PropTypes.string.isRequired,
+//     streetAddress: PropTypes.string.isRequired,
+//     city: PropTypes.string.isRequired,
+//     state: PropTypes.string.isRequired,
+//     phoneNumber: PropTypes.string.isRequired,
+//     website: PropTypes.string
+//   }).isRequired
+// };
