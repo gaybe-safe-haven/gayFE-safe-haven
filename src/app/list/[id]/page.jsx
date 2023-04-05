@@ -129,3 +129,8 @@ export default function ShelterPage({ params }) {
   )
 }
 
+ShelterPage.propTypes = {
+  params: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+  }).isRequired,
+};
