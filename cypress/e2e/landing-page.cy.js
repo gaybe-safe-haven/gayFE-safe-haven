@@ -11,12 +11,12 @@ describe("User Flow: As a user, when I visit the site, I should see a landing pa
   it("Should have a nav bar that navigates to different page views using Link", () => {
     cy.get('button[alt="about"]')
       .should("be.visible")
-    cy.get("button.nav_linkButton__zOSWr").contains("about").click()
+    cy.get('[href="/about"] > .nav_linkButton__zOSWr').contains("about").click()
       .url().should("eq", "http://localhost:3000/about")
 
     cy.get('button[alt="list"]')
       .should("be.visible")
-    cy.get("button.nav_linkButton__zOSWr").contains("list").click()
+    cy.get('[href="/list"] > .nav_linkButton__zOSWr').contains("list").click()
       .url().should("eq", "http://localhost:3000/list")
 
     cy.get('button[alt="add a shelter"]')
