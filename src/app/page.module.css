@@ -8,7 +8,6 @@
     padding: 0 1rem;
 }
 
-/* //---header--- */
 .header {
     background-color: #8e8afe;
     border-bottom: 2px solid #4F49E0;
@@ -53,9 +52,7 @@
     width: 12rem;;
 }
 
-/* //---txt-styling---- */
 .h2Styling {
-    /* color: #1c1a51; */
     color: #660137;
     font-size: 1.5rem;
     font-weight: 500;
@@ -63,16 +60,11 @@
 }
 
 .mainPagePTag3 {
-    border: 1px solid yellow;
-    /* background-color: #e5abd5; */
     color: #066161;
     font-weight: 700;
 }
 
 .mainPagePTag2 {
-    border: 1px solid blue;
-    /* background-color:#bacaff; */
-    /* color: #E9007E; */
     color: #660137;
     font-size: 1.5rem;
     font-weight: 600;
@@ -80,20 +72,16 @@
 }
 
 .mainPagePTag1 {
-    border: 1px solid orange;
-    /* background-color: #98EDED;
-    border: 2px solid #ABD757; */
     font-weight: 700;
     order: 1;
 }
 
 .greenPTagThin {
-    border: 1px solid green;
     color: #066161;
     font-weight: 400;
+    padding: .5rem;
 }
 
-/* ---media-queries--------- */
 @media (min-width: 400px) {
     .main {
         display: flex;
@@ -152,11 +140,11 @@
     .mainContentBottom2 {
         display: flex;
         gap: 1rem;
-        /* max-height: 40%; */
     }
     
     .textWrapper {
-        background-color: #F3F1FE;
+        background-color: #d7f0f5;
+        color: #1c1a51cc;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -166,7 +154,7 @@
     }
     
     .textWrapper2 {
-        background-color: #d3d3d3;
+        background-color: #dfe7d0;  
         padding: 1rem;
     }
 
@@ -176,6 +164,7 @@
     }
 
     .boxLowerRight {
+        background-color: #c4cffa;
         composes: buttonBox;
         align-items: center;
         display: flex;
@@ -184,38 +173,55 @@
     }
 
     .mainPagePTag1 {
-        /* background-color: #98EDED;
-        border: 1px solid #ABD757; */
+        background-color: #d7f0f5;
         color: #066161;
         flex: .6;
         font-weight: 700;
         margin: .5rem;
         order: 1;
         padding: 1rem;
+        text-align: center;
+
     }
 
     .mainPagePTag2 {
-        /* margin-left: 2rem; */
+        background-color: #dfe7d0;  
+        color: #066161;
         order: 2;
         padding: 1rem;
-        /* padding-left: 2rem; */
+        text-align: center;
     }
 
     .mainPagePTag3 {
-        /* background-color: #e5abd5; */
+        background-color: #c4cffa;
         color: #066161;
         flex: .5;
-        font-size: 1.5rem;
-        /* margin: 2rem; */
-        /* margin-bottom: 8rem; */
-        /* padding: 1rem; */
+        font-size: 1.2rem;
+        padding: 1rem;
+        text-align: center;
     }
 
     .bluePTag {
-        border: 1px solid red;
-        /* background-color: #d6d6d6; */
+        background-color: #c4cffa;
+        font-size: 1.2rem;
         margin: .5rem;
         padding: 1rem;
+        text-align: center;
+    }
+
+    .pinkPTag {
+        color: #1c1a51cc;
+        font-weight: 700;
+        text-align: center;
+
+    }
+    .greenPTagThin {
+        background-color: #d1d0ed;
+        color: #066161;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 1rem;
+        text-align: center;
     }
 
     .h2Styling {
