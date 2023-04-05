@@ -78,7 +78,6 @@ export default function Form() {
     setFeedback('')
 
     if(checkForm()) {
-      console.log('posting', formData)
       postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
@@ -94,9 +93,13 @@ export default function Form() {
       clearInputs()
     })
     .catch(error => {
-      console.log(error)
+      console.log(error.error)
       //this will come in as an object and we will need to set different error messages depending
-      setError(error)
+      if(error.error.message === "Unique constraint failed. Shelter already exists at this location") {
+        setError('A shelter at this location is already listed! Please only enter shelters that are not included in our directory')
+      } else {
+        setError('Whoops! Something went wrong. Please check all fields are correct and try again')
+      }
     })
     }
   }
@@ -226,7 +229,7 @@ function goToShelter(id) {
           />
         </div>
         <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
-        {error && <p className="message">There was an error with your submission. Please try again.</p>}
+        {error && <p className="message">{error}</p>}
         {feedback && <p className="message">{feedback}</p>}
       </form>
     }
