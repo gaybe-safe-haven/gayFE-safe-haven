@@ -178,14 +178,3 @@ export default function Form() {
     </form>    
   )
 }
-
-// Form.propTypes = {
-//   formData: PropTypes.shape({
-//     name: PropTypes.string.isRequired,
-//     streetAddress: PropTypes.string.isRequired,
-//     city: PropTypes.string.isRequired,
-//     state: PropTypes.string.isRequired,
-//     phoneNumber: PropTypes.string.isRequired,
-//     website: PropTypes.string
-//   }).isRequired
-// };
