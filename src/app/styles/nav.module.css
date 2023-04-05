@@ -1,62 +1,116 @@
 .navContainer {
     background-color: #c1c0e3;
-    border-bottom: 2px solid #4F49E0;
+    border-bottom: 2px solid #1c1a51cc;
     font-size: .8rem;
     font-weight: 600;
     max-width: 360px;
-    padding: 1rem 0;
+    padding: .8rem 0;
 }
 
 .navContentWrapper {
     align-items: center;
     display: flex;
-    flex-direction: column;
-}
-
-.title {
-    color: rgb(28, 26, 81, .8);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .linkContainer {
     align-items: center;
     display: flex;
     flex-direction: row;
+    gap: .5rem;
     justify-content: space-evenly;
     margin: 0;
-    padding: 0;
+    padding: .5rem 0;
 }
 
 .linkButton {
     background-color: inherit;
     border: none;
-    color:#1c1a51;
+    color:#030163;
+    cursor: pointer;
     font-style: inherit;
+    padding: .1rem;
+    margin: 0;
 }
 
-@media (max-width: 330px) {
-    .title {
-        font-size: 1.5rem;
+.navIcon {
+    align-self: center;
+    color: #4F49E0;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 300px) {
+    .navContentWrapper {
+        font-size: .7rem;
     }
 }
-
-@media (min-width: 300px) {
+@media (max-width: 360px) {
     .navContainer {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 }
 
 @media (min-width: 361px) {
     .navContainer {
         background-color: #c1c0e3;
-        border-bottom: 2px solid #4F49E0;
+        border-bottom: 2px solid #1c1a51cc;
+        font-size: 1rem;
         font-weight: 600;
         padding: .6rem 0;
-        min-width: 100vw;
+        max-width: 100vw;
+    }
+
+    .navContentWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100vw;
+    }
+
+    .linkContainer {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
     }
 }
 
 @media (min-width: 500px) {
     .navContainer {
         font-size: 1rem;
+        max-width: 100vw;
+    }
+
+    .navContentWrapper {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100vw;
+    }
+
+    .linkContainer {
+        align-items: flex-start;
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .navContainer,
+    .navContentWrapper,
+    .linkContainer {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .navContentWrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }

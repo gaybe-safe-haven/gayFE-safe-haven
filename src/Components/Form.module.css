@@ -19,11 +19,12 @@
 
 .formInput {
     background-color: #E8FFFF;
-    border: 1px solid #066161;
+    border: 1px solid #066161; 
     border-radius: .1rem;
     color: rgb(28, 26, 81);
     font: inherit;
     margin: .2rem;
+    /* min-width: 10rem; */
 }
 
 .button {
@@ -31,6 +32,7 @@
     border: 1px solid #660137;
     border-radius: .1rem;
     color: #660137;
+    cursor: pointer;
     font: inherit;
     margin: .2rem;
     width: 8rem;
@@ -40,4 +42,20 @@
     border: none;
     color: rgb(28, 26, 81, .6);
 
+}
+
+@media (min-width: 340px) {
+    .formInput {
+        background-color: #E8FFFF;
+        border: 1px solid #066161; 
+        border-radius: .1rem;
+        color: rgb(28, 26, 81);
+        font: inherit;
+        margin: .2rem;
+        min-width: 15rem;
+    }
+}
+
+@media (min-width: 500px) {
+    
 }

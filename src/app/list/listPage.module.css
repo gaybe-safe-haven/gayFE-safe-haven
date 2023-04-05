@@ -1,36 +1,24 @@
-.listItemContainer {
-    background-color: #E8FFFF;
-    border: 1px solid #066161;
-    border-radius: .1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    max-width: 25rem;
-    padding: .3rem;
-    text-decoration: none;
-} 
- 
-.linkText {
-    color: #1c1a51;
-    text-decoration: none;
-} 
 
-.icon {
-    align-self: baseline;
-    background-color: inherit;
-    display: block;
-    height: 1.2em;
-    padding: 0;
-    width: 1.2em;
+@media (min-width: 800px) {
+    .stacked {
+        display: grid;
+    }
+    
+    .stackedChild {
+        composes: stacked;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
+    
+    
+    .grid {
+        composes: stackedChild;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
+    }
 }
 
-.validateIcon {
-    composes: icon;
-    color: #E9007E;
-}
-
-.notValidatedIcon {
-    composes: icon;
-    color: rgb(233, 0, 126, .5);
+@media (max-width: 300px) {
+    
 }
