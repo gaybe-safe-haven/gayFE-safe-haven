@@ -17,7 +17,19 @@ export default function Form() {
     }
   )
 
-  const [postSuccess, setPostSuccess] = useState({})
+  const [postSuccess, setPostSuccess] = useState({
+            name: '',
+            streetAddress: '',
+            city: '',
+            state: '',
+            zip: '',
+            websiteUrl: '',
+            phoneNumber: '',
+            verified: '',
+            avgStaff: '',
+            avgSafety: '',
+            avgClean: ''
+  })
   const [error, setError] = useState(false)
   const [incomplete, setIncomplete] = useState(true)
   const [feedback, setFeedback] = useState('')
