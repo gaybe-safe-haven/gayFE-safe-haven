@@ -20,7 +20,7 @@
 }
 
 .title {
-    color:#04015f;
+    color: rgb(28, 26, 81, .8);
     font-weight: 600;
     padding: .5rem 0;
 }
@@ -33,35 +33,35 @@
 /* //---txt-styling---- */
 .h2Styling {
     /* color: #1c1a51; */
-    color: #5a5a5a;
+    color: #660137;
     font-size: 1.5rem;
     font-weight: 500;
     margin: 1rem;
 }
 
 .mainPagePTag3 {
-    background-color: #e5abd5;
-    color: #401a51;
+    /* background-color: #e5abd5; */
+    color: #066161;
     font-weight: 700;
 }
 
 .mainPagePTag2 {
-    background-color:#bacaff;
-    color: #6f1dd4;
+    /* background-color:#bacaff; */
+    color: #E9007E;
     font-size: 1.5rem;
     font-weight: 600;
     order: 3;
 }
 
 .mainPagePTag1 {
-    background-color: #98EDED;
-    border: 2px solid #ABD757;
+    /* background-color: #98EDED;
+    border: 2px solid #ABD757; */
     font-weight: 700;
     order: 1;
 }
 
 .greenPTagThin {
-    color: #545454;
+    color: #066161;
     font-weight: 400;
 }
 
@@ -135,9 +135,9 @@
     }
 
     .mainPagePTag1 {
-        background-color: #98EDED;
-        border: 1px solid #ABD757;
-        color: #401a51;
+        /* background-color: #98EDED;
+        border: 1px solid #ABD757; */
+        color: #066161;
         flex: .6;
         font-weight: 700;
         margin: .5rem;
@@ -153,8 +153,8 @@
     }
 
     .mainPagePTag3 {
-        background-color: #e5abd5;
-        color: #401a51;
+        /* background-color: #e5abd5; */
+        color: #066161;
         flex: 1;
         font-size: 1.5rem;
         margin: 2rem;
@@ -163,7 +163,7 @@
     }
 
     .bluePTag {
-        background-color: #d6d6d6;
+        /* background-color: #d6d6d6; */
         margin: .5rem;
         padding: 1rem;
     }

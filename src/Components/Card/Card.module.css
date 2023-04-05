@@ -1,6 +1,6 @@
 .listItemContainer {
-    background-color: #f7f7f7;
-    border: 1px solid #535353;
+    background-color: #E8FFFF;
+    border: 1px solid #066161;
     border-radius: .1rem;
     display: flex;
     flex-direction: row;
@@ -12,7 +12,7 @@
 }
 
 .linkText {
-    color: #272727;
+    color: #1c1a51;
     text-decoration: none;
 }
 
@@ -27,17 +27,18 @@
 
 .validateIcon {
     composes: icon;
-    color: #686868;
+    color: #e9007e;
 }
 
 .notValidatedIcon {
     composes: icon;
-    color: rgba(114, 114, 114, 0.5);
+    color: #e9007e80;
 }
+
 @media (max-width: 350px) {
     .listItemContainer {
-        background-color: #f7f7f7;
-        border: 1px solid #535353;
+        background-color: #E8FFFF;
+        border: 1px solid #066161;
         border-radius: .1rem;
         display: flex;
         flex-direction: row;
@@ -52,8 +53,8 @@
 
 @media (min-width: 800px) {
     .listItemContainer {
-        background-color: #f7f7f7;
-        border: 1px solid #535353;
+        background-color: #E8FFFF;
+        border: 1px solid #066161;
         border-radius: .2rem;
         display: flex;
         flex-direction: row;

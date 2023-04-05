@@ -1,6 +1,6 @@
 .formContainer {
-    background-color: #d2d2d2;
-    border: 1px solid rgba(22, 22, 22, 0.6);
+    background-color: #B6E6E6;
+    border: 1px solid rgb(28, 26, 81, .6);
     border-radius: .1rem;
     display: flex;
     flex-direction: column;
@@ -10,16 +10,16 @@
 }
 
 .formHeading {
-    color:rgba(22, 22, 22, 0.8);
+    color:rgb(60, 1, 32, .8);
 }
 
 .inputContainer {
-    color: #4f4f4f;
+    color: #066161;
 }
 
 .formInput {
-    background-color: #e3e3e3;
-    border: 1px solid #5e5e5e;
+    background-color: #E8FFFF;
+    border: 1px solid #066161; 
     border-radius: .1rem;
     color: rgb(28, 26, 81);
     font: inherit;
@@ -28,10 +28,10 @@
 }
 
 .button {
-    background-color: #989898;
-    border: 1px solid #484848;
+    background-color: #E5ABCA;
+    border: 1px solid #660137;
     border-radius: .1rem;
-    color: #3f3f3f;
+    color: #660137;
     font: inherit;
     margin: .2rem;
     width: 8rem;
@@ -45,8 +45,8 @@
 
 @media (min-width: 340px) {
     .formInput {
-        background-color: #e3e3e3;
-        border: 1px solid #5e5e5e;
+        background-color: #E8FFFF;
+        border: 1px solid #066161; 
         border-radius: .1rem;
         color: rgb(28, 26, 81);
         font: inherit;

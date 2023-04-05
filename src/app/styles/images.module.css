@@ -1,6 +1,6 @@
 .greenImageWrapper {
     align-self: flex-start;
-    background-color: #d2d2d2;  
+    background-color: #C5D2AC;  
     min-width: 300px;
 }
 
@@ -13,7 +13,7 @@
 
 .yellowGreenImageWrapper {
     align-self: flex-start;
-    background-color: #c5d2ac;
+    background-color: #ABD757;
     min-width: 300px;
 }
 
@@ -27,7 +27,7 @@
 
 .purpleImageWrapper {
     align-self: flex-start;
-    background-color: #aba8ff;
+    background-color: #B3B1DE;
     min-width: 300px;
 }
 
@@ -41,7 +41,7 @@
 
 .blueImageWrapper {
     align-self: flex-start;
-    background-color: #ebebeb;
+    background-color: #98EDED;
     min-width: 300px;
 }
 
