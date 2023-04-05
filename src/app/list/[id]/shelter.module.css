@@ -21,9 +21,11 @@
 .smallH2 {
   font-size: 1.3rem;
 }
+
 .smallP {
   font-size: 1rem;
 }
+
 .smallerP {
   font-size: .8rem;
 }
@@ -62,17 +64,25 @@
 }
 
 @media (max-width: 400px) {
+  .reviews,
   .contact {
     margin: .5rem;
+    padding: .5rem
   }
 
+  .cleanP,
+  .safetyP,
+  .staffP,
+  .communityReviews,
   .name {
     composes: smallH2;
   }
 
-  .verify {
-    composes: smallerP
+  .reviewNote,
+  .verifiedMessage {
+    composes: smallerP;
   }
+
   .site,
   .phone,
   .street {
