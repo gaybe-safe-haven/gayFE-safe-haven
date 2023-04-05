@@ -3,6 +3,7 @@ import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
 import { useEffect, useState } from "react";
 import { checkSite, checkZip, checkPhone } from '../util'
+import PropTypes from 'prop-types';
 
 export default function Form() {
   const [formData, setFormData] = useState(
