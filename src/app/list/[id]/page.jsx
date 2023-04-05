@@ -88,21 +88,21 @@ export default function ShelterPage({ params }) {
 		<div className={shelterPage.leftWrapper}>
 			<div className={shelterPage.infoWrapper}> 
 				<section className={shelterPage.contact}>
-				<h2 className={shelterPage.name}>{shelter.name}</h2>
-				<div className={shelterPage.address}>
-					<p>{shelter.streetAddress}</p>
-					<p>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
-				</div>
-				<div className={shelterPage.clientServices}>
-					{shelter.websiteUrl && <a href={`http://${shelter.websiteUrl}`}>website</a>}
-					<p>{shelter.phoneNumber}</p>
-				</div>
-				<div className={shelterPage.verify} >
-				{shelter.verified ? 
-					<p>the contact information for this shelter has been verified by our team</p> :
-					<p>the contact information for this shelter was submitted by a community member and has not been verified</p>
-					}
-				</div>
+					<h2 className={shelterPage.name}>{shelter.name}</h2>
+					<div className={shelterPage.address}>
+						<p className={shelterPage.street} >{shelter.streetAddress}</p>
+						<p className={shelterPage.street}>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
+					</div>
+					<div className={shelterPage.clientServices}>
+						{shelter.websiteUrl && <a href={`http://${shelter.websiteUrl}`} className={shelterPage.site}>website</a>}
+						<p className={shelterPage.phone}>{shelter.phoneNumber}</p>
+					</div>
+					<div className={shelterPage.verify} >
+					{shelter.verified ? 
+						<p className={shelterPage.verified}>the contact information for this shelter has been verified by our team</p> :
+						<p className={shelterPage.verified}>the contact information for this shelter was submitted by a community member and has not been verified</p>
+						}
+					</div>
 				</section>
 			</div>
 

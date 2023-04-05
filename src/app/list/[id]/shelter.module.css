@@ -18,6 +18,18 @@
   font-size: 2rem;
 }
 
+.smallH2 {
+  font-size: 1.3rem;
+}
+.smallP {
+  font-size: 1rem;
+}
+.smallerP {
+  font-size: .8rem;
+}
+.address {
+  color:#4F49E0;
+}
 .clientServices {
   display: flex;
   justify-content: space-around;
@@ -44,9 +56,29 @@
   font-size: 2rem;
 }
 
-.verify {
+.verified {
   font-size: 1rem;
   padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  .contact {
+    margin: .5rem;
+  }
+
+  .name {
+    composes: smallH2;
+  }
+
+  .verify {
+    composes: smallerP
+  }
+  .site,
+  .phone,
+  .street {
+    /* color:#4F49E0; */
+    composes: smallP;
+  }
 }
 
 @media (min-width: 800px) {
@@ -66,6 +98,7 @@
 
   .infoWrapper {
     align-self: flex-start;
+    max-width: 50vw;
   }
- 
+
 }

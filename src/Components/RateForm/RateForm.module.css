@@ -25,9 +25,15 @@
 }
 
 .icon {
-  height: 46px;
-  width: 46px;
+  aspect-ratio: 1 / 1;
+  height:3rem;
+  width: 3rem;
   margin: 1rem;
+}
+
+.rangeInput {
+  color: #4F49E0;
+  width: 12rem;
 }
 
 .submit {
@@ -44,4 +50,29 @@
   font-size: 1rem;
   color: #066161;
   /* width: 60vw; */
+}
+
+@media (max-width: 400px ){ 
+  .review {
+    border: #E9007E solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    margin: .5rem;
+    text-align: center;
+  }
+
+  .icon {
+    aspect-ratio: 1 / 1;
+    height:2rem;
+    width: 2rem;
+    margin: .5rem;
+  }
+
+  .rangeInput {
+    color: #4F49E0;
+    width: 8rem;
+  }
 }
