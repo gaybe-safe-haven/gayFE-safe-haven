@@ -44,7 +44,6 @@ export default function Form() {
         setIncomplete(true)
       }
     })
-    console.log(formData.websiteUrl)
   }, [formData])
   
   function handleChange(e) {
@@ -83,19 +82,17 @@ export default function Form() {
       if (response.ok) {
         return response.json()
       } else {
-        return Promise.reject(response.status)
+        return Promise.reject(response)
       }
     })
     .then(data => {
-      console.log('success!', data.data.attributes)
       setPostSuccess({...data.data.attributes, id: data.data.id})
-      // setTimeout(() => {setPostSuccess(false)}, 3000)
       clearInputs()
     })
     .catch(error => {
-      console.log(error.error)
+      console.log('error: ', error)
       //this will come in as an object and we will need to set different error messages depending
-      if(error.error.message === "Unique constraint failed. Shelter already exists at this location") {
+      if(error.message === "Unique constraint failed. Shelter already exists at this location") {
         setError('A shelter at this location is already listed! Please only enter shelters that are not included in our directory')
       } else {
         setError('Whoops! Something went wrong. Please check all fields are correct and try again')
