@@ -6,6 +6,7 @@ import LoadingListPage from "./list/loading";
 import PropTypes from 'prop-types';
 import headerStyles from "./page.module.css";
 import { CiStar } from "react-icons/ci";
+import { BsHouseHeart } from "react-icons/bs";
 
 export const metadata = {
   title: 'S.A.F.E.R. Tonight',
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
           <div className={headerStyles.headerWrapper}>
             <Link href="/">
               <button alt="main page" className={headerStyles.headerLinkButton}>
-                <h1 className={headerStyles.title}>S.A.F.E.R. Tonight</h1>    
+                <h1 className={headerStyles.title}><BsHouseHeart/>&nbsp;S.A.F.E.R. Tonight</h1>    
               </button>
             </Link>
           </div>
