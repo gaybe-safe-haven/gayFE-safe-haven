@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 
 export default function Card({data}) {
-    console.log('data:', data)
     const validation = data.attributes.verified ? <BiCheckboxChecked id="validationIcon" alt="validated shelter" className={styles.validateIcon} /> : <BiCheckbox id="notValidatedIcon" alt="not validated" className={styles.notValidatedIcon}/>;
 
     return (
