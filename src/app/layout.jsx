@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
         <nav className={styles.navContainer}>
           <div className={styles.navContentWrapper}>
             <h1 className={styles.title}>Our App &#60;3</h1>
-            {/* we should have a link to "/" and the h1 could do this or a logo? */}
             <div className={styles.linkContainer}>
               <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link>
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
@@ -39,3 +38,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
