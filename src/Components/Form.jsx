@@ -120,6 +120,7 @@ export default function Form() {
           className={styles.formInput}
           value={formData.streetAddress}
           onChange={(e) => handleChange(e)}
+          required  
         />
       </div>
       <div className={styles.inputContainer}>
