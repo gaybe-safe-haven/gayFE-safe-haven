@@ -76,7 +76,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
 
   })
 
-  it.only("Should display a message upon successful form submission", () => {
+  it("Should display a message upon successful form submission", () => {
     cy.intercept("POST", "https://gaybe-safe-haven.herokuapp.com/api/v1/reviews", {fixture: "../fixtures/reviewShelter.json"})
 		cy.get("form").within((form) => {
       cy.get("input[type=range][name='staff']").invoke("val", 8).trigger("change")
