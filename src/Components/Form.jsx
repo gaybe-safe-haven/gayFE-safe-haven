@@ -15,7 +15,7 @@ export default function Form() {
       state: "",
       zip: "",
       phoneNumber: "",
-      websiteURL: ""
+      websiteUrl: ""
     }
   )
 
@@ -40,11 +40,11 @@ export default function Form() {
     setIncomplete(false)
     const inputs = Object.keys(formData)
     inputs.forEach(key => {
-      if(key !== 'websiteURL' && !formData[key]) {
+      if(key !== 'websiteUrl' && !formData[key]) {
         setIncomplete(true)
       }
     })
-    console.log(formData.websiteURL)
+    console.log(formData.websiteUrl)
   }, [formData])
   
   function handleChange(e) {
@@ -57,7 +57,7 @@ export default function Form() {
   }
 
   function checkForm() {
-    if(formData.websiteURL && !checkSite(formData.websiteURL)) {
+    if(formData.websiteUrl && !checkSite(formData.websiteUrl)) {
       setFeedback('please enter a valid web address beginning with www.')
       return false
     }
@@ -110,7 +110,7 @@ export default function Form() {
         state: "",
         zip: "",
         phoneNumber: "",
-        websiteURL: ""
+        websiteUrl: ""
       }
     )
   }
@@ -148,7 +148,7 @@ function goToShelter(id) {
           <p>{postSuccess.streetAddress}</p>
           <p>{`${postSuccess.city}, ${postSuccess.state} ${postSuccess.zip}`}</p>
           <p>{postSuccess.phoneNumber}</p>
-          {postSuccess.websiteURL && <p>{postSuccess.websiteUrl}</p>}
+          {postSuccess.websiteUrl && <p>{postSuccess.websiteUrl}</p>}
         </div>
         <button onClick={() => {goToShelter(postSuccess.id)}}>See the Shelter</button>
         <button onClick={clearPost}>Add Another Shelter</button>
@@ -218,10 +218,10 @@ function goToShelter(id) {
         <div className={styles.inputContainer}>
           <input 
             type="text" 
-            name="websiteURL" 
+            name="websiteUrl" 
             placeholder="website" 
             className={styles.formInput}
-            value={formData.websiteURL}
+            value={formData.websiteUrl}
             onChange={(e) => handleChange(e)}
           />
         </div>
