@@ -8,20 +8,27 @@
   padding: 1rem;
   max-width: 340px;
 }
+
 .formHeading {
   color:rgb(60, 1, 32, .8);
 }
+
 .inputContainer {
   color: #066161;
 }
+
 .formInput {
-  background-color: #E8FFFF;
-  border: 1px solid #066161;
-  border-radius: .1rem;
-  color: rgb(28, 26, 81);
-  font: inherit;
-  margin: .2rem;
-  /* min-width: 10rem; */
+    background-color: #E8FFFF;
+    border: 1px solid #066161; 
+    border-radius: .1rem;
+    color: rgb(28, 26, 81);
+    font: inherit;
+    margin: .2rem;
+}
+
+.formInput:required {
+    border-color:rgb(28, 26, 81);
+
 }
 .button {
   background-color: #E5ABCA;
@@ -33,10 +40,12 @@
   margin: .2rem;
   width: 8rem;
 }
+
 .button:disabled {
   border: none;
   color: rgb(28, 26, 81, .6);
 }
+
 @media (min-width: 340px) {
   .formInput {
       background-color: #E8FFFF;
@@ -47,7 +56,5 @@
       margin: .2rem;
       min-width: 15rem;
   }
-}
-@media (min-width: 500px) {
 }
 

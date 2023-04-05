@@ -9,7 +9,7 @@
 <br />
 
   <a href="https://github.com/smithkirsten/gaybe-safe-haven/gayFE-safe-haven">
-    <h1 align="center">Gaybe Safe Haven</h1>
+    <h1 align="center">S.A.F.E.R. Kids</h1>
   </a>
 
 <h3 align="center"></h3>
@@ -47,9 +47,12 @@
 ## About The Project
 #### Mobile View
 
-images here
+
 
 #### Desktop View
+
+
+
 
 images here
 #### Overview
