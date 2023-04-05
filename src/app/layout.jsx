@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
           <div className={headerStyles.headerWrapper}>
             <Link href="/">
               <button alt="main page" className={headerStyles.headerLinkButton}>
-                <h1 className={headerStyles.title}>GayBES.A.F.E. Search</h1>    
+                <h1 className={headerStyles.title}>Our App &#60;3</h1>    
               </button>
             </Link>
           </div>
