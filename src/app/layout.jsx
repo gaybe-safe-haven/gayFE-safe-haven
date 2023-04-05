@@ -38,3 +38,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+ children: PropTypes.node.isRequired,
+};
