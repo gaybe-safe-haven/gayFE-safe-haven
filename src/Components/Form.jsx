@@ -17,7 +17,7 @@ export default function Form() {
     }
   )
 
-  const [postSuccess, setPostSuccess] = useState(false)
+  const [postSuccess, setPostSuccess] = useState({})
   const [error, setError] = useState(false)
   const [incomplete, setIncomplete] = useState(true)
   const [feedback, setFeedback] = useState('')
@@ -30,6 +30,7 @@ export default function Form() {
         setIncomplete(true)
       }
     })
+    console.log(formData.websiteURL)
   }, [formData])
   
   function handleChange(e) {
@@ -63,6 +64,7 @@ export default function Form() {
     setFeedback('')
 
     if(checkForm()) {
+      console.log('posting')
       postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
@@ -72,8 +74,9 @@ export default function Form() {
       }
     })
     .then(data => {
-      setPostSuccess(true)
-      setTimeout(() => {setPostSuccess(false)}, 3000)
+      console.log('success!', data.data.attributes)
+      setPostSuccess(data.data.attributes)
+      // setTimeout(() => {setPostSuccess(false)}, 3000)
       clearInputs()
     })
     .catch(error => {
@@ -85,6 +88,7 @@ export default function Form() {
   }
 
   function clearInputs() {
+    console.log('reset')
     setFormData(
       {
         name: "",
@@ -93,12 +97,24 @@ export default function Form() {
         state: "",
         zip: "",
         phoneNumber: "",
-        website: ""
+        websiteURL: ""
       }
     )
   }
 
   return (
+    {postSuccess.name ?
+    <section className={styles.formContainer}>
+    <h2 className="message">Your submission was successful!</h2> 
+      <div className={styles.receipt}>
+        <p>Name:</p>
+        <p>Address:</p>
+        <p></p>
+        <p>Phone:</p>
+      </div>
+      <button>See the Shelter</button>
+      <button>Add Another Shelter</button>
+    </section> :
     <form className={styles.formContainer}>
       <h3 className={styles.formHeading}>Add A Shelter</h3>
       <div className={styles.inputContainer}>
@@ -174,7 +190,6 @@ export default function Form() {
       <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
       {error && <p className="message">There was an error with your submission. Please try again.</p>}
       {feedback && <p className="message">{feedback}</p>}
-      {postSuccess && <p className="message">Your submission was successful!</p> }
-    </form>    
+    </form>}
   )
 }
