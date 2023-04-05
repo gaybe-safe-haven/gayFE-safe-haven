@@ -47,7 +47,7 @@ export default function List() {
 	shelterData.sort((a,b) => a.attributes.name.localeCompare(b.attributes.name))
 
 	const mappedData = shelterData.map(data => {
-		return <Card  key={data.attributes.id} data={data} />;
+		return <Card  key={data.id} data={data} />;
 	})
 
 	return (
