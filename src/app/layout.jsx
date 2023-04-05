@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from "./styles/nav.module.css"
 import { Suspense } from "react";
 import LoadingListPage from "./list/loading";
+import PropTypes from 'prop-types';
 
 export const metadata = {
   title: 'Gaybe Safe Haven',
