@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Roboto } from 'next/font/google'
 import styles from "./page.module.css";
 import imageStyles from "./styles/images.module.css";
 import makeupTeens from "../../public/makeup-teens.jpg";
 import facepaintTeenPic from "../../public/facepaint-teen.jpg";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -16,8 +16,11 @@ export default function Home() {
       </div>
       <div className={styles.mainContentBottom}>
         <Image className={imageStyles.facepaintTeen} src={facepaintTeenPic} alt="face paint teen" />
-        <p className={styles.mainPagePTag3}>We&apos;re asking you to help us track the ones that are.</p>
-        <button></button>
+        <div className="rightBox">
+          <p className={styles.mainPagePTag3}>We&apos;re asking you to help us track the ones that are.</p>
+          <Link href="/list"><button alt="list" className={styles.buttonLink}>go to list</button></Link>
+          <Link href="/add-shelter"><button alt="add a shelter" className={styles.buttonLink}>add a shelter</button></Link>
+        </div>
       </div>
     </main>
   )

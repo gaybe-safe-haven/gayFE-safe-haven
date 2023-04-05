@@ -24,6 +24,7 @@
     border: none;
     cursor: pointer;
 }
+
 .title {
     color: rgb(28, 26, 81, .8);
     font-weight: 600;
@@ -35,6 +36,18 @@
     font-size: 1rem;
     font-weight: 300;
 }
+
+.buttonLink {
+    background-color: #E5ABCA;
+    border: 1px solid #660137;
+    border-radius: .1rem;
+    color: #660137;
+    cursor: pointer;
+    font: inherit;
+    margin: .2rem;
+    width: 8rem;;
+}
+
 /* //---txt-styling---- */
 .h2Styling {
     /* color: #1c1a51; */
