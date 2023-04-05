@@ -1,10 +1,12 @@
 "use client"
 import styles from "./Form.module.css";
+import { useRouter } from 'next/router'
 import { postData } from "../apiCalls";
 import { useEffect, useState } from "react";
 import { checkSite, checkZip, checkPhone } from '../util'
 
 export default function Form() {
+  const router = useRouter()
   const [formData, setFormData] = useState(
     {
       name: "",
