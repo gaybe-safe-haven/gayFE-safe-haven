@@ -31,7 +31,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     e.preventDefault()
     const newReview = {
       ...review,
-      id
+      shelterId: id
     }
   
     if(newReview.cleanliness && newReview.safety && newReview.staff) {
