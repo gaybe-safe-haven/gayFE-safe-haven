@@ -73,6 +73,7 @@ Our app is designed to be easy to use and navigate. Users can view a list of saf
 
 ### Installation
 ## To use the deployed app visit: 
+[Gaybe Safe Haven](https://gay-fe-safe-haven.vercel.app/)
 
 1. Fork the Repo from the [Repository](https://github.com/gaybe-safe-haven/gayFE-safe-haven)
 2. Clone the repo

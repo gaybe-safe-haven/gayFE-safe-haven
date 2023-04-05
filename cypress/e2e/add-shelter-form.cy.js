@@ -1,5 +1,6 @@
 describe("User Flow: As a user, when I choose to add a shelter to the list, I am taken to a form where I can input all the relevant information, and submit it. The shelter will be added to the existing list", () => {
   beforeEach(() => {
+		cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters',{fixture: '../fixtures/postShelter200.json'} )
     cy.visit("http://localhost:3000/add-shelter");
     cy.get('input[type=text][name="name"]').type("Test Shelter 1")
     cy.get('input[type=text][name="streetAddress"]').type("123 Test Ave")
