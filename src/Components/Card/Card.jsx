@@ -2,7 +2,7 @@
 import styles from "./Card.module.css";
 import { BiCheckboxChecked, BiCheckbox } from "react-icons/bi";
 import Link from "next/link";
-
+import PropTypes from 'prop-types';
 
 export default function Card({data}) {
 
