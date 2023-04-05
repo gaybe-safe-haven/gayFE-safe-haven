@@ -31,7 +31,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     e.preventDefault()
     const newReview = {
       ...review,
-      id
+      shelterId: id
     }
   
     if(newReview.cleanliness && newReview.safety && newReview.staff) {
@@ -45,7 +45,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
   if(reviewed) {
     return (
       <section className={styles.review}>
-        <p>thank you for taking the time to share your experience with us</p>
+        <p className="message">thank you for taking the time to share your experience with us</p>
       </section>
     )
   }
