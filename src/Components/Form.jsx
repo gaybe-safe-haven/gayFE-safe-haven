@@ -118,16 +118,17 @@ export default function Form() {
     <section className={styles.formContainer}>
       {postSuccess.name ? 
       <section>
-      <h2 className="message">Your submission was successful!</h2> 
-      <div className={styles.receipt}>
-        <p>Name:</p>
-        <p>Address:</p>
-        <p></p>
-        <p>Phone:</p>
-      </div>
-      <button>See the Shelter</button>
-      <button>Add Another Shelter</button>
-    </section> :
+        <h2 className="message">Your submission was successful!</h2> 
+        <div className={styles.receipt}>
+          <p>{postSuccess.name}</p>
+          <p>{postSuccess.streetAddress}</p>
+          <p>{`${postSuccess.city}, ${postSuccess.state} ${postSuccess.zip}`}</p>
+          <p>{postSuccess.phoneNumber}</p>
+          {postSuccess.websiteURL && <p>{postSuccess.websiteUrl}</p>}
+        </div>
+        <button>See the Shelter</button>
+        <button>Add Another Shelter</button>
+      </section> :
       <form>
         <h3 className={styles.formHeading}>Add A Shelter</h3>
         <div className={styles.inputContainer}>
