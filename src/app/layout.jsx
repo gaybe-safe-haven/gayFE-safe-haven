@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           <div className={styles.navContentWrapper}>
             <h1 className={styles.title}>Our App &#60;3</h1>
             <div className={styles.linkContainer}>
-              <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link>
+              {/* <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link> */}
               <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link>
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={styles.linkButton}>list</button></Link>
