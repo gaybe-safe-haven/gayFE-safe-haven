@@ -151,7 +151,7 @@ function goToShelter(id) {
           {postSuccess.websiteURL && <p>{postSuccess.websiteUrl}</p>}
         </div>
         <button onClick={() => {goToShelter(postSuccess.id)}}>See the Shelter</button>
-        <button>Add Another Shelter</button>
+        <button onClick={clearPost}>Add Another Shelter</button>
       </section> :
       <form>
         <h3 className={styles.formHeading}>Add A Shelter</h3>
