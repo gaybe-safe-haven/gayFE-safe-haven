@@ -1,5 +1,6 @@
 import styles from "./RateForm.module.css";
 import { useState } from 'react'
+import PropTypes from 'prop-types';
 
 export default function RateForm({ id, reviewed, error, submitReview }) {
   const [review, setReview] = useState({
