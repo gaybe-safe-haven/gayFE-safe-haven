@@ -77,7 +77,8 @@ export default function Form() {
     setFeedback('')
 
     if(checkForm()) {
-      postData(formData, 'shelters')
+    console.log('submitting: ', formData)
+    postData(formData, 'shelters')
     .then(response => {
       if (response.ok) {
         return response.json()
@@ -92,7 +93,7 @@ export default function Form() {
     .catch(error => {
       console.log('error: ', error)
       //this will come in as an object and we will need to set different error messages depending
-      if(error.message === "Unique constraint failed. Shelter already exists at this location") {
+      if(error.error.message === "Unique constraint failed. Shelter already exists at this location") {
         setError('A shelter at this location is already listed! Please only enter shelters that are not included in our directory')
       } else {
         setError('Whoops! Something went wrong. Please check all fields are correct and try again')
