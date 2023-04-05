@@ -13,7 +13,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("contain", "website")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("have.attr", "href")
-    cy.get("div.shelter_verify__1sjXX > p").contains("the contact information for this shelter was submitted by a community member and has not been verified")
+    cy.get(".shelter_verifiedMessage__9UdYX").contains("the contact information for this shelter was submitted by a community member and has not been verified")
   })
 
   it("Should display community review data as well as icons and ratings explanation", () => {

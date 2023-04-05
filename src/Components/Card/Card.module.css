@@ -27,10 +27,42 @@
 
 .validateIcon {
     composes: icon;
-    color: #E9007E;
+    color: #e9007e;
 }
 
 .notValidatedIcon {
     composes: icon;
-    color: rgb(233, 0, 126, .5);
+    color: #e9007e80;
+}
+
+@media (max-width: 350px) {
+    .listItemContainer {
+        background-color: #E8FFFF;
+        border: 1px solid #066161;
+        border-radius: .1rem;
+        display: flex;
+        flex-direction: row;
+        font-size: .8rem;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        max-width: 25rem;
+        padding: .3rem;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .listItemContainer {
+        background-color: #E8FFFF;
+        border: 1px solid #066161;
+        border-radius: .2rem;
+        display: flex;
+        flex-direction: row;
+        font-size: 1.2rem;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        max-width: 25rem;
+        padding: .5rem;
+        text-decoration: none;
+    }
 }
