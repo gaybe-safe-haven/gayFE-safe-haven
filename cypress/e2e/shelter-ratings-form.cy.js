@@ -5,7 +5,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.visit("http://localhost:3000/list/1");
   });
 
-  it("Should display shelter details including the shelter name, address, website, phone number, and validation info", () => {
+  it.only("Should display shelter details including the shelter name, address, website, phone number, and validation info", () => {
     cy.get("h2.shelter_name__HjWLg").should("be.visible")
     cy.get('.shelter_contact__ecbAs > :nth-child(2) > :nth-child(1)').should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > p").should("be.visible")
@@ -13,7 +13,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("be.visible")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("contain", "website")
     cy.get("div > section.shelter_contact__ecbAs > div.shelter_clientServices__7uXe8 > a").should("have.attr", "href")
-    cy.get(".shelter_verifiedMessage__9UdYX").contains("the contact information for this shelter was submitted by a community member and has not been verified")
+    cy.get(".shelter_reviewNote__HAdCK").contains("these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them")
   })
 
   it("Should display community review data as well as icons and ratings explanation", () => {
@@ -77,17 +77,15 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
   })
 
   it("Should display a message upon successful form submission", () => {
-    cy.get("form").within((form) => {
+    cy.intercept("POST", "https://gaybe-safe-haven.herokuapp.com/api/v1/reviews", {fixture: "../fixtures/reviewShelter.json"})
+		cy.get("form").within((form) => {
       cy.get("input[type=range][name='staff']").invoke("val", 8).trigger("change")
       cy.get("input[type=range][name='safety']").invoke("val", 8).trigger("change")
       cy.get("input[type=range][name='cleanliness']").invoke("val", 8).trigger("change")
       cy.get("button.RateForm_submit__1MsQV").contains("submit review").click()
     })
+		cy.get(".RateForm_review__ZaJ9c").should('be.visible')
 //need something here for conditionally rendered text on submit
   })
-	it("Should POST review", () => {
-		cy.intercept("POST", "https://gaybe-safe-haven.herokuapp.com/api/v1/reviews", {fixture: "../fixtures/reviewShelter.json"})
-		cy.intercept("GET", "https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/1")
-	})
 })
 

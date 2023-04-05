@@ -9,7 +9,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     staff: '',
   })
   const [missing, setMissing] = useState('')
-
+  
   const clearInputs = () => {
     setReview({
       cleanliness: '',
@@ -31,7 +31,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
     e.preventDefault()
     const newReview = {
       ...review,
-      id
+      shelterId: id
     }
   
     if(newReview.cleanliness && newReview.safety && newReview.staff) {
@@ -45,7 +45,7 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
   if(reviewed) {
     return (
       <section className={styles.review}>
-        <p>thank you for taking the time to share your experience with us</p>
+        <p className="message">thank you for taking the time to share your experience with us</p>
       </section>
     )
   }
@@ -80,8 +80,8 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
 }
 
 RateForm.propTypes = {
-  id: PropTypes.number.isRequired,
-  reviewed: PropTypes.bool.isRequired,
-  error: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
+  reviewed: PropTypes.string,
+  error: PropTypes.string,
   submitReview: PropTypes.func.isRequired,
 };

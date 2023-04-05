@@ -17,7 +17,7 @@ export default function ShelterPage({ params }) {
 	const [error, setError] = useState(null);
 	const [reviewed, setReviewed] = useState('')
 	const [revError, setRevError] = useState('')
-
+	
 	useEffect(() => {
 		getShelterData(`shelters/${params.id}`)
 			.then((data) => {
@@ -141,8 +141,5 @@ export default function ShelterPage({ params }) {
 ShelterPage.propTypes = {
  params: PropTypes.shape({
    id: PropTypes.string.isRequired,
- }).isRequired,
- error: PropTypes.string.isRequired,
- reviewed: PropTypes.string.isRequired,
- submitReview: PropTypes.func.isRequired
+ }).isRequired
 };
