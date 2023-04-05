@@ -1,6 +1,6 @@
 "use client"
 import styles from "./Form.module.css";
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import { postData } from "../apiCalls";
 import { useEffect, useState } from "react";
 import { checkSite, checkZip, checkPhone } from '../util'
@@ -89,7 +89,7 @@ export default function Form() {
     })
     .then(data => {
       console.log('success!', data.data.attributes)
-      setPostSuccess(data.data.attributes)
+      setPostSuccess({...data.data.attributes, id: data.data.id})
       // setTimeout(() => {setPostSuccess(false)}, 3000)
       clearInputs()
     })
@@ -115,12 +115,10 @@ export default function Form() {
     )
   }
 
-  function goToShelter(id) {
 
-  }
-
-  function displayForm() {
+  function clearPost() {
     setPostSuccess({
+      id: '',
       name: '',
       streetAddress: '',
       city: '',
@@ -132,8 +130,13 @@ export default function Form() {
       avgStaff: '',
       avgSafety: '',
       avgClean: ''
-})
-  }
+  })
+}
+
+function goToShelter(id) {
+  clearPost()
+  router.push(`/list/${id}`)
+}
 
   return (
     <section className={styles.formContainer}>
@@ -147,7 +150,7 @@ export default function Form() {
           <p>{postSuccess.phoneNumber}</p>
           {postSuccess.websiteURL && <p>{postSuccess.websiteUrl}</p>}
         </div>
-        <button>See the Shelter</button>
+        <button onClick={() => {goToShelter(postSuccess.id)}}>See the Shelter</button>
         <button>Add Another Shelter</button>
       </section> :
       <form>
