@@ -23,7 +23,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.get('input[type=text][name="state"]')
       cy.get('input[type=text][name="zip"]')
       cy.get('input[type=text][name="phoneNumber"]')
-      cy.get('input[type=text][name="websiteURL"]')
+      cy.get('input[type=text][name="websiteUrl"]')
       cy.get("button.Form_button__BbaEK").contains("Add Shelter")
     }).should("be.visible")
   })
@@ -33,7 +33,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
     
       cy.get('input[type=text][name="zip"]').type("02460")
       cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
-      cy.get('input[type=text][name="websiteURL"]')
+      cy.get('input[type=text][name="websiteUrl"]')
     })
 
     cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
@@ -45,7 +45,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.get('input[type=text][name="state"]').should("be.empty")
       cy.get('input[type=text][name="zip"]').should("be.empty")
       cy.get('input[type=text][name="phoneNumber"]').should("be.empty")
-      cy.get('input[type=text][name="websiteURL"]').should("be.empty")
+      cy.get('input[type=text][name="websiteUrl"]').should("be.empty")
     })
   })
 
@@ -54,7 +54,7 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
     cy.get('form').within((form) => {
       cy.get('input[type=text][name="zip"]').type("02460")
       cy.get('input[type=text][name="phoneNumber"]').type("(123)456-7890")
-      cy.get('input[type=text][name="websiteURL"]')
+      cy.get('input[type=text][name="websiteUrl"]')
       cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
     })
     cy.get('.message').contains("Your submission was successful!").should("be.visible")
@@ -107,18 +107,18 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
       cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters', {fixture: '../fixtures/postShelter200.json'} )
       cy.get('input[type=text][name="zip"]').type("02460")
       cy.get('input[type=text][name="phoneNumber"]').type("(123)456-7700")
-      cy.get('input[type=text][name="websiteURL"]').type('http://www.google.com')
+      cy.get('input[type=text][name="websiteUrl"]').type('http://www.google.com')
       
       cy.get("button.Form_button__BbaEK").click()
       cy.get("p.message").contains("please enter a valid web address beginning with www.").should("be.visible")
 
-      cy.get('input[type=text][name="websiteURL"]').clear()
-      cy.get('input[type=text][name="websiteURL"]').type('.com')
+      cy.get('input[type=text][name="websiteUrl"]').clear()
+      cy.get('input[type=text][name="websiteUrl"]').type('.com')
       cy.get("button.Form_button__BbaEK").click()
       cy.get("p.message").contains("please enter a valid web address beginning with www.").should("be.visible")
 
-      cy.get('input[type=text][name="websiteURL"]').clear()
-      cy.get('input[type=text][name="websiteURL"]').type('www.google.com')
+      cy.get('input[type=text][name="websiteUrl"]').clear()
+      cy.get('input[type=text][name="websiteUrl"]').type('www.google.com')
       cy.get("button.Form_button__BbaEK").click()
       cy.get('.message').contains("Your submission was successful!").should("be.visible")
       cy.get('.Form_receipt___kJJe > :nth-child(1)').contains('Thrive Youth Center')
@@ -128,18 +128,30 @@ describe("User Flow: As a user, when I choose to add a shelter to the list, I am
 
     })
 
-   
     it("Should display an error message if the server returns an error", () => {
-      cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters', { statusCode: 500, })
+      cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters', { error: { status: 500, message: 'Internal server error' } })
 
         cy.get('input[type=text][name="zip"]').type("02460")
         cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
-        cy.get('input[type=text][name="websiteURL"]').type("www.google.com")
+        cy.get('input[type=text][name="websiteUrl"]').type("www.google.com")
         cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
         cy.get("p.message").contains("There was an error with your submission. Please try again.").should("be.visible")
     })
 
     //it should display an error message if the user tries to submit a shelter that already exists
+    it("Should display an error message if a duplicate address is POSTed", () => {
+      cy.intercept('POST', 'https://gaybe-safe-haven.herokuapp.com/api/v1/shelters', {
+        "error": {
+            "status": 422,
+            "code": "P2002",
+            "message": "Unique constraint failed. Shelter already exists at this location"
+        }
+      })
 
-    //it should display an error message if the zip code entered is invalid according to BE
+      cy.get('input[type=text][name="zip"]').type("02460")
+      cy.get('input[type=text][name="phoneNumber"]').type("123-456-7890")
+      cy.get("button.Form_button__BbaEK").contains("Add Shelter").click()
+      cy.get("p.message").contains("A shelter at this location is already listed! Please only enter shelters that are not included in our directory").should("be.visible")
+    })
+
 })
