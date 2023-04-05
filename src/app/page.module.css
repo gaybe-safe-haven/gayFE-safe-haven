@@ -1,4 +1,5 @@
 .main {
+    background-color: #F3F1FE;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -9,9 +10,8 @@
 
 /* //---header--- */
 .header {
-    background-color: #b0b0b0;
-    border-bottom: 1px solid #ababab;
-    color: #f1f1f1;
+    background-color: #8e8afe;
+    border-bottom: 2px solid #4F49E0;
     max-width: 100vw;
 }
 
@@ -20,12 +20,13 @@
 }
 
 .title {
-    color:#4b4b4b;
+    color:#0a03d1;
     font-weight: 600;
+    padding: .5rem 0;
 }
 
 .titleDescription {
-    color:#2b2b2b;
+
     font-size: 1rem;
     font-weight: 300;
 }
@@ -38,19 +39,23 @@
     margin: 1rem;
 }
 
-.painPagePTag3 {
-    color: #666666;
+.mainPagePTag3 {
+    background-color: #e5abd5;
+    color: #401a51;
     font-weight: 700;
 }
 
 .mainPagePTag2 {
-    color: #535353;
+    background-color:#bacaff;
+    color: #6f1dd4;
+    font-size: 1.5rem;
     font-weight: 600;
     order: 3;
 }
 
 .mainPagePTag1 {
-    color: #585858;
+    background-color: #98EDED;
+    border: 2px solid #ABD757;
     font-weight: 700;
     order: 1;
 }
@@ -115,7 +120,7 @@
     }
     
     .textWrapper {
-        background-color: #b5b5b5;
+        background-color: #F3F1FE;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -130,8 +135,9 @@
     }
 
     .mainPagePTag1 {
-        background-color:#b3b3b3;
-        color: #555555;
+        background-color: #98EDED;
+        border: 1px solid #ABD757;
+        color: #401a51;
         flex: .6;
         font-weight: 700;
         margin: .5rem;
@@ -140,14 +146,17 @@
     }
 
     .mainPagePTag2 {
-        margin-left: 2rem;
+        /* margin-left: 2rem; */
         order: 2;
-        padding-left: 2rem;
+        padding: 1rem;
+        /* padding-left: 2rem; */
     }
 
     .mainPagePTag3 {
-        background-color: #c8c8c8;
+        background-color: #e5abd5;
+        color: #401a51;
         flex: 1;
+        font-size: 1.5rem;
         margin: 2rem;
         margin-bottom: 8rem;
         padding: 1rem;

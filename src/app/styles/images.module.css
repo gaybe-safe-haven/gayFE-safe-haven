@@ -13,7 +13,7 @@
 
 .yellowGreenImageWrapper {
     align-self: flex-start;
-    background-color: #cfcfcf;
+    background-color: #c5d2ac;
     min-width: 300px;
 }
 
@@ -27,7 +27,7 @@
 
 .purpleImageWrapper {
     align-self: flex-start;
-    background-color: #dddddd;
+    background-color: #aba8ff;
     min-width: 300px;
 }
 
@@ -74,6 +74,14 @@
         order: 2;
         width: auto;
     }
+
+    .facepaintTeen {
+        composes: purpleImageWrapper;
+        height: auto;
+        margin: 0;
+        padding: 1rem;
+        width: auto;
+    }
 }
 
 @media (min-width: 600px) {
@@ -87,6 +95,13 @@
     .makeupTeensImage {
         composes: yellowGreenImageWrapper;
         order: 2;
+        padding: 1rem;
+        width: auto;
+    }
+    .facepaintTeen {
+        composes: purpleImageWrapper;
+        height: auto;
+        margin: 0;
         padding: 1rem;
         width: auto;
     }

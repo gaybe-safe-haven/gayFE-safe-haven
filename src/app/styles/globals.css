@@ -68,7 +68,7 @@ select {
 /* ---------------------------- */
 
 body {
-  background-color: #ffffff;
+  background-color: #F3F1FE;
   color: #000000;
   /* color: #066161; */
   display: flex;
@@ -97,7 +97,7 @@ body {
   height: 10px;
 }
 
-/* .purpleStripe {
+.purpleStripe {
   background-color: #b3b1de;
 }
 
@@ -111,4 +111,38 @@ body {
 
 .roseStripe {
   background-color: #e5abca;
-} */
+}
+
+.utils {
+  color: rgb(60, 1, 32, .8);
+  color: #660137;
+  color: rgb(233, 0, 126, .5);
+  color: #E9007E;
+  color: #E5ABCA;
+  color: #F3F1FE;
+  color: #E8FFFF;
+  color: #ABD757;
+  color: #c5d2ac;
+  color: #b6e6e6;
+  color: #98EDED;
+  color: #57fbfb;
+  color: #0FEEEE;
+  color: #54c1c1;
+  color: #449d9d;
+
+  color: #c1c0e3;
+  color: #B3B1DE;
+  color: #4F49E0;
+  color: #0a03d1;
+  color: #8e8afe;
+  color: #8aa5fe;
+
+  color: #030163;
+  color: #030163;
+  color: #401a51;
+  color: #1c1a51cc;
+  color: #1c1a5199;
+  color: #1c1a51;
+
+
+}

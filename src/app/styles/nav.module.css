@@ -1,6 +1,6 @@
 .navContainer {
-    background-color: #e4e4e4;
-    border-bottom: 2px solid #e1e1e1;
+    background-color: #c1c0e3;
+    border-bottom: 2px solid #1c1a51cc;
     font-size: .8rem;
     font-weight: 600;
     max-width: 360px;
@@ -28,7 +28,7 @@
 .linkButton {
     background-color: inherit;
     border: none;
-    color:#4d4d4d;
+    color:#030163;
     font-style: inherit;
     padding: .1rem;
     margin: 0;
@@ -36,6 +36,7 @@
 
 .navIcon {
     align-self: center;
+    color: #4F49E0;
     margin: 0;
     padding: 0;
 }
@@ -53,8 +54,8 @@
 
 @media (min-width: 361px) {
     .navContainer {
-        background-color: #e4e4e4;
-        border-bottom: 2px solid #cccccc;
+        background-color: #c1c0e3;
+        border-bottom: 2px solid #1c1a51cc;
         font-size: 1rem;
         font-weight: 600;
         padding: .6rem 0;
