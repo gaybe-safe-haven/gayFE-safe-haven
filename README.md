@@ -9,7 +9,7 @@
 <br />
 
   <a href="https://github.com/smithkirsten/gaybe-safe-haven/gayFE-safe-haven">
-    <h1 align="center">Gaybe Safe Haven</h1>
+    <h1 align="center">S.A.F.E.R. Kids</h1>
   </a>
 
 <h3 align="center"></h3>
@@ -46,7 +46,13 @@
 
 ## About The Project
 
-image/gif here
+#### Mobile View
+
+
+
+#### Desktop View
+
+
 
 #### Overview
 The LGBTQ+ community faces unique challenges when it comes to finding safe and welcoming shelters, especially for youth. Our app aims to bridge this information gap by allowing community members to submit safe shelter information through our app, which is then added to an API that we are building. Additionally, users can leave reviews based on their experiences at these shelters to provide valuable insight for those seeking safe and inclusive shelter options.
