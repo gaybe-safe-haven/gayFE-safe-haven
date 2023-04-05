@@ -125,3 +125,7 @@ export default function Form() {
     </form>    
   )
 }
+
+Form.propTypes = {
+  postData: PropTypes.func.isRequired,
+};
