@@ -41,7 +41,7 @@
 }
 
 .buttonLink {
-    background-color: #E5ABCA;
+    background-color: #e8c3d7;
     border: 1px solid #660137;
     border-radius: .2rem;
     color: #660137;
@@ -63,20 +63,24 @@
 }
 
 .mainPagePTag3 {
+    border: 1px solid yellow;
     /* background-color: #e5abd5; */
     color: #066161;
     font-weight: 700;
 }
 
 .mainPagePTag2 {
+    border: 1px solid blue;
     /* background-color:#bacaff; */
-    color: #E9007E;
+    /* color: #E9007E; */
+    color: #660137;
     font-size: 1.5rem;
     font-weight: 600;
     order: 3;
 }
 
 .mainPagePTag1 {
+    border: 1px solid orange;
     /* background-color: #98EDED;
     border: 2px solid #ABD757; */
     font-weight: 700;
@@ -84,6 +88,7 @@
 }
 
 .greenPTagThin {
+    border: 1px solid green;
     color: #066161;
     font-weight: 400;
 }
@@ -207,6 +212,7 @@
     }
 
     .bluePTag {
+        border: 1px solid red;
         /* background-color: #d6d6d6; */
         margin: .5rem;
         padding: 1rem;
