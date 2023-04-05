@@ -1,3 +1,5 @@
+// "/"
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import imageStyles from "./styles/images.module.css";
@@ -16,10 +18,10 @@ export default function Home() {
       </div>
       <div className={styles.mainContentBottom}>
         <Image className={imageStyles.facepaintTeen} src={facepaintTeenPic} alt="face paint teen" />
-        <div className="rightBox">
+        <div className={styles.boxLowerRight}>
           <p className={styles.mainPagePTag3}>We&apos;re asking you to help us track the ones that are.</p>
-          <Link href="/list"><button alt="list" className={styles.buttonLink}>go to list</button></Link>
-          <Link href="/add-shelter"><button alt="add a shelter" className={styles.buttonLink}>add a shelter</button></Link>
+          <Link href="/list" className={styles.linkWidth}><button alt="list" className={styles.buttonLink}>go to list</button></Link>
+          <Link href="/add-shelter" className={styles.linkWidth}><button alt="add a shelter" className={styles.buttonLink}>add a shelter</button></Link>
         </div>
       </div>
     </main>

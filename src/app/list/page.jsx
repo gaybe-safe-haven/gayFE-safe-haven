@@ -1,3 +1,5 @@
+// "/list"
+
 "use client";
 import styles from "../page.module.css";
 import listBoxStyles from "./listPage.module.css";

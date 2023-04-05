@@ -1,3 +1,5 @@
+// "/list/6"
+
 "use client";
 import { getShelterData, postData } from '../../../apiCalls';
 import { useState, useEffect } from 'react';
