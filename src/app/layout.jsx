@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
             <h1 className={styles.title}>Our App &#60;3</h1>
             <div className={styles.linkContainer}>
               <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link>
+              <Link href="/"><button alt="home" className={styles.linkButton}>home</button></Link>
               <Link href="/about"><button alt="about" className={styles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={styles.linkButton}>list</button></Link>
               <Link href="/add-shelter"><button alt="add a shelter" className={styles.linkButton}>add a shelter</button></Link>
@@ -40,5 +41,5 @@ export default function RootLayout({ children }) {
 }
 
 RootLayout.propTypes = {
-  children: PropTypes.node.isRequired,
+ children: PropTypes.node.isRequired,
 };

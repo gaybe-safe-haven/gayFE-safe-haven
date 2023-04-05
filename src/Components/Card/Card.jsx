@@ -18,3 +18,13 @@ export default function Card({data}) {
         </div>
     );
 }
+
+Card.propTypes = {
+    data: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        attributes: PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            verified: PropTypes.bool.isRequired,
+        })
+    })
+}

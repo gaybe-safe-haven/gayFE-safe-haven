@@ -78,3 +78,10 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
   </form>
   )
 }
+
+RateForm.propTypes = {
+  id: PropTypes.number.isRequired,
+  reviewed: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
+  submitReview: PropTypes.func.isRequired,
+};
