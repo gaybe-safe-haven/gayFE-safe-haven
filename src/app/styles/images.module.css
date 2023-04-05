@@ -13,7 +13,7 @@
 
 .yellowGreenImageWrapper {
     align-self: flex-start;
-    background-color: #ABD757;
+    background-color: rgb(171, 215, 87, .8);
     min-width: 300px;
 }
 

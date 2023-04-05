@@ -5,12 +5,25 @@
   text-align: center;
 }
 
-.infoWrapper {
+/* .infoWrapper {
   border: 3px solid #4F49E0;
-}
+} */
 
 .contact {
+  border: 3px solid #4F49E0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.reviews {
+  border: #ABD757 solid 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 1rem;
   margin: 1rem;
 }
 
@@ -43,13 +56,6 @@
   width: 3.5rem;
 }
 
-.reviews {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border: #ABD757 solid 3px;
-  font-size: 1rem;
-}
 
 .scores {
   display: flex;
@@ -94,6 +100,7 @@
 @media (min-width: 800px) {
   .mainContainer {
     display: flex;
+    flex: 1;
     flex-direction: row;
     max-width: 100vw;
   }
@@ -104,11 +111,77 @@
     flex-direction: column;
     justify-content: space-evenly;
     max-width: 50vw;
+    min-height: 100%;
   }
 
-  .infoWrapper {
+  /* .infoWrapper {
     align-self: flex-start;
     max-width: 50vw;
+  } */
+  /* .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: #ABD757 solid 3px;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .contact {
+    font-size: 1.5rem;
+    flex: .5;
+    padding: 1rem;
+    max-width: 50vw;
+    min-height: 50%;
+  }  */
+
+  .contact {
+    border: 3px solid #4F49E0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 25vh;
+    padding: 1rem;
+
+  }
+  
+  .reviews {
+    border: #ABD757 solid 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 25vh;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact {
+    border: 3px solid #4F49E0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 30vh;
+    padding: 1rem;
   }
 
+  .reviews {
+    border: #ABD757 solid 3px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    justify-content: space-between;
+    margin: 1rem;
+    max-width: 50vw;
+    min-height: 20vh;
+    padding: 1rem;
+  }
 }

@@ -88,7 +88,7 @@ export default function ShelterPage({ params }) {
       <div className={shelterPage.mainContainer}>
 
 		<div className={shelterPage.leftWrapper}>
-			<div className={shelterPage.infoWrapper}> 
+			{/* <div className={shelterPage.infoWrapper}>  */}
 				<section className={shelterPage.contact}>
 					<h2 className={shelterPage.name}>{shelter.name}</h2>
 					<div className={shelterPage.address}>
@@ -106,7 +106,7 @@ export default function ShelterPage({ params }) {
 						}
 					</div>
 				</section>
-			</div>
+			{/* </div> */}
 
 			<section className={shelterPage.reviews}>
 				<h2 className={shelterPage.communityReviews}>Community Reviews</h2>
