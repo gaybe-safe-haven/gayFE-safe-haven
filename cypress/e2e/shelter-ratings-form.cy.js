@@ -85,7 +85,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
       cy.get("button.RateForm_submit__1MsQV").contains("submit review").click()
     })
 		cy.get("section > p")
-		// .contains("your review was not processed, please try again")
+		// .contains("thank you for taking the time to share your experience with us")
 //need something here for conditionally rendered text on submit
   })
 })
