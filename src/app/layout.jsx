@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
               <Link href="/about"><button alt="about" className={navStyles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={navStyles.linkButton}>list</button></Link>
               <Link href="/add-shelter"><button alt="add a shelter" className={navStyles.linkButton}>add a shelter</button></Link>
-              <Link href="/api"><button alt="public api" className={navStyles.linkButton}>public api</button></Link>
+              <Link href="/public-api"><button alt="public api" className={navStyles.linkButton}>public api</button></Link>
             </div>
             <CiStar className={navStyles.navIcon}/>
           </div>
