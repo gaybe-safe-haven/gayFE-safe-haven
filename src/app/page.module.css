@@ -36,11 +36,6 @@
     padding: .5rem 0;
 }
 
-.titleDescription {
-    font-size: 1rem;
-    font-weight: 300;
-}
-
 .linkWidth {
     max-width: 12rem;
 }
@@ -85,6 +80,7 @@
 .greenPTagThin {
     color: #066161;
     font-weight: 400;
+    max-width: 23rem;
     padding: .5rem;
 }
 
@@ -113,32 +109,6 @@
         margin: 1rem;
         margin-left: 0;
         padding-left: .1rem;
-    }
-
-    .buttonLink {
-        background-color: #e8c3d7;
-        border: 1px solid #a86487;
-        border-radius: .1rem;
-        color: #660137;
-        cursor: pointer;
-        font: inherit;
-        font-size: 1rem;
-        margin: .2rem;
-        padding: 1rem;
-        width: 9rem;;
-    }
-}
-
-@media (max-width: 799px) {
-    .mainContentTop,
-    .mainContentBottom,
-    .mainContentTop2,
-    .mainContentBottom2 {
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        max-height: 50%;
-        padding: 0;
     }
 
     .buttonLink {
@@ -207,7 +177,7 @@
         padding: 1rem;
         width: 12rem;;
     }
-    
+
     .boxLowerRight {
         background-color: #c4cffa;
         composes: buttonBox;
@@ -276,5 +246,69 @@
         margin: 1rem;
         margin-left: 0;
         padding-left: .1rem;
+    }
+}
+
+@media (max-width: 799px) {
+    .mainContentTop,
+    .mainContentBottom,
+    .mainContentTop2,
+    .mainContentBottom2 {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        max-height: 50%;
+        padding: 0;
+    }
+
+    .buttonLink {
+        background-color: #e8c3d7;
+        border: 1px solid #a86487;
+        border-radius: .1rem;
+        color: #660137;
+        cursor: pointer;
+        font: inherit;
+        font-size: 1rem;
+        margin: .2rem;
+        padding: 1rem;
+        width: 9rem;;
+    }
+}
+
+@media (max-width: 399px) {
+    .title {
+        color: rgb(28, 26, 81, .8);
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: .5rem 0;
+    }
+
+    .main {
+        background-color: #F3F1FE;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        font-family: inherit;
+        gap: .3rem;
+        justify-content: flex-start;
+        padding: 0 1rem;
+    }
+    
+    .mainPagePTag1,
+    .mainPagePTag2,
+    .mainPagePTag3 {
+        font-size: 1rem;
+    }
+    .buttonLink {
+        background-color: #e8c3d7;
+        border: 1px solid #a86487;
+        border-radius: .1rem;
+        color: #660137;
+        cursor: pointer;
+        font: inherit;
+        font-size: .8rem;
+        margin: .2rem;
+        padding: .5rem;
+        width: 8rem;;
     }
 }
