@@ -1,4 +1,5 @@
 .review {
+  background-color: rgb(247, 229, 232);
   border: #E9007E solid 2px;
   display: flex;
   flex-direction: column;

@@ -6,6 +6,7 @@
 }
 
 .contact {
+  background-color:#c4d3fa;
   border: 3px solid #4F49E0;
   display: flex;
   flex-direction: column;
@@ -15,6 +16,7 @@
 }
 
 .reviews {
+  background-color: #d7f0f5;
   border: #ABD757 solid 3px;
   display: flex;
   flex-direction: column;
