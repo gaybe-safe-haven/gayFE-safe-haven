@@ -1,5 +1,6 @@
 import styles from "./RateForm.module.css";
 import { useState } from 'react'
+import PropTypes from 'prop-types';
 
 export default function RateForm({ id, reviewed, error, submitReview }) {
   const [review, setReview] = useState({
@@ -77,3 +78,10 @@ export default function RateForm({ id, reviewed, error, submitReview }) {
   </form>
   )
 }
+
+RateForm.propTypes = {
+  id: PropTypes.number.isRequired,
+  reviewed: PropTypes.bool.isRequired,
+  error: PropTypes.bool.isRequired,
+  submitReview: PropTypes.func.isRequired,
+};

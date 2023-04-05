@@ -1,10 +1,12 @@
 import "./styles/globals.css";
 import Link from 'next/link'
 import navStyles from "./styles/nav.module.css"
+import { Suspense } from "react";
+import LoadingListPage from "./list/loading";
+import PropTypes from 'prop-types';
 import headerStyles from "./page.module.css";
-// import LoadingListPage from "./list/loading";
-import { CiStar } from "react-icons/ci";
 
+import { CiStar } from "react-icons/ci";
 
 export const metadata = {
   title: 'Gaybe Safe Haven',
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
         <nav className={navStyles.navContainer}>
           <div className={navStyles.navContentWrapper}>
             <div className={navStyles.linkContainer}>
+              <Link href="/"><button alt="home" className={navStyles.linkButton}>home</button></Link>
               <Link href="/about"><button alt="about" className={navStyles.linkButton}>about</button></Link>
               <Link href="/list"><button alt="list" className={navStyles.linkButton}>list</button></Link>
               <Link href="/add-shelter"><button alt="add a shelter" className={navStyles.linkButton}>add a shelter</button></Link>
@@ -47,3 +50,7 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+RootLayout.propTypes = {
+ children: PropTypes.node.isRequired,
+};
