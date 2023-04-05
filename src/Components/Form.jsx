@@ -1,7 +1,6 @@
 "use client"
 import styles from "./Form.module.css";
 import { postData } from "../apiCalls";
-import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import { checkSite, checkZip, checkPhone } from '../util'
 
@@ -180,13 +179,13 @@ export default function Form() {
   )
 }
 
-Form.propTypes = {
-  postData: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    streetAddress: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
-    phoneNumber: PropTypes.string.isRequired,
-    website: PropTypes.string
-  }).isRequired
-};
+// Form.propTypes = {
+//   formData: PropTypes.shape({
+//     name: PropTypes.string.isRequired,
+//     streetAddress: PropTypes.string.isRequired,
+//     city: PropTypes.string.isRequired,
+//     state: PropTypes.string.isRequired,
+//     phoneNumber: PropTypes.string.isRequired,
+//     website: PropTypes.string
+//   }).isRequired
+// };
