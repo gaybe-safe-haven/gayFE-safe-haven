@@ -29,8 +29,11 @@ export default function RootLayout({ children }) {
         </nav>
         <div className={headerStyles.header}>
           <div className={headerStyles.headerWrapper}>
-            <h1 className={headerStyles.title}>GayBES.A.F.E. Search</h1>
-            {/* <p className={headerStyles.titleDescription}>Safer Access to Free Emergency Respite: Youth Shelter and Housing Resources</p> */}
+            <Link href="/">
+              <button alt="main page" className={headerStyles.headerLinkButton}>
+                <h1 className={headerStyles.title}>GayBES.A.F.E. Search</h1>    
+              </button>
+            </Link>
           </div>
         </div>
         {children}

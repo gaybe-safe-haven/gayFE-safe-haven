@@ -19,6 +19,11 @@
     padding: 0 1rem;
 }
 
+.headerLinkButton {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
 .title {
     color: rgb(28, 26, 81, .8);
     font-weight: 600;

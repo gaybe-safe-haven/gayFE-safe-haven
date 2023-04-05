@@ -17,6 +17,7 @@ export default function Home() {
       <div className={styles.mainContentBottom}>
         <Image className={imageStyles.facepaintTeen} src={facepaintTeenPic} alt="face paint teen" />
         <p className={styles.mainPagePTag3}>We&apos;re asking you to help us track the ones that are.</p>
+        <button></button>
       </div>
     </main>
   )
