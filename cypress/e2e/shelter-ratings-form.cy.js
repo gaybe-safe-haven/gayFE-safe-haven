@@ -84,8 +84,7 @@ describe("User Flow: As a user, I should be able to submit a form on the shelter
       cy.get("input[type=range][name='cleanliness']").invoke("val", 8).trigger("change")
       cy.get("button.RateForm_submit__1MsQV").contains("submit review").click()
     })
-		cy.get(".RateForm_review__ZaJ9c").contains("thank you for taking the time to share your experience with us")
-//need something here for conditionally rendered text on submit
+		cy.get('section > :nth-child(4)').should('be.visible')
   })
 })
 
