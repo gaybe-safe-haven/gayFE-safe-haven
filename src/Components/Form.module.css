@@ -39,5 +39,9 @@
 .button:disabled {
     border: none;
     color: rgb(28, 26, 81, .6);
+}
 
+.receipt{
+    border: #4F49E0 solid 2px;
+    text-align: center;
 }
