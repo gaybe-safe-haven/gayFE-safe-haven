@@ -115,9 +115,10 @@ export default function Form() {
   }
 
   return (
-    {postSuccess.name ?
     <section className={styles.formContainer}>
-    <h2 className="message">Your submission was successful!</h2> 
+      {postSuccess.name ? 
+      <section>
+      <h2 className="message">Your submission was successful!</h2> 
       <div className={styles.receipt}>
         <p>Name:</p>
         <p>Address:</p>
@@ -127,81 +128,83 @@ export default function Form() {
       <button>See the Shelter</button>
       <button>Add Another Shelter</button>
     </section> :
-    <form className={styles.formContainer}>
-      <h3 className={styles.formHeading}>Add A Shelter</h3>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="name" 
-          placeholder="shelter name" 
-          className={styles.formInput}
-          value={formData.name}
-          onChange={handleChange}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="streetAddress" 
-          placeholder="street address" 
-          className={styles.formInput}
-          value={formData.streetAddress}
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="city" 
-          placeholder="city" 
-          className={styles.formInput}
-          value={formData.city}
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="state" 
-          placeholder="state" 
-          className={styles.formInput}
-          value={formData.state}
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="zip" 
-          placeholder="zipcode" 
-          className={styles.formInput}
-          value={formData.zip}
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="phoneNumber" 
-          placeholder="phone number" 
-          className={styles.formInput}
-          value={formData.phoneNumber}
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
-      <div className={styles.inputContainer}>
-        <input 
-          type="text" 
-          name="websiteURL" 
-          placeholder="website" 
-          className={styles.formInput}
-          value={formData.websiteURL}
-          onChange={(e) => handleChange(e)}
-        />
-      </div>
-      <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
-      {error && <p className="message">There was an error with your submission. Please try again.</p>}
-      {feedback && <p className="message">{feedback}</p>}
-    </form>}
+      <form>
+        <h3 className={styles.formHeading}>Add A Shelter</h3>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="name" 
+            placeholder="shelter name" 
+            className={styles.formInput}
+            value={formData.name}
+            onChange={handleChange}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="streetAddress" 
+            placeholder="street address" 
+            className={styles.formInput}
+            value={formData.streetAddress}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="city" 
+            placeholder="city" 
+            className={styles.formInput}
+            value={formData.city}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="state" 
+            placeholder="state" 
+            className={styles.formInput}
+            value={formData.state}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="zip" 
+            placeholder="zipcode" 
+            className={styles.formInput}
+            value={formData.zip}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="phoneNumber" 
+            placeholder="phone number" 
+            className={styles.formInput}
+            value={formData.phoneNumber}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <div className={styles.inputContainer}>
+          <input 
+            type="text" 
+            name="websiteURL" 
+            placeholder="website" 
+            className={styles.formInput}
+            value={formData.websiteURL}
+            onChange={(e) => handleChange(e)}
+          />
+        </div>
+        <button type="submit" className={styles.button} disabled={incomplete} onClick={(e) => handleSubmit(e)}>Add Shelter</button>
+        {error && <p className="message">There was an error with your submission. Please try again.</p>}
+        {feedback && <p className="message">{feedback}</p>}
+      </form>
+    }
+    </section>
   )
 }
