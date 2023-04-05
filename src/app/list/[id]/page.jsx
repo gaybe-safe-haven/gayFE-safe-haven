@@ -133,4 +133,7 @@ ShelterPage.propTypes = {
   params: PropTypes.shape({
     id: PropTypes.string.isRequired,
   }).isRequired,
+	error: PropTypes.string.isRequired,
+	reviewed: PropTypes.string.isRequired,
+	submitReview: PropTypes.func.isRequired
 };
