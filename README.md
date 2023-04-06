@@ -79,7 +79,7 @@ Our app is designed to be easy to use and navigate. Users can view a list of saf
 
 ### Installation
 ## To use the deployed app visit: 
-[S.A.F.E.R. Kids](https://gay-fe-safe-haven.vercel.app/)
+[S.A.F.E.R. Kids](https://saferkids.vercel.app/)
 
 1. Fork the Repo from the [Repository](https://github.com/gaybe-safe-haven/gayFE-safe-haven)
 2. Clone the repo
