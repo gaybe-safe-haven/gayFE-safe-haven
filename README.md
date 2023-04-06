@@ -47,11 +47,14 @@
 ## About The Project
 #### Mobile View
 
-
+<img width="330" alt="mobile home" src="https://user-images.githubusercontent.com/107816053/230251269-b97abae8-9c34-415d-aaba-0a5839b14497.png"> <img width="330" alt="mobile about" src="https://user-images.githubusercontent.com/107816053/230251293-3122f2ea-ae78-4636-b67e-53cf04d3bd8f.png"> <img width="330" alt="mobile list" src="https://user-images.githubusercontent.com/107816053/230251320-bd9e3be8-1684-4d75-aa5d-2efb9a2e8b9d.png"> <img width="330" alt="mobile add" src="https://user-images.githubusercontent.com/107816053/230251340-54f2b20c-ec0f-4e7c-a46e-231f6c172e44.png">
+ <img width="330" alt="mobile api" src="https://user-images.githubusercontent.com/107816053/230251349-fe57d4e9-d70c-486d-bb2e-5dfb93d959c3.png">
 
 #### Desktop View
 
-
+<img width="1352" alt="desktop home" src="https://user-images.githubusercontent.com/107816053/230251384-c6151b16-b014-4ac6-85ee-4c1fcd35d00d.png"> <img width="1352" alt="Desktop about" src="https://user-images.githubusercontent.com/107816053/230251419-769dabc2-5e82-4426-87b6-7d01e44bce80.png"> 
+<img width="1352" alt="desktop list" src="https://user-images.githubusercontent.com/107816053/230251451-136c1e69-d4c9-42e5-9737-9852b8a893e9.png"> <img width="1352" alt="desktop add" src="https://user-images.githubusercontent.com/107816053/230251476-2c864488-3f5f-405a-af8e-d591f7a3bd31.png">
+<img width="1352" alt="desktop api" src="https://user-images.githubusercontent.com/107816053/230251496-1c5a33bd-479a-4d95-a8ba-cc14dbd27c39.png">
 
 
 #### Overview
