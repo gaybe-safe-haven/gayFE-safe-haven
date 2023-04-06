@@ -28,8 +28,8 @@
 
 .formInput:required {
     border-color:rgb(28, 26, 81);
-
 }
+
 .button {
   background-color: #E5ABCA;
   border: 1px solid #660137;
@@ -58,3 +58,8 @@
   }
 }
 
+@media (max-width: 350px) {
+  .formContainer {
+    margin: 0;
+  }
+}

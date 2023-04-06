@@ -17,6 +17,7 @@
 .headerWrapper {
     padding: 0 1rem;
 }
+
 .houseIcon {
     aspect-ratio: 1 / 1;
     display: block;
@@ -85,6 +86,28 @@
     font-weight: 400;
     max-width: 23rem;
     padding: .5rem;
+}
+
+.span {
+    color:#E9007E;
+}
+
+.hr {
+    background-color:#F3F1FE;
+    border: none;
+}
+
+@media (min-width: 900px) {
+    .wrapperAPI {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .leftWrapperAPI {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 400px) {
@@ -313,5 +336,19 @@
         margin: .2rem;
         padding: .5rem;
         width: 8rem;;
+    }
+
+    .addH2 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: .5rem;
+
+    }
+
+    .greenPTagThin,
+    .addWrapper1,
+    .addWrapper2,
+    .addWrapper3 {
+        font-size: .8rem;
     }
 }
