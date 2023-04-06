@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
                 <h1 className={headerStyles.title}><BsHouseHeart classname={headerStyles.houseIcon}/>&nbsp;S.A.F.E.R. Kids</h1>    
               </button>
             </Link>
+            <p className={headerStyles.acronym}>Safer Access to Free Emergency Respite for LGBTQ+ Kids</p>
           </div>
         </div>
         {children}
