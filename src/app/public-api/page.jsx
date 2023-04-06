@@ -11,19 +11,19 @@ export default function publicApi() {
 				<div className={styles.leftWrapperAPI}>
 					<h2>Here is our free public API</h2>
 					<p>Use this API to get a community created list of shelters</p>
-					<hr />
+					<hr className={styles.hr}/>
 					<p><span className={styles.span}>GET</span> endpoint for all shelters: 
 					</p>
 					<p>
 						<Link href={"https://gaybe-safe-haven.herokuapp.com/api/v1/shelters"} >https://gaybe-safe-haven.herokuapp.com/api/v1/shelters</Link>
 					</p>
-					<hr />
+					<hr className={styles.hr}/>
 					<p><span className={styles.span}>GET</span> endpoint for a single shelter: 
 					</p>
 					<p>
 						<Link href={"https://gaybe-safe-haven.herokuapp.com/api/v1/shelters"} >https://gaybe-safe-haven.herokuapp.com/api/v1/shelters/:id</Link>
 					</p>
-					<hr />
+					<hr className={styles.hr}/>
 				</div>
 				<Image className={imageStyles.example} src={example} alt="API get request example" />
 			</div>

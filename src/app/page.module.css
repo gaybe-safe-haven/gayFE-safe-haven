@@ -92,6 +92,10 @@
     color:#E9007E;
 }
 
+.hr {
+    background-color:#F3F1FE;
+    border: none;
+}
 @media (min-width: 900px) {
     .wrapperAPI {
         display: flex;
