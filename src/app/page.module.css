@@ -36,6 +36,9 @@
     padding: .5rem 0;
 }
 
+.acronym {
+    font-size: 12px;
+}
 .linkWidth {
     max-width: 12rem;
 }
