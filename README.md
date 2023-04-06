@@ -72,7 +72,6 @@ Our app is designed to be easy to use and navigate. Users can view a list of saf
 - [![Cypress]][Cypress-url]
 - [![Javascript][javascript.js]][javascript-url]
 - [![CSS][css]][css-url]
-- [![HTML][html]][html-url]
 - [![Webpack][webpack]][webpack-url]
 - [![API][api]][api-url]
 - [![Git][git]][git-url]
