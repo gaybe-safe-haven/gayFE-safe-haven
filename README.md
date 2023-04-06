@@ -90,9 +90,9 @@ Our app is designed to be easy to use and navigate. Users can view a list of saf
    ```sh
    npm install
    ```
-4. Run npm start
+4. Run npm
    ```sh
-   npm start
+   npm run dev
    ```
 5. Use the Link that is given in the Terminal & Open in Browser
    ```sh
