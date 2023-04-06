@@ -8,5 +8,9 @@ describe("User Flow: As a user, when I select one of the shelters, I will be tak
     cy.get(".page_main__ibFHK > :nth-child(2) > :nth-child(1)").first().click()
     cy.go("forward")
   })
+	it('Should see a 404 if manually entering a shelter id does not exist', () => {
+		cy.visit("http://localhost:3000/list/20")
+		cy.get("body > :nth-child(3)").contains("Uh oh! This shelter could not be found. Try again later")
+	})
 })
 

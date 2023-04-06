@@ -5,7 +5,7 @@ describe("User Flow: As a user, when I visit the site, I should see a landing pa
 
   it("Should show the main page of the app with title and header", () => {
     cy.get("nav").should("have.class", "nav_navContainer__mu3F6")
-    cy.get("h1.page_title__yhPp_").contains("Our App <3")
+    cy.get("h1.page_title__yhPp_").contains("S.A.F.E.R. Kids")
   })
 
   it("Should have a nav bar that navigates to different page views using Link", () => {

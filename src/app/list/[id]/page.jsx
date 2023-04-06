@@ -111,21 +111,21 @@ export default function ShelterPage({ params }) {
 
 			<section className={shelterPage.reviews}>
 				<h2 className={shelterPage.communityReviews}>Community Reviews</h2>
-				{!shelterPage.reviews 
+				{!shelter.avgStaff && !shelter.avgSafety && !shelter.avgClean
 					? <p>There are no reviews of this shelter</p>  
-					:<article className={shelterPage.scores}>
-					<div>
-						<p className={shelterPage.staffP}>{shelter.avgStaff}</p>
-						<img className={shelterPage.icons} src={'/flag.png'} />
-					</div>
-					<div>
-						<p className={shelterPage.safetyP}>{shelter.avgSafety}</p>
-						<img className={shelterPage.icons} src={'/home.png'} />
-					</div>
-					<div>
-						<p className={shelterPage.cleanP}>{shelter.avgClean}</p>
-						<img className={shelterPage.icons} src={'/mop.png'} />
-					</div>
+					: <article className={shelterPage.scores}>
+						<div>
+							<p className={shelterPage.staffP}>{shelter.avgStaff}</p>
+							<img className={shelterPage.icons} src={'/flag.png'} />
+						</div>
+						<div>
+							<p className={shelterPage.safetyP}>{shelter.avgSafety}</p>
+							<img className={shelterPage.icons} src={'/home.png'} />
+						</div>
+						<div>
+							<p className={shelterPage.cleanP}>{shelter.avgClean}</p>
+							<img className={shelterPage.icons} src={'/mop.png'} />
+						</div>
 					</article>
 				}
 				<p className={shelterPage.reviewNote}>these ratings are averaged from community reviews and are intended to reflect the experience of those who have received services here, not those who provide them</p>
