@@ -45,12 +45,13 @@
 </details>
 
 ## About The Project
+#### Preview
+![Desktop Preview](./public/SAFERgif.gif)
+
+
 #### Mobile View
-
-
-
-#### Desktop View
-
+![Mobile Landing Page](./public/mobileLANDING.png) 
+![Mobile Shelter Page](./public/mobile%20SHELTER.png)
 
 
 
