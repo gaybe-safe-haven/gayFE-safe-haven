@@ -87,6 +87,10 @@
     padding: .5rem;
 }
 
+.span {
+    color:#E9007E;
+}
+
 @media (min-width: 400px) {
     .main {
         display: flex;

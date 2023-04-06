@@ -39,6 +39,14 @@
     width: auto;
 }
 
+.example {
+    composes: purpleImageWrapper;
+    height: auto;
+    margin: 0;
+    padding: 1rem;
+    width: auto;
+}
+
 .blueImageWrapper {
     align-self: flex-start;
     background-color: #98EDED;
