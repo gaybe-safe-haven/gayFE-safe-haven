@@ -17,6 +17,7 @@
 .headerWrapper {
     padding: 0 1rem;
 }
+
 .houseIcon {
     aspect-ratio: 1 / 1;
     display: block;
@@ -89,6 +90,19 @@
 
 .span {
     color:#E9007E;
+}
+
+@media (min-width: 900px) {
+    .wrapperAPI {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+
+    .leftWrapperAPI {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 400px) {
