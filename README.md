@@ -6,7 +6,7 @@
  [![El Brewster][El-badge]][El-url]
  [![Faye Rosenshein][Faye-badge]][Faye-url]
 
- **Back End Credit**
+ **Back End Credit**:
  Big thanks to our backend team for spinning up our database and API
  [SAFER Kids Back End Repo](https://github.com/gaybe-safe-haven/gaybe-safe-haven-BE)
 
