@@ -97,7 +97,7 @@ export default function ShelterPage({ params }) {
 						<p className={shelterPage.street}>{`${shelter.city}, ${shelter.state} ${shelter.zip}`}</p>
 					</div>
 					<div className={shelterPage.clientServices}>
-						{shelter.websiteUrl && <a href={`http://${shelter.websiteUrl}`} className={shelterPage.site}>website</a>}
+						{shelter.websiteUrl && <a href={`${shelter.websiteUrl}`} className={shelterPage.site}>website</a>}
 						<p className={shelterPage.phone}>{shelter.phoneNumber}</p>
 					</div>
 					<div className={shelterPage.verify} >
