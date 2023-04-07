@@ -1,6 +1,10 @@
 'use client'
+import styles from '../../page.module.css';
+
 export default function LoadingShelterPage() {
   return (
-    <p>loading...</p>
+    <main className={styles.main}>
+      <p>loading...</p>
+    </main>
   )
 }
